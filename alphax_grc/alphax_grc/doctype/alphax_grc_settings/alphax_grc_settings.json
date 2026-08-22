@@ -1,0 +1,104 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX GRC Settings",
+  "module": "AlphaX GRC",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "company",
+    "default_risk_matrix",
+    "default_review_frequency",
+    "enable_incident_management",
+    "enable_control_library",
+    "saudi_focus_frameworks",
+    "enable_policy_management",
+    "enable_vendor_risk",
+    "enable_audit_management"
+  ],
+  "fields": [
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Default Company",
+      "options": "Company",
+      "reqd": 0
+    },
+    {
+      "fieldname": "default_risk_matrix",
+      "fieldtype": "Select",
+      "label": "Default Risk Matrix",
+      "options": "3x3\n5x5",
+      "default": "5x5"
+    },
+    {
+      "fieldname": "default_review_frequency",
+      "fieldtype": "Select",
+      "label": "Default Review Frequency",
+      "options": "Monthly\nQuarterly\nHalf-Yearly\nYearly",
+      "default": "Quarterly"
+    },
+    {
+      "fieldname": "enable_incident_management",
+      "fieldtype": "Check",
+      "label": "Enable Incident Management",
+      "default": 1
+    },
+    {
+      "fieldname": "enable_control_library",
+      "fieldtype": "Check",
+      "label": "Enable Control Library",
+      "default": 1
+    },
+    {
+      "fieldname": "saudi_focus_frameworks",
+      "fieldtype": "Small Text",
+      "label": "Saudi Focus Frameworks",
+      "default": "NCA ECC\nSAMA CSF\nPDPL"
+    },
+    {
+      "fieldname": "enable_policy_management",
+      "fieldtype": "Check",
+      "label": "Enable Policy Management",
+      "default": 1
+    },
+    {
+      "fieldname": "enable_vendor_risk",
+      "fieldtype": "Check",
+      "label": "Enable Vendor Risk",
+      "default": 1
+    },
+    {
+      "fieldname": "enable_audit_management",
+      "fieldtype": "Check",
+      "label": "Enable Audit Management",
+      "default": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    }
+  ],
+  "creation": "2026-04-04 00:00:00.000000",
+  "modified": "2026-04-04 00:00:00.000000",
+  "modified_by": "Administrator",
+  "owner": "Administrator",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "links": [],
+  "actions": [],
+  "issingle": 1
+}

@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:policy_code",
+ "creation": "2026-08-14 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_code",
+  "policy_title",
+  "policy_title_ar",
+  "cb_head",
+  "category",
+  "source",
+  "is_mandatory",
+  "is_active",
+  "sec_detail",
+  "purpose",
+  "scope",
+  "summary",
+  "sec_governance",
+  "review_cycle_months",
+  "default_owner_role",
+  "cb_gov",
+  "acknowledgement_required",
+  "display_order",
+  "sec_map",
+  "framework_mappings"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "description": "Stable identifier, e.g. NEO-POL-ISMS-01",
+   "fieldname": "policy_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "policy_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "policy_title_ar",
+   "fieldtype": "Data",
+   "label": "Policy Title (Arabic)",
+   "translatable": 1
+  },
+  {
+   "fieldname": "cb_head",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "description": "Mirrors GRC Policy.policy_category so adopted policies map 1:1",
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Information Security\nPrivacy\nRisk\nCompliance\nHR\nOperations",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "default": "Neotec Standard",
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Source",
+   "options": "Neotec Standard\nNCA\nISO\nSDAIA PDPL\nSAMA\nGDPR\nClient Specific"
+  },
+  {
+   "default": "0",
+   "description": "Part of the minimum policy set every client should hold",
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "label": "Mandatory Baseline"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "sec_detail",
+   "fieldtype": "Section Break",
+   "label": "Policy Content"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Small Text",
+   "label": "Scope"
+  },
+  {
+   "description": "Seeded as the summary of every GRC Policy adopted from this entry",
+   "fieldname": "summary",
+   "fieldtype": "Text Editor",
+   "label": "Summary / Boilerplate"
+  },
+  {
+   "fieldname": "sec_governance",
+   "fieldtype": "Section Break",
+   "label": "Governance"
+  },
+  {
+   "default": "12",
+   "fieldname": "review_cycle_months",
+   "fieldtype": "Int",
+   "label": "Review Cycle (Months)"
+  },
+  {
+   "fieldname": "default_owner_role",
+   "fieldtype": "Data",
+   "label": "Suggested Owner Role"
+  },
+  {
+   "fieldname": "cb_gov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "acknowledgement_required",
+   "fieldtype": "Check",
+   "label": "Requires Employee Acknowledgement"
+  },
+  {
+   "default": "0",
+   "fieldname": "display_order",
+   "fieldtype": "Int",
+   "label": "Display Order"
+  },
+  {
+   "fieldname": "sec_map",
+   "fieldtype": "Section Break",
+   "label": "Framework Mapping"
+  },
+  {
+   "fieldname": "framework_mappings",
+   "fieldtype": "Table",
+   "label": "Framework Mappings",
+   "options": "GRC Global Policy Mapping"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC Global Policy",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "policy_title,category,source",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "policy_title",
+ "track_changes": 1
+}

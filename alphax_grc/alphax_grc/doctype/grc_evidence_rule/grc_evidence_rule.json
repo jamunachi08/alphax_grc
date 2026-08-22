@@ -1,0 +1,307 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ER-{####}",
+ "creation": "2026-04-29 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "rule_name",
+  "is_active",
+  "client",
+  "column_break_1",
+  "framework",
+  "control_reference",
+  "rule_priority",
+  "section_source",
+  "source_doctype",
+  "source_filters",
+  "section_logic",
+  "evaluation_type",
+  "expected_value",
+  "field_to_check",
+  "tolerance_days",
+  "min_required_count",
+  "section_actions",
+  "auto_create_finding",
+  "finding_severity",
+  "auto_assign_to",
+  "section_schedule",
+  "evaluate_on_save",
+  "evaluate_daily",
+  "section_results",
+  "last_evaluated",
+  "last_pass_count",
+  "last_fail_count",
+  "last_pass_rate",
+  "section_notes",
+  "description",
+  "implementation_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "label": "Rule Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client (leave blank for firm-wide)",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "framework",
+   "fieldtype": "Select",
+   "label": "Framework",
+   "options": "NCA ECC-2:2024\nISO 27001\nISO 42001\nAramco SACS-002\nPDPL\nGDPR\nCustom\nNIST CSF 2.0\nISO 22301",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "control_reference",
+   "fieldtype": "Data",
+   "label": "Control Code",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "e.g. 1-9-3-1, A.6.2.4, SACS-001-2"
+  },
+  {
+   "fieldname": "rule_priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "High\nMedium\nLow",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "section_source",
+   "fieldtype": "Section Break",
+   "label": "Source Data"
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Link",
+   "options": "DocType",
+   "label": "Source Doctype",
+   "reqd": 1,
+   "description": "ERPNext or Frappe doctype to evaluate, e.g. Employee, Sales Invoice, Asset"
+  },
+  {
+   "fieldname": "source_filters",
+   "fieldtype": "Code",
+   "options": "JSON",
+   "label": "Source Filters (JSON)",
+   "description": "Frappe-style filters dict, e.g. {\"status\": \"Left\", \"company\": \"ACME\"}"
+  },
+  {
+   "fieldname": "section_logic",
+   "fieldtype": "Section Break",
+   "label": "Evaluation Logic"
+  },
+  {
+   "fieldname": "evaluation_type",
+   "fieldtype": "Select",
+   "label": "Evaluation Type",
+   "options": "Field Must Be Set\nField Must Equal Value\nField Must Be Within Days\nMinimum Record Count\nNo Records Allowed\nCustom Python Method",
+   "reqd": 1,
+   "default": "Field Must Be Set"
+  },
+  {
+   "fieldname": "expected_value",
+   "fieldtype": "Data",
+   "label": "Expected Value",
+   "description": "For 'Field Must Equal Value' — the value to compare against"
+  },
+  {
+   "fieldname": "field_to_check",
+   "fieldtype": "Data",
+   "label": "Field To Check",
+   "description": "Field on the source doctype, e.g. exit_interview_date, approval_status"
+  },
+  {
+   "fieldname": "tolerance_days",
+   "fieldtype": "Int",
+   "label": "Tolerance (days)",
+   "description": "For date-based checks",
+   "default": 0
+  },
+  {
+   "fieldname": "min_required_count",
+   "fieldtype": "Int",
+   "label": "Minimum Required Count",
+   "description": "For 'Minimum Record Count' rules",
+   "default": 1
+  },
+  {
+   "fieldname": "section_actions",
+   "fieldtype": "Section Break",
+   "label": "Actions on Failure"
+  },
+  {
+   "fieldname": "auto_create_finding",
+   "fieldtype": "Check",
+   "label": "Auto-create Audit Finding on Failure",
+   "default": "1"
+  },
+  {
+   "fieldname": "finding_severity",
+   "fieldtype": "Select",
+   "label": "Finding Severity",
+   "options": "Critical\nHigh\nMedium\nLow\nInformational",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "auto_assign_to",
+   "fieldtype": "Link",
+   "options": "User",
+   "label": "Auto-assign Finding To"
+  },
+  {
+   "fieldname": "section_schedule",
+   "fieldtype": "Section Break",
+   "label": "When to Evaluate"
+  },
+  {
+   "fieldname": "evaluate_on_save",
+   "fieldtype": "Check",
+   "label": "Evaluate when source record is saved",
+   "default": "1",
+   "description": "Real-time evaluation on every doc_event"
+  },
+  {
+   "fieldname": "evaluate_daily",
+   "fieldtype": "Check",
+   "label": "Re-evaluate daily via scheduler",
+   "default": "1"
+  },
+  {
+   "fieldname": "section_results",
+   "fieldtype": "Section Break",
+   "label": "Last Evaluation",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "last_evaluated",
+   "fieldtype": "Datetime",
+   "label": "Last Evaluated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_pass_count",
+   "fieldtype": "Int",
+   "label": "Last Pass Count",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "last_fail_count",
+   "fieldtype": "Int",
+   "label": "Last Fail Count",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "last_pass_rate",
+   "fieldtype": "Percent",
+   "label": "Pass Rate %",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "implementation_notes",
+   "fieldtype": "Text",
+   "label": "Implementation Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2026-04-29 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC Evidence Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "rule_name",
+ "track_changes": 1
+}

@@ -1,0 +1,165 @@
+{
+ "name": "GRC Action Plan",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:ACT-{#####}",
+ "title_field": "action_title",
+ "description": "Action Plan tracking risk response steps, control tests, escalations, and monitoring tasks",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Risk Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Vendor Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "action_title",
+   "fieldtype": "Data",
+   "label": "Action Title",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "label": "Linked Risk",
+   "options": "GRC Risk Register",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "risk_impact_level",
+   "fieldtype": "Select",
+   "label": "Risk Impact Level",
+   "options": "\nVery Low\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "label": "Action Type",
+   "options": "\nMitigation\nControl Test\nEscalation\nContingency\nMonitoring",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "response_strategy",
+   "fieldtype": "Select",
+   "label": "Response Strategy",
+   "options": "\nMitigate\nTransfer\nAccept\nWatch\nAvoid"
+  },
+  {
+   "fieldname": "goal",
+   "fieldtype": "Small Text",
+   "label": "Goal"
+  },
+  {
+   "fieldname": "action_steps",
+   "fieldtype": "Text Editor",
+   "label": "Action Steps"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Action Owner",
+   "options": "User",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nUrgent\nHigh\nMedium\nLow"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "completed_date",
+   "fieldtype": "Date",
+   "label": "Completed Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Not Started\nIn Progress\nCompleted\nBlocked\nOn Hold",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "completion_pct",
+   "fieldtype": "Percent",
+   "label": "Completion %"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "linked_finding",
+   "fieldtype": "Link",
+   "label": "Linked Audit Finding",
+   "options": "GRC Audit Finding"
+  },
+  {
+   "fieldname": "linked_vendor",
+   "fieldtype": "Link",
+   "label": "Linked Vendor",
+   "options": "GRC Vendor"
+  }
+ ],
+ "field_order": [
+  "client"
+ ]
+}

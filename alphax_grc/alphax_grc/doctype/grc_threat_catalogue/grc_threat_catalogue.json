@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:threat_code",
+ "creation": "2026-04-25 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "threat_code",
+  "threat_name",
+  "threat_name_ar",
+  "category",
+  "description",
+  "typical_impact",
+  "is_nca_standard"
+ ],
+ "fields": [
+  {"fieldname": "threat_code", "fieldtype": "Data", "label": "Threat Code", "reqd": 1, "unique": 1, "in_list_view": 1, "in_standard_filter": 1, "description": "Short code: T01, T02 etc."},
+  {"fieldname": "threat_name", "fieldtype": "Data", "label": "Threat Name", "reqd": 1, "in_list_view": 1, "in_global_search": 1},
+  {"fieldname": "threat_name_ar", "fieldtype": "Data", "label": "Threat Name (Arabic)"},
+  {"fieldname": "category", "fieldtype": "Select", "label": "Category", "in_list_view": 1, "in_standard_filter": 1, "options": "Identity & Access\nInsider\nAsset\nSocial Engineering\nData\nBusiness Continuity\nCompliance\nTechnology\nMalware\nOperational\nProcess\nThird Party\nOther"},
+  {"fieldname": "description", "fieldtype": "Text", "label": "Description"},
+  {"fieldname": "typical_impact", "fieldtype": "Text", "label": "Typical Impact"},
+  {"fieldname": "is_nca_standard", "fieldtype": "Check", "label": "NCA Standard Threat", "default": "0", "in_standard_filter": 1, "description": "Part of NCA's predefined threat list (22 standard threats)"}
+ ],
+ "links": [],
+ "modified": "2026-04-25 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC Threat Catalogue",
+ "owner": "Administrator",
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "report": 1, "export": 1},
+  {"role": "GRC Admin", "read": 1, "write": 1, "create": 1, "delete": 1, "report": 1, "export": 1},
+  {"role": "GRC Executive", "read": 1, "report": 1},
+  {"role": "Compliance Officer", "read": 1, "report": 1},
+  {"role": "GRC Assessor", "read": 1, "report": 1},
+  {"role": "GRC Auditor", "read": 1, "report": 1},
+  {"role": "Risk Owner", "read": 1, "report": 1}
+ ],
+ "sort_field": "threat_code",
+ "sort_order": "ASC",
+ "title_field": "threat_name",
+ "track_changes": 0
+}

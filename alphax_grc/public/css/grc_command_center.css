@@ -1,0 +1,15 @@
+.alphax-grc-grid {display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:16px;}
+.alphax-grc-card {background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04);}
+.alphax-grc-span-3{grid-column:span 3;}.alphax-grc-span-4{grid-column:span 4;}.alphax-grc-span-6{grid-column:span 6;}.alphax-grc-span-12{grid-column:span 12;}
+.alphax-grc-metric{font-size:32px;font-weight:700;line-height:1.1;margin-top:8px;}
+.alphax-grc-muted{color:#6b7280;font-size:12px;}
+.alphax-grc-kpi{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f1f5f9;}
+.alphax-grc-kpi:last-child{border-bottom:0;}
+.alphax-grc-bar{height:10px;background:#e5e7eb;border-radius:999px;overflow:hidden;}.alphax-grc-bar > span{display:block;height:100%;background:#0ea5a4;border-radius:999px;}
+.alphax-grc-table{width:100%;border-collapse:collapse;}.alphax-grc-table th,.alphax-grc-table td{padding:8px;border-bottom:1px solid #f1f5f9;font-size:12px;vertical-align:top;}
+.alphax-grc-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;background:#f3f4f6;}
+.alphax-grc-high{background:#fee2e2;color:#991b1b;}.alphax-grc-medium{background:#fef3c7;color:#92400e;}.alphax-grc-low{background:#dcfce7;color:#166534;}
+.alphax-heatmap{display:grid;grid-template-columns:repeat(6,auto);gap:4px;align-items:center;justify-content:start;}
+.alphax-heatmap .cell{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:#f3f4f6;}
+.alphax-heatmap .axis{font-size:11px;color:#6b7280;text-align:center;}
+@media (max-width: 992px){.alphax-grc-span-3,.alphax-grc-span-4,.alphax-grc-span-6{grid-column:span 12;}}

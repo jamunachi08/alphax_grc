@@ -1,0 +1,27 @@
+{
+ "name": "GRC IT Audit Control Item",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "istable": 1,
+ "description": "Individual IT control item in an audit program — maps to specific domain, control type, timing, and artifact delivery status",
+ "fields": [
+  {"fieldname": "domain", "fieldtype": "Select", "label": "Domain", "options": "GLBA Compliance\nData Loss Prevention\nPatch Management\nVendor Management\nNetwork Security\nInfo Security Program\nIncident Response", "in_list_view": 1},
+  {"fieldname": "domain_code", "fieldtype": "Data", "label": "Code", "in_list_view": 1},
+  {"fieldname": "item_number", "fieldtype": "Int", "label": "Item #", "in_list_view": 1},
+  {"fieldname": "control_name", "fieldtype": "Data", "label": "IT Control", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "requested_artifacts", "fieldtype": "Small Text", "label": "Requested Artifacts"},
+  {"fieldname": "proposed_owner", "fieldtype": "Link", "label": "Business Owner", "options": "User"},
+  {"fieldname": "delivery_status", "fieldtype": "Select", "label": "Status", "options": "Not Started\nDelivered\nNot Applicable\nPartial\nOverdue", "in_list_view": 1},
+  {"fieldname": "delivered_artifacts", "fieldtype": "Small Text", "label": "Delivered Artifacts"},
+  {"fieldname": "auditor_notes", "fieldtype": "Small Text", "label": "Auditor Notes"},
+  {"fieldname": "file_count", "fieldtype": "Int", "label": "# Files"},
+  {"fieldname": "control_type_mgmt", "fieldtype": "Check", "label": "Management"},
+  {"fieldname": "control_type_tech", "fieldtype": "Check", "label": "Technical"},
+  {"fieldname": "control_type_phys", "fieldtype": "Check", "label": "Physical"},
+  {"fieldname": "timing_preventive", "fieldtype": "Check", "label": "Preventive"},
+  {"fieldname": "timing_detective", "fieldtype": "Check", "label": "Detective"},
+  {"fieldname": "timing_corrective", "fieldtype": "Check", "label": "Corrective"},
+  {"fieldname": "risk_rating", "fieldtype": "Select", "label": "Risk Rating", "options": "\nCritical\nHigh\nMedium\nLow"},
+  {"fieldname": "linked_control", "fieldtype": "Link", "label": "Linked GRC Control", "options": "GRC Control"}
+ ]
+}

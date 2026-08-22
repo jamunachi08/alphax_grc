@@ -1,0 +1,199 @@
+{
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "creation": "2026-04-04 00:00:00.000000",
+ "modified": "2026-04-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": [],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  }
+ ],
+ "allow_rename": 1,
+ "name": "GRC Evidence",
+ "autoname": "format:EVD-{#####}",
+ "field_order": [
+  "client",
+  "evidence_title",
+  "evidence_type",
+  "related_doctype",
+  "related_document",
+  "owner_user",
+  "status",
+  "collected_on",
+  "notes",
+  "verification_status",
+  "review_due_date",
+  "expiry_date",
+  "attachment",
+  "archived_on",
+  "review_frequency",
+  "verified_by",
+  "verified_on",
+  "version_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "evidence_title",
+   "fieldtype": "Data",
+   "label": "Evidence Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence_type",
+   "fieldtype": "Select",
+   "label": "Evidence Type",
+   "options": "Document\nScreenshot\nLog\nConfiguration\nApproval\nOther",
+   "default": "Document"
+  },
+  {
+   "fieldname": "related_doctype",
+   "fieldtype": "Data",
+   "label": "Related DocType"
+  },
+  {
+   "fieldname": "related_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Related Document",
+   "options": "related_doctype"
+  },
+  {
+   "fieldname": "owner_user",
+   "fieldtype": "Link",
+   "label": "Owner User",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nCollected\nVerified\nArchived",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "collected_on",
+   "fieldtype": "Datetime",
+   "label": "Collected On"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "Pending\nVerified\nRejected\nExpired",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "review_due_date",
+   "fieldtype": "Date",
+   "label": "Review Due Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "archived_on",
+   "fieldtype": "Datetime",
+   "label": "Archived On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "review_frequency",
+   "fieldtype": "Select",
+   "label": "Review Frequency",
+   "options": "Monthly\nQuarterly\nHalf-Yearly\nYearly"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "verified_on",
+   "fieldtype": "Date",
+   "label": "Verified On"
+  },
+  {
+   "fieldname": "version_no",
+   "fieldtype": "Data",
+   "label": "Version No",
+   "default": "1.0"
+  }
+ ]
+}

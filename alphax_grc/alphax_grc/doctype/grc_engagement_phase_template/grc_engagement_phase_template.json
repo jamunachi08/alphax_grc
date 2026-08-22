@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{engagement_type}-P{phase_number}",
+ "creation": "2026-05-03 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "engagement_type",
+  "phase_number",
+  "phase_code",
+  "column_break_1",
+  "phase_label",
+  "is_active",
+  "icon",
+  "section_purpose",
+  "purpose_summary",
+  "expected_duration_days",
+  "section_entry",
+  "entry_criteria",
+  "section_exit",
+  "completion_criteria",
+  "auto_advance_when_complete",
+  "section_actions",
+  "default_checklist_items",
+  "section_automation",
+  "on_phase_start_method",
+  "on_phase_complete_method"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "engagement_type",
+   "fieldtype": "Select",
+   "label": "Engagement Type",
+   "options": "Standard NCA Engagement\nAramco CCC Pursuit\nISO 27001 Certification\nISO 42001 AI Governance\nManaged Compliance (ongoing)\nGDPR Compliance\nCustom",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "phase_number",
+   "fieldtype": "Int",
+   "label": "Phase Number",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "1, 2, 3, ... in execution order"
+  },
+  {
+   "fieldname": "phase_code",
+   "fieldtype": "Data",
+   "label": "Phase Code",
+   "reqd": 1,
+   "description": "Short identifier e.g. DISCOVERY, SCOPING"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phase_label",
+   "fieldtype": "Data",
+   "label": "Phase Label",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Human-readable name"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Data",
+   "label": "Icon",
+   "description": "Emoji or single character shown on the timeline"
+  },
+  {
+   "fieldname": "section_purpose",
+   "fieldtype": "Section Break",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "purpose_summary",
+   "fieldtype": "Text",
+   "label": "What this phase achieves"
+  },
+  {
+   "fieldname": "expected_duration_days",
+   "fieldtype": "Int",
+   "label": "Expected Duration (days)",
+   "default": 14
+  },
+  {
+   "fieldname": "section_entry",
+   "fieldtype": "Section Break",
+   "label": "Entry Criteria — what must be true before this phase can start"
+  },
+  {
+   "fieldname": "entry_criteria",
+   "fieldtype": "Text",
+   "label": "Entry Criteria"
+  },
+  {
+   "fieldname": "section_exit",
+   "fieldtype": "Section Break",
+   "label": "Completion Criteria — what must be true to advance"
+  },
+  {
+   "fieldname": "completion_criteria",
+   "fieldtype": "Text",
+   "label": "Completion Criteria"
+  },
+  {
+   "fieldname": "auto_advance_when_complete",
+   "fieldtype": "Check",
+   "label": "Auto-advance when all checklist items complete",
+   "default": "0",
+   "description": "If checked, the engagement moves to the next phase automatically"
+  },
+  {
+   "fieldname": "section_actions",
+   "fieldtype": "Section Break",
+   "label": "Default Checklist Items"
+  },
+  {
+   "fieldname": "default_checklist_items",
+   "fieldtype": "Table",
+   "options": "GRC Engagement Phase Checklist Item",
+   "label": "Checklist Items"
+  },
+  {
+   "fieldname": "section_automation",
+   "fieldtype": "Section Break",
+   "label": "Automation Hooks",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "on_phase_start_method",
+   "fieldtype": "Data",
+   "label": "Method to call on phase start",
+   "description": "Dotted path, e.g. alphax_grc.engagement_automation.on_discovery_start"
+  },
+  {
+   "fieldname": "on_phase_complete_method",
+   "fieldtype": "Data",
+   "label": "Method to call on phase complete",
+   "description": "Dotted path"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-03 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC Engagement Phase Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "phase_number",
+ "sort_order": "ASC",
+ "title_field": "phase_label",
+ "track_changes": 1
+}

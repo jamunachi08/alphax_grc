@@ -1,0 +1,144 @@
+{
+  "doctype": "DocType",
+  "module": "AlphaX GRC",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "engine": "InnoDB",
+  "creation": "2026-04-22 00:00:00.000000",
+  "modified": "2026-04-22 00:00:00.000000",
+  "modified_by": "Administrator",
+  "owner": "Administrator",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "autoname": "field:template_code",
+  "title_field": "template_name",
+  "search_fields": "template_name,template_code,assessment_area",
+  "states": [],
+  "links": [],
+  "actions": [],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    },
+    {
+      "role": "GRC Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    },
+    {
+      "role": "Compliance Officer",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1
+    },
+    {
+      "role": "GRC Assessor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1
+    },
+    {
+      "role": "GRC Auditor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1
+    }
+  ],
+  "fields": [
+    {
+      "fieldname": "template_name",
+      "fieldtype": "Data",
+      "label": "Template Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "template_name_ar",
+      "fieldtype": "Data",
+      "label": "Template Name (Arabic)"
+    },
+    {
+      "fieldname": "template_code",
+      "fieldtype": "Data",
+      "label": "Template Code",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "assessment_area",
+      "fieldtype": "Select",
+      "label": "Assessment Area",
+      "options": "Governance\nRisk Management\nCompliance\nIAM\nPrivacy\nBCP / DR\nVendor Risk\nOT / ICS\nAI Governance\nAudit Readiness",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "framework",
+      "fieldtype": "Link",
+      "label": "Framework",
+      "options": "GRC Framework"
+    },
+    {
+      "fieldname": "country_scope",
+      "fieldtype": "Data",
+      "label": "Country Scope"
+    },
+    {
+      "fieldname": "industry_scope",
+      "fieldtype": "Data",
+      "label": "Industry Scope"
+    },
+    {
+      "fieldname": "target_maturity_level",
+      "fieldtype": "Float",
+      "label": "Target Maturity Level",
+      "default": "4"
+    },
+    {
+      "fieldname": "objective",
+      "fieldtype": "Text",
+      "label": "Objective"
+    },
+    {
+      "fieldname": "consultant_notes",
+      "fieldtype": "Text Editor",
+      "label": "Consultant Notes"
+    },
+    {
+      "fieldname": "questions",
+      "fieldtype": "Table",
+      "label": "Questions",
+      "options": "GRC Assessment Template Question",
+      "reqd": 1
+    }
+  ],
+  "name": "GRC Assessment Template"
+}

@@ -1,0 +1,225 @@
+{
+ "actions": [],
+ "autoname": "format:PLAN-{#####}",
+ "creation": "2026-08-16 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_title",
+  "client",
+  "engagement",
+  "cb_head",
+  "template",
+  "status",
+  "sec_sched",
+  "start_date",
+  "working_days",
+  "holiday_list",
+  "cb_sched",
+  "end_date",
+  "total_working_days",
+  "pct_complete",
+  "sec_evm",
+  "budget_at_completion",
+  "planned_pct_complete",
+  "cb_evm",
+  "actual_cost",
+  "cost_performance_index",
+  "schedule_performance_index",
+  "estimate_at_completion",
+  "sec_tasks",
+  "tasks",
+  "sec_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "description": "Left blank, this is taken from the template and client",
+   "fieldname": "plan_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Title"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "GRC Client Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "engagement",
+   "fieldtype": "Link",
+   "label": "Engagement",
+   "options": "GRC Engagement"
+  },
+  {
+   "fieldname": "cb_head",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Load tasks from a template, then edit freely",
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "label": "Plan Template",
+   "options": "GRC Plan Template"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nOn Hold\nComplete\nCancelled"
+  },
+  {
+   "fieldname": "sec_sched",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "default": "Today",
+   "description": "Change this and every unlocked task reschedules",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "default": "Sun-Thu (KSA)",
+   "description": "Non-working days are skipped when dates are calculated",
+   "fieldname": "working_days",
+   "fieldtype": "Select",
+   "label": "Working Week",
+   "options": "Sun-Thu (KSA)\nMon-Fri\nSat-Thu (6 day)\nAll days"
+  },
+  {
+   "description": "Optional. Holidays are skipped as well.",
+   "fieldname": "holiday_list",
+   "fieldtype": "Link",
+   "label": "Holiday List",
+   "options": "Holiday List"
+  },
+  {
+   "fieldname": "cb_sched",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_working_days",
+   "fieldtype": "Int",
+   "label": "Total Working Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pct_complete",
+   "fieldtype": "Percent",
+   "label": "Overall % Complete",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_evm",
+   "fieldtype": "Section Break",
+   "label": "Earned Value (v2.10.0)",
+   "collapsible": 1,
+   "description": "Cost performance is computed from Budget at Completion and billable GRC Consultant Timesheet entries linked to this plan."
+  },
+  {
+   "fieldname": "budget_at_completion",
+   "fieldtype": "Currency",
+   "label": "Budget at Completion (BAC)",
+   "description": "Total approved budget for this engagement plan."
+  },
+  {
+   "fieldname": "planned_pct_complete",
+   "fieldtype": "Percent",
+   "label": "Planned % Complete",
+   "read_only": 1,
+   "description": "Where the schedule says the plan should be today, based on elapsed working days."
+  },
+  {
+   "fieldname": "cb_evm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Cost (AC)",
+   "read_only": 1,
+   "description": "Sum of billable GRC Consultant Timesheet amounts linked to this plan."
+  },
+  {
+   "fieldname": "cost_performance_index",
+   "fieldtype": "Float",
+   "label": "CPI",
+   "read_only": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "schedule_performance_index",
+   "fieldtype": "Float",
+   "label": "SPI",
+   "read_only": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "estimate_at_completion",
+   "fieldtype": "Currency",
+   "label": "Estimate at Completion (EAC)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_tasks",
+   "fieldtype": "Section Break",
+   "label": "Tasks"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "Tasks",
+   "options": "GRC Project Task"
+  },
+  {
+   "fieldname": "sec_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC Project Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "plan_title",
+ "track_changes": 1
+}

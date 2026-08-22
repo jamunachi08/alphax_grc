@@ -1,0 +1,139 @@
+{
+ "doctype": "DocType",
+ "name": "GRC Privacy Processing Activity",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "allow_rename": 1,
+ "field_order": [
+  "client",
+  "activity_name",
+  "activity_name_ar",
+  "controller_name",
+  "processor_name",
+  "personal_data_categories",
+  "purpose",
+  "legal_basis",
+  "cross_border_transfer",
+  "retention_period",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "activity_name",
+   "fieldtype": "Data",
+   "label": "Activity Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "activity_name_ar",
+   "fieldtype": "Data",
+   "label": "اسم النشاط",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "controller_name",
+   "fieldtype": "Data",
+   "label": "Controller"
+  },
+  {
+   "fieldname": "processor_name",
+   "fieldtype": "Data",
+   "label": "Processor"
+  },
+  {
+   "fieldname": "personal_data_categories",
+   "fieldtype": "Small Text",
+   "label": "Personal Data Categories"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "legal_basis",
+   "fieldtype": "Data",
+   "label": "Legal Basis"
+  },
+  {
+   "fieldname": "cross_border_transfer",
+   "fieldtype": "Check",
+   "label": "Cross-Border Transfer"
+  },
+  {
+   "fieldname": "retention_period",
+   "fieldtype": "Data",
+   "label": "Retention Period"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nArchived\nUnder Review",
+   "default": "Draft"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1
+  }
+ ]
+}

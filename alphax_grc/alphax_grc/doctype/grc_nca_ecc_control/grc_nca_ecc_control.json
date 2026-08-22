@@ -1,0 +1,334 @@
+{
+ "name": "GRC NCA ECC Control",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:NCA-{#####}",
+ "title_field": "control_name",
+ "description": "NCA ECC-2:2024 Essential Cybersecurity Controls with technology mapping, compliance status, and KPI pillar alignment (Zero Trust, Cyber Resilience, PDPL, AI/SOAR).",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "sb_identity",
+   "fieldtype": "Section Break",
+   "label": "Control Identity"
+  },
+  {
+   "fieldname": "main_domain",
+   "fieldtype": "Select",
+   "label": "Main Domain",
+   "options": "1 — Cybersecurity Governance\n2 — Cybersecurity Defense\n3 — Cybersecurity Resilience\n4 — Third-Party and Cloud Computing Cybersecurity",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "control_number",
+   "fieldtype": "Data",
+   "label": "Control Number",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_b1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "control_name",
+   "fieldtype": "Data",
+   "label": "Control Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "control_description",
+   "fieldtype": "Text",
+   "label": "Control Description & Objective"
+  },
+  {
+   "fieldname": "sb_technology",
+   "fieldtype": "Section Break",
+   "label": "Technology Mapping"
+  },
+  {
+   "fieldname": "required_technology_type",
+   "fieldtype": "Data",
+   "label": "Required Technology Type"
+  },
+  {
+   "fieldname": "technology_solutions",
+   "fieldtype": "Small Text",
+   "label": "Recommended Vendors / Solutions"
+  },
+  {
+   "fieldname": "col_b2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currently_deployed_tool",
+   "fieldtype": "Data",
+   "label": "Currently Deployed Tool"
+  },
+  {
+   "fieldname": "tool_vendor",
+   "fieldtype": "Link",
+   "label": "Tool Vendor",
+   "options": "GRC Vendor"
+  },
+  {
+   "fieldname": "sb_pillars",
+   "fieldtype": "Section Break",
+   "label": "ECC-2:2024 Key Pillars"
+  },
+  {
+   "fieldname": "pillar_zero_trust",
+   "fieldtype": "Check",
+   "label": "Zero Trust Architecture (ZTA)"
+  },
+  {
+   "fieldname": "pillar_cyber_resilience",
+   "fieldtype": "Check",
+   "label": "Cyber Resilience"
+  },
+  {
+   "fieldname": "pillar_data_sovereignty",
+   "fieldtype": "Check",
+   "label": "Data Sovereignty & Privacy (PDPL)"
+  },
+  {
+   "fieldname": "pillar_ai_automation",
+   "fieldtype": "Check",
+   "label": "Automation & AI (SOAR / AI Detection)"
+  },
+  {
+   "fieldname": "sb_compliance",
+   "fieldtype": "Section Break",
+   "label": "Compliance Status"
+  },
+  {
+   "fieldname": "compliance_status",
+   "fieldtype": "Select",
+   "label": "Compliance Status",
+   "options": "Not Assessed\nCompliant\nPartially Compliant\nNon-Compliant\nNot Applicable",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "compliance_score",
+   "fieldtype": "Percent",
+   "label": "Compliance Score (%)"
+  },
+  {
+   "fieldname": "col_b3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "responsible_owner",
+   "fieldtype": "Link",
+   "label": "Responsible Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "target_date",
+   "fieldtype": "Date",
+   "label": "Target Compliance Date"
+  },
+  {
+   "fieldname": "last_assessed",
+   "fieldtype": "Date",
+   "label": "Last Assessed"
+  },
+  {
+   "fieldname": "implementation_notes",
+   "fieldtype": "Text",
+   "label": "Implementation Notes & Evidence"
+  },
+  {
+   "fieldname": "sb_links",
+   "fieldtype": "Section Break",
+   "label": "GRC Linkage"
+  },
+  {
+   "fieldname": "linked_control",
+   "fieldtype": "Link",
+   "label": "Linked GRC Control",
+   "options": "GRC Control"
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "label": "Linked Risk",
+   "options": "GRC Risk Register"
+  },
+  {
+   "fieldname": "linked_evidence",
+   "fieldtype": "Link",
+   "label": "Evidence",
+   "options": "GRC Evidence"
+  },
+  {
+   "fieldname": "col_b4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_policy",
+   "fieldtype": "Link",
+   "label": "Linked Policy",
+   "options": "GRC Policy"
+  },
+  {
+   "fieldname": "linked_itgc_item",
+   "fieldtype": "Link",
+   "label": "Linked ITGC Item",
+   "options": "GRC ITGC Audit Item"
+  },
+  {
+   "fieldname": "linked_asset",
+   "fieldtype": "Link",
+   "label": "Linked Asset",
+   "options": "GRC Asset Inventory"
+  },
+  {
+   "fieldname": "gap_description",
+   "fieldtype": "Text",
+   "label": "Gap Description / Remediation Plan"
+  },
+  {
+   "fieldname": "sb_catalog_link",
+   "fieldtype": "Section Break",
+   "label": "ECC-2:2024 Catalog Link",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "ecc2_catalog_ref",
+   "fieldtype": "Link",
+   "options": "GRC NCA ECC2 Catalog",
+   "label": "ECC-2:2024 Catalog Reference",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Link to the official ECC-2:2024 control in the master catalog"
+  },
+  {
+   "fieldname": "control_text_ar_fetched",
+   "fieldtype": "Text",
+   "label": "Control Text (AR)",
+   "fetch_from": "ecc2_catalog_ref.control_text_ar",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_gecc_workflow",
+   "fieldtype": "Section Break",
+   "label": "GECC-2024 Compliance Workflow",
+   "collapsible": 1,
+   "description": "The 14-column compliance workflow per the official NCA GECC-2024 tool"
+  },
+  {
+   "fieldname": "sub_compliance_status",
+   "fieldtype": "Select",
+   "label": "Sub-Control Compliance Status",
+   "options": "\nمطبق كليًا - Implemented\nمطبق جزئيًا - Partially Implemented\nغير مطبق - Not Implemented\nلاينطبق على الجهة - Not Applicable"
+  },
+  {
+   "fieldname": "compliance_classification",
+   "fieldtype": "Select",
+   "label": "Compliance Classification",
+   "options": "\nMandatory\nRecommended\nOptional"
+  },
+  {
+   "fieldname": "related_tools_used",
+   "fieldtype": "Small Text",
+   "label": "Related Tools Used"
+  },
+  {
+   "fieldname": "implementation_method_used",
+   "fieldtype": "Text",
+   "label": "Implementation Method Used"
+  },
+  {
+   "fieldname": "expected_output_evidence",
+   "fieldtype": "Text",
+   "label": "Expected Output / Evidence Produced"
+  },
+  {
+   "fieldname": "responsible_department",
+   "fieldtype": "Data",
+   "label": "Responsible Department"
+  },
+  {
+   "fieldname": "corrective_actions",
+   "fieldtype": "Text",
+   "label": "Corrective Actions Required"
+  },
+  {
+   "fieldname": "department_notes",
+   "fieldtype": "Text",
+   "label": "Department Notes"
+  },
+  {
+   "fieldname": "csec_dept_notes",
+   "fieldtype": "Text",
+   "label": "Cybersecurity Department Notes"
+  },
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "label": "Last Review Date"
+  }
+ ],
+ "field_order": [
+  "client",
+  "sb_catalog_link",
+  "ecc2_catalog_ref",
+  "control_text_ar_fetched",
+  "sb_gecc_workflow",
+  "sub_compliance_status",
+  "compliance_classification",
+  "related_tools_used",
+  "implementation_method_used",
+  "expected_output_evidence",
+  "responsible_department",
+  "corrective_actions",
+  "department_notes",
+  "csec_dept_notes",
+  "review_date"
+ ]
+}

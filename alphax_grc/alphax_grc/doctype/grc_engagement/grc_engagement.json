@@ -1,0 +1,390 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ENG-{####}",
+ "creation": "2026-05-03 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "engagement_title",
+  "client",
+  "engagement_type",
+  "column_break_1",
+  "lead_consultant",
+  "executive_sponsor",
+  "engagement_status",
+  "section_scope",
+  "frameworks_in_scope",
+  "scope_summary",
+  "column_break_2",
+  "industry_sector",
+  "organization_size",
+  "country",
+  "section_dates",
+  "kickoff_date",
+  "target_completion_date",
+  "actual_completion_date",
+  "column_break_3",
+  "contract_value",
+  "currency",
+  "section_phase",
+  "current_phase_number",
+  "current_phase_label",
+  "current_phase_started",
+  "column_break_4",
+  "phase_progress_pct",
+  "days_in_current_phase",
+  "is_overdue",
+  "section_progress",
+  "phase_log",
+  "section_health",
+  "blocking_issues_count",
+  "open_findings_count",
+  "high_risks_count",
+  "column_break_5",
+  "tasks_pending_count",
+  "tasks_overdue_count",
+  "evidence_rule_failures",
+  "section_notes",
+  "engagement_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "engagement_title",
+   "fieldtype": "Data",
+   "label": "Engagement Title",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "engagement_type",
+   "fieldtype": "Select",
+   "label": "Engagement Type",
+   "options": "Standard NCA Engagement\nAramco CCC Pursuit\nISO 27001 Certification\nISO 42001 AI Governance\nManaged Compliance (ongoing)\nGDPR Compliance\nCustom",
+   "reqd": 1,
+   "default": "Standard NCA Engagement",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_consultant",
+   "fieldtype": "Link",
+   "options": "User",
+   "label": "Lead Consultant",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "executive_sponsor",
+   "fieldtype": "Data",
+   "label": "Executive Sponsor (client side)"
+  },
+  {
+   "fieldname": "engagement_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nOn Hold\nCompleted\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "section_scope",
+   "fieldtype": "Section Break",
+   "label": "Scope"
+  },
+  {
+   "fieldname": "frameworks_in_scope",
+   "fieldtype": "Small Text",
+   "label": "Frameworks in Scope",
+   "description": "Comma-separated, e.g. NCA ECC-2:2024, ISO 27001"
+  },
+  {
+   "fieldname": "scope_summary",
+   "fieldtype": "Text",
+   "label": "Scope Summary"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "industry_sector",
+   "fieldtype": "Data",
+   "label": "Industry"
+  },
+  {
+   "fieldname": "organization_size",
+   "fieldtype": "Select",
+   "label": "Organization Size",
+   "options": "\nSmall (<100)\nMedium (100-500)\nLarge (500-2000)\nEnterprise (>2000)"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "default": "Saudi Arabia"
+  },
+  {
+   "fieldname": "section_dates",
+   "fieldtype": "Section Break",
+   "label": "Dates & Commercials"
+  },
+  {
+   "fieldname": "kickoff_date",
+   "fieldtype": "Date",
+   "label": "Kickoff Date"
+  },
+  {
+   "fieldname": "target_completion_date",
+   "fieldtype": "Date",
+   "label": "Target Completion Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "actual_completion_date",
+   "fieldtype": "Date",
+   "label": "Actual Completion Date"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Currency",
+   "label": "Contract Value"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "options": "Currency",
+   "label": "Currency",
+   "default": "SAR"
+  },
+  {
+   "fieldname": "section_phase",
+   "fieldtype": "Section Break",
+   "label": "Current Phase"
+  },
+  {
+   "fieldname": "current_phase_number",
+   "fieldtype": "Int",
+   "label": "Phase Number",
+   "default": 0,
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "current_phase_label",
+   "fieldtype": "Data",
+   "label": "Phase",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "current_phase_started",
+   "fieldtype": "Datetime",
+   "label": "Phase Started At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phase_progress_pct",
+   "fieldtype": "Percent",
+   "label": "Phase Progress %",
+   "default": 0,
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "days_in_current_phase",
+   "fieldtype": "Int",
+   "label": "Days in Current Phase",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_overdue",
+   "fieldtype": "Check",
+   "label": "Phase Overdue",
+   "default": 0,
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_progress",
+   "fieldtype": "Section Break",
+   "label": "Phase Log"
+  },
+  {
+   "fieldname": "phase_log",
+   "fieldtype": "Table",
+   "options": "GRC Engagement Phase Log",
+   "label": "Phases",
+   "read_only": 0
+  },
+  {
+   "fieldname": "section_health",
+   "fieldtype": "Section Break",
+   "label": "Engagement Health (auto-computed)",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "blocking_issues_count",
+   "fieldtype": "Int",
+   "label": "Blocking Issues",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "open_findings_count",
+   "fieldtype": "Int",
+   "label": "Open Findings",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "high_risks_count",
+   "fieldtype": "Int",
+   "label": "High/Critical Risks",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tasks_pending_count",
+   "fieldtype": "Int",
+   "label": "Pending Tasks",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "tasks_overdue_count",
+   "fieldtype": "Int",
+   "label": "Overdue Tasks",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "evidence_rule_failures",
+   "fieldtype": "Int",
+   "label": "Evidence Rule Failures (last 30d)",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "engagement_notes",
+   "fieldtype": "Text Editor",
+   "label": "Engagement Notes"
+  }
+ ],
+ "links": [
+  {
+   "link_doctype": "GRC Engagement Decision Log",
+   "link_fieldname": "engagement"
+  },
+  {
+   "link_doctype": "GRC Implementation Task",
+   "link_fieldname": "engagement"
+  },
+  {
+   "link_doctype": "GRC Audit Finding",
+   "link_fieldname": "engagement"
+  },
+  {
+   "link_doctype": "GRC Risk Register",
+   "link_fieldname": "engagement"
+  }
+ ],
+ "modified": "2026-05-03 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC Engagement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "write": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "engagement_title",
+ "track_changes": 1
+}

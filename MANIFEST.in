@@ -1,0 +1,4 @@
+include README.md
+include pyproject.toml
+recursive-include alphax_grc *.json *.py *.js *.css *.html *.svg *.txt *.md
+recursive-exclude alphax_grc *.pyc

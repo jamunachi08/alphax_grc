@@ -1,0 +1,129 @@
+{
+ "doctype": "DocType",
+ "name": "GRC Aramco Incident Notification",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "allow_rename": 1,
+ "field_order": [
+  "client",
+  "third_party_profile",
+  "incident_title",
+  "reported_on",
+  "notification_status",
+  "initial_notification_sent_on",
+  "next_update_due_on",
+  "final_business_report_date",
+  "final_technical_report_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "third_party_profile",
+   "fieldtype": "Link",
+   "label": "Third Party Profile",
+   "options": "GRC Aramco Third Party Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_title",
+   "fieldtype": "Data",
+   "label": "Incident Title",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reported_on",
+   "fieldtype": "Datetime",
+   "label": "Reported On"
+  },
+  {
+   "fieldname": "notification_status",
+   "fieldtype": "Select",
+   "label": "Notification Status",
+   "options": "Draft\nInitial Notified\nInterim Updates Running\nFinalized\nClosed",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "initial_notification_sent_on",
+   "fieldtype": "Datetime",
+   "label": "Initial Notification Sent On"
+  },
+  {
+   "fieldname": "next_update_due_on",
+   "fieldtype": "Datetime",
+   "label": "Next Update Due On"
+  },
+  {
+   "fieldname": "final_business_report_date",
+   "fieldtype": "Date",
+   "label": "Final Business Report Date"
+  },
+  {
+   "fieldname": "final_technical_report_date",
+   "fieldtype": "Date",
+   "label": "Final Technical Report Date"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1
+  }
+ ]
+}

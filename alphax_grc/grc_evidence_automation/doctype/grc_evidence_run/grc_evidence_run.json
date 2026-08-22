@@ -1,0 +1,68 @@
+{
+ "autoname": "format:EVR-{YYYY}-{MM}-{#####}",
+ "custom": 0,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "fetcher",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fetcher",
+   "options": "GRC Evidence Fetcher",
+   "reqd": 1
+  },
+  {
+   "fieldname": "started_at",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Started At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finished_at",
+   "fieldtype": "Datetime",
+   "label": "Finished At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Result",
+   "options": "Pass\nFail\nNot Applicable\nInconclusive\nAuth Error",
+   "read_only": 1
+  },
+  {
+   "fieldname": "evidence_record",
+   "fieldtype": "Link",
+   "label": "Evidence Record",
+   "options": "GRC Evidence",
+   "read_only": 1
+  },
+  {
+   "fieldname": "detail",
+   "fieldtype": "Code",
+   "label": "Detail / Raw Output",
+   "options": "JSON"
+  }
+ ],
+ "istable": 0,
+ "module": "GRC Evidence Automation",
+ "name": "GRC Evidence Run",
+ "naming_rule": "Expression",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "title_field": "fetcher",
+ "track_changes": 0
+}

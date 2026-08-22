@@ -1,0 +1,27 @@
+{
+ "name": "GRC Team Member",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:TM-{#####}",
+ "title_field": "member_name",
+ "description": "GRC team member registry with role, assigned risks, and response counts",
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "GRC Admin", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Compliance Officer", "read": 1, "write": 1, "create": 1},
+  {"role": "GRC Executive", "read": 1}
+ ],
+ "fields": [
+  {"fieldname": "member_name", "fieldtype": "Data", "label": "Team Member Name", "reqd": 1, "bold": 1, "in_list_view": 1},
+  {"fieldname": "user", "fieldtype": "Link", "label": "Frappe User", "options": "User"},
+  {"fieldname": "grc_role", "fieldtype": "Data", "label": "GRC Role / Title", "in_list_view": 1},
+  {"fieldname": "department", "fieldtype": "Data", "label": "Department"},
+  {"fieldname": "email", "fieldtype": "Data", "label": "Email"},
+  {"fieldname": "phone", "fieldtype": "Data", "label": "Phone"},
+  {"fieldname": "active", "fieldtype": "Check", "label": "Active", "default": "1"},
+  {"fieldname": "risks_assigned", "fieldtype": "Int", "label": "Risks Assigned", "read_only": 1},
+  {"fieldname": "responses_assigned", "fieldtype": "Int", "label": "Risk Responses Assigned", "read_only": 1},
+  {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+ ]
+}

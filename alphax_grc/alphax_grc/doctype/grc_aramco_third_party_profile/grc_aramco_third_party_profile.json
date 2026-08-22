@@ -1,0 +1,130 @@
+{
+ "doctype": "DocType",
+ "name": "GRC Aramco Third Party Profile",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "allow_rename": 1,
+ "field_order": [
+  "client",
+  "third_party_name",
+  "third_party_name_ar",
+  "network_connectivity",
+  "outsourced_infrastructure",
+  "critical_data_processor",
+  "customized_software",
+  "cloud_computing_service",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "third_party_name",
+   "fieldtype": "Data",
+   "label": "Third Party Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "third_party_name_ar",
+   "fieldtype": "Data",
+   "label": "اسم الطرف الثالث",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "network_connectivity",
+   "fieldtype": "Select",
+   "label": "Network Connectivity",
+   "options": "No Connectivity\nIndirect\nDirect",
+   "default": "No Connectivity"
+  },
+  {
+   "fieldname": "outsourced_infrastructure",
+   "fieldtype": "Check",
+   "label": "Outsourced Infrastructure"
+  },
+  {
+   "fieldname": "critical_data_processor",
+   "fieldtype": "Check",
+   "label": "Critical Data Processor"
+  },
+  {
+   "fieldname": "customized_software",
+   "fieldtype": "Check",
+   "label": "Customized Software"
+  },
+  {
+   "fieldname": "cloud_computing_service",
+   "fieldtype": "Check",
+   "label": "Cloud Computing Service"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nReady\nGap Identified\nUnder Review\nApproved",
+   "default": "Draft",
+   "in_list_view": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "hash",
+ "creation": "2026-08-19 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "policy",
+  "version_label",
+  "column_break_1",
+  "published_on",
+  "published_by",
+  "section_snapshot",
+  "snapshot_json",
+  "section_integrity",
+  "prev_hash",
+  "snapshot_hash"
+ ],
+ "fields": [
+  {"fieldname": "section_identity", "fieldtype": "Section Break", "label": "Identity"},
+  {"fieldname": "policy", "fieldtype": "Link", "options": "GRC Policy",
+   "label": "Policy", "reqd": 1, "in_list_view": 1, "in_standard_filter": 1},
+  {"fieldname": "version_label", "fieldtype": "Data", "label": "Version Label",
+   "reqd": 1, "in_list_view": 1, "description": "Taken from the policy's Version No. at the moment of publication."},
+  {"fieldname": "column_break_1", "fieldtype": "Column Break"},
+  {"fieldname": "published_on", "fieldtype": "Datetime", "label": "Published On", "read_only": 1, "in_list_view": 1},
+  {"fieldname": "published_by", "fieldtype": "Link", "options": "User", "label": "Published By", "read_only": 1},
+
+  {"fieldname": "section_snapshot", "fieldtype": "Section Break", "label": "Snapshot", "collapsible": 1},
+  {"fieldname": "snapshot_json", "fieldtype": "Code", "options": "JSON", "label": "Snapshot (JSON)",
+   "read_only": 1, "description": "Title, summary, owner, category and dates exactly as they stood at publication."},
+
+  {"fieldname": "section_integrity", "fieldtype": "Section Break", "label": "Integrity", "collapsible": 1,
+   "description": "Chained per policy - re-verify with alphax_grc.policy_versioning.verify_policy_chain."},
+  {"fieldname": "prev_hash", "fieldtype": "Data", "label": "Previous Hash", "read_only": 1},
+  {"fieldname": "snapshot_hash", "fieldtype": "Data", "label": "Snapshot Hash", "read_only": 1, "in_list_view": 1}
+ ],
+ "links": [],
+ "modified": "2026-08-19 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC Policy Version",
+ "owner": "Administrator",
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 0, "create": 0, "delete": 0, "report": 1, "export": 1},
+  {"role": "GRC Admin", "read": 1, "write": 0, "create": 0, "delete": 0, "report": 1, "export": 1},
+  {"role": "GRC Executive", "read": 1, "report": 1, "export": 1},
+  {"role": "Compliance Officer", "read": 1, "report": 1, "export": 1},
+  {"role": "GRC Auditor", "read": 1, "report": 1, "export": 1}
+ ],
+ "sort_field": "published_on",
+ "sort_order": "DESC",
+ "title_field": "version_label",
+ "track_changes": 0
+}

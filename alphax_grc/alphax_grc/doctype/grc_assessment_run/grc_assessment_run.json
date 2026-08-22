@@ -1,0 +1,191 @@
+{
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "creation": "2026-04-22 00:00:00.000000",
+ "modified": "2026-04-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "format:GAR-.YYYY.-.#####",
+ "title_field": "assessment_title",
+ "search_fields": "assessment_title,customer_name,status",
+ "states": [],
+ "links": [],
+ "actions": [],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "assessment_title",
+   "fieldtype": "Data",
+   "label": "Assessment Title",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "assessment_title_ar",
+   "fieldtype": "Data",
+   "label": "Assessment Title (Arabic)"
+  },
+  {
+   "fieldname": "assessment_template",
+   "fieldtype": "Link",
+   "label": "Assessment Template",
+   "options": "GRC Assessment Template",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer_country",
+   "fieldtype": "Data",
+   "label": "Customer Country"
+  },
+  {
+   "fieldname": "assessment_date",
+   "fieldtype": "Date",
+   "label": "Assessment Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "lead_consultant",
+   "fieldtype": "Link",
+   "label": "Lead Consultant",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nApproved",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "maturity_score",
+   "fieldtype": "Percent",
+   "label": "Maturity Score %",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "maturity_label",
+   "fieldtype": "Data",
+   "label": "Maturity Label",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "yes_score",
+   "fieldtype": "Int",
+   "label": "Yes Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "partial_score",
+   "fieldtype": "Int",
+   "label": "Partial Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_score",
+   "fieldtype": "Int",
+   "label": "No Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "executive_summary",
+   "fieldtype": "Text Editor",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "responses",
+   "fieldtype": "Table",
+   "label": "Responses",
+   "options": "GRC Assessment Response Item"
+  }
+ ],
+ "name": "GRC Assessment Run",
+ "field_order": [
+  "client"
+ ]
+}

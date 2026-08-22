@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "creation": "2026-08-14 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "framework",
+  "reference",
+  "notes"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "framework",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Framework",
+   "options": "ISO 27001:2022\nISO 27701\nISO 22301\nISO 42001\nNCA ECC-2:2024\nNCA CSCC\nSAMA CSF\nSDAIA PDPL\nGDPR\nNIST CSF 2.0\nPCI DSS\nAramco SACS-002\nOther",
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "description": "e.g. A.5.1, 1-3-1, Art. 19",
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Control Reference"
+  },
+  {
+   "columns": 4,
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC Global Policy Mapping",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

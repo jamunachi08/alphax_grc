@@ -1,0 +1,424 @@
+{
+ "name": "GRC Asset Inventory",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:AST-{#####}",
+ "title_field": "asset_name",
+ "description": "ISO 27001 Asset Register — 6 asset categories: Software, Network Devices, Servers, Laptops, Media, Desktops. Full CIA classification, NCA ECC-2:2024 mapping, PDPL personal data flag, lifecycle tracking.",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Risk Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "sb_identity",
+   "fieldtype": "Section Break",
+   "label": "Asset Identity"
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "asset_type",
+   "fieldtype": "Select",
+   "label": "Asset Type",
+   "options": "\nSoftware\nNetwork Device\nServer\nLaptop\nDesktop\nMedia / Portable Device\nCloud Service\nPhysical / Facility\nPeople\nService",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_b1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asset_id",
+   "fieldtype": "Data",
+   "label": "Asset ID / Tag",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "asset_status",
+   "fieldtype": "Select",
+   "label": "Asset Status",
+   "options": "Active\nDecommissioned\nUnder Maintenance\nDisposed\nUnder Review",
+   "default": "Active",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_owner",
+   "fieldtype": "Section Break",
+   "label": "Ownership & Location"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Asset Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "custodian",
+   "fieldtype": "Link",
+   "label": "Custodian",
+   "options": "User"
+  },
+  {
+   "fieldname": "user_role",
+   "fieldtype": "Data",
+   "label": "User / Role"
+  },
+  {
+   "fieldname": "col_b2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department / Business Unit"
+  },
+  {
+   "fieldname": "asset_location",
+   "fieldtype": "Select",
+   "label": "Asset Location",
+   "options": "\nHead Office\nData Centre\nBranch Office\nRemote / WFH\nCloud\nOff-Site Storage\nThird Party"
+  },
+  {
+   "fieldname": "rack_number",
+   "fieldtype": "Data",
+   "label": "Rack Number (Servers)"
+  },
+  {
+   "fieldname": "sb_tech",
+   "fieldtype": "Section Break",
+   "label": "Technical Details"
+  },
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address"
+  },
+  {
+   "fieldname": "hostname",
+   "fieldtype": "Data",
+   "label": "Hostname"
+  },
+  {
+   "fieldname": "os_version",
+   "fieldtype": "Data",
+   "label": "OS / Firmware / Version"
+  },
+  {
+   "fieldname": "make_model",
+   "fieldtype": "Data",
+   "label": "Make / Model"
+  },
+  {
+   "fieldname": "col_b3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Link",
+   "label": "Vendor",
+   "options": "GRC Vendor"
+  },
+  {
+   "fieldname": "vendor_name_text",
+   "fieldtype": "Data",
+   "label": "Vendor Name (if no record)"
+  },
+  {
+   "fieldname": "cpu",
+   "fieldtype": "Data",
+   "label": "CPU"
+  },
+  {
+   "fieldname": "ram",
+   "fieldtype": "Data",
+   "label": "RAM"
+  },
+  {
+   "fieldname": "storage",
+   "fieldtype": "Data",
+   "label": "Storage / HDD"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Data",
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "sb_software",
+   "fieldtype": "Section Break",
+   "label": "Software / Service Details"
+  },
+  {
+   "fieldname": "software_type",
+   "fieldtype": "Select",
+   "label": "Software Type",
+   "options": "\nOperating System\nApplication\nDatabase\nSecurity Tool\nNetwork Tool\nDevelopment Tool\nCloud SaaS\nMiddleware\nOther"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version / Release"
+  },
+  {
+   "fieldname": "sla",
+   "fieldtype": "Select",
+   "label": "SLA in Place",
+   "options": "\nYes\nNo\nNot Applicable"
+  },
+  {
+   "fieldname": "col_b4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purpose_service_role",
+   "fieldtype": "Small Text",
+   "label": "Purpose / Service / Role"
+  },
+  {
+   "fieldname": "stored_information_assets",
+   "fieldtype": "Small Text",
+   "label": "Stored Information Assets"
+  },
+  {
+   "fieldname": "application_requirements",
+   "fieldtype": "Small Text",
+   "label": "Application / Business Requirements"
+  },
+  {
+   "fieldname": "dependencies",
+   "fieldtype": "Small Text",
+   "label": "Dependencies"
+  },
+  {
+   "fieldname": "sb_cia",
+   "fieldtype": "Section Break",
+   "label": "CIA Classification (ISO 27001)"
+  },
+  {
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "Confidentiality",
+   "options": "\nLow (L)\nMedium (M)\nHigh (H)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "integrity",
+   "fieldtype": "Select",
+   "label": "Integrity",
+   "options": "\nLow (L)\nMedium (M)\nHigh (H)"
+  },
+  {
+   "fieldname": "availability",
+   "fieldtype": "Select",
+   "label": "Availability",
+   "options": "\nLow (L)\nMedium (M)\nHigh (H)"
+  },
+  {
+   "fieldname": "col_b5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asset_criticality",
+   "fieldtype": "Select",
+   "label": "Overall Criticality (Auto-calculated)",
+   "options": "\nVery Low\nLow\nMedium\nHigh\nCritical",
+   "in_list_view": 1,
+   "read_only": 0
+  },
+  {
+   "fieldname": "data_classification",
+   "fieldtype": "Select",
+   "label": "Data Classification",
+   "options": "\nPublic\nInternal Use Only\nConfidential\nRestricted\nSecret"
+  },
+  {
+   "fieldname": "contains_personal_data",
+   "fieldtype": "Check",
+   "label": "Contains Personal Data (PDPL / GDPR)"
+  },
+  {
+   "fieldname": "anti_virus_updated",
+   "fieldtype": "Select",
+   "label": "Anti-Virus Updated",
+   "options": "\nYes\nNo\nNot Applicable"
+  },
+  {
+   "fieldname": "redundancy_required",
+   "fieldtype": "Select",
+   "label": "Redundancy Required",
+   "options": "\nYes\nNo\nNot Applicable"
+  },
+  {
+   "fieldname": "backup_schedule",
+   "fieldtype": "Select",
+   "label": "Backup Schedule",
+   "options": "\nDaily\nWeekly\nMonthly\nReal-time\nNot Applicable"
+  },
+  {
+   "fieldname": "backup_location",
+   "fieldtype": "Data",
+   "label": "Backup Location"
+  },
+  {
+   "fieldname": "configuration_backup",
+   "fieldtype": "Select",
+   "label": "Configuration Backup",
+   "options": "\nYes\nNo\nNot Applicable"
+  },
+  {
+   "fieldname": "sb_lifecycle",
+   "fieldtype": "Section Break",
+   "label": "Lifecycle & Maintenance"
+  },
+  {
+   "fieldname": "expected_life",
+   "fieldtype": "Data",
+   "label": "Expected Life"
+  },
+  {
+   "fieldname": "maintenance_status",
+   "fieldtype": "Select",
+   "label": "Maintenance Status",
+   "options": "\nActive\nEnd of Life\nEnd of Support\nUnder Contract\nOut of Contract"
+  },
+  {
+   "fieldname": "last_reviewed",
+   "fieldtype": "Date",
+   "label": "Last Reviewed"
+  },
+  {
+   "fieldname": "col_b6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase / Deployment Date"
+  },
+  {
+   "fieldname": "end_of_life_date",
+   "fieldtype": "Date",
+   "label": "End of Life Date"
+  },
+  {
+   "fieldname": "sb_grc",
+   "fieldtype": "Section Break",
+   "label": "GRC & NCA ECC Linkage"
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "label": "Linked Risk",
+   "options": "GRC Risk Register"
+  },
+  {
+   "fieldname": "linked_framework",
+   "fieldtype": "Link",
+   "label": "Framework",
+   "options": "GRC Framework"
+  },
+  {
+   "fieldname": "linked_nca_control",
+   "fieldtype": "Link",
+   "label": "Linked NCA ECC Control",
+   "options": "GRC NCA ECC Control"
+  },
+  {
+   "fieldname": "col_b7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nca_ecc_domain",
+   "fieldtype": "Select",
+   "label": "NCA ECC-2:2024 Domain",
+   "options": "\nGovernance\nDefense\nResilience\nExternal Parties\nTechnical Systems"
+  },
+  {
+   "fieldname": "nca_control_number",
+   "fieldtype": "Data",
+   "label": "NCA ECC Control No."
+  },
+  {
+   "fieldname": "linked_itgc_item",
+   "fieldtype": "Link",
+   "label": "Linked ITGC Audit Item",
+   "options": "GRC ITGC Audit Item"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes / Additional Information"
+  },
+  {
+   "fieldname": "features",
+   "fieldtype": "Small Text",
+   "label": "Features"
+  }
+ ],
+ "field_order": [
+  "client"
+ ]
+}

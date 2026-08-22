@@ -1,0 +1,28 @@
+{
+ "content": null,
+ "creation": "2026-04-25 00:00:00",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-04-25 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "grc-risk-dashboard",
+ "owner": "Administrator",
+ "page_name": "grc-risk-dashboard",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "GRC Admin"},
+  {"role": "GRC Executive"},
+  {"role": "Compliance Officer"},
+  {"role": "GRC Assessor"},
+  {"role": "GRC Auditor"},
+  {"role": "Risk Owner"},
+  {"role": "Privacy Officer"}
+ ],
+ "script": null,
+ "standard": "No",
+ "style": null,
+ "system_page": 0,
+ "title": "GRC Risk Dashboard"
+}

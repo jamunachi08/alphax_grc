@@ -1,0 +1,71 @@
+{
+  "doctype": "DocType",
+  "module": "AlphaX GRC",
+  "custom": 0,
+  "istable": 1,
+  "is_submittable": 0,
+  "track_changes": 0,
+  "engine": "InnoDB",
+  "creation": "2026-04-22 00:00:00.000000",
+  "modified": "2026-04-22 00:00:00.000000",
+  "modified_by": "Administrator",
+  "owner": "Administrator",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "autoname": "",
+  "title_field": "",
+  "search_fields": "",
+  "states": [],
+  "links": [],
+  "actions": [],
+  "permissions": [],
+  "fields": [
+    {
+      "fieldname": "section",
+      "fieldtype": "Data",
+      "label": "Section",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "question_code",
+      "fieldtype": "Data",
+      "label": "Question Code",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "question_text",
+      "fieldtype": "Small Text",
+      "label": "Question Text",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "question_text_ar",
+      "fieldtype": "Small Text",
+      "label": "Question Text (Arabic)"
+    },
+    {
+      "fieldname": "framework_reference",
+      "fieldtype": "Data",
+      "label": "Framework Reference"
+    },
+    {
+      "fieldname": "response_type",
+      "fieldtype": "Select",
+      "label": "Response Type",
+      "options": "Yes / No\nMaturity 0-5\nSingle Choice\nFree Text\nNumber",
+      "default": "Yes / No"
+    },
+    {
+      "fieldname": "weight",
+      "fieldtype": "Float",
+      "label": "Weight",
+      "default": "1"
+    },
+    {
+      "fieldname": "expected_evidence",
+      "fieldtype": "Small Text",
+      "label": "Expected Evidence"
+    }
+  ],
+  "name": "GRC Assessment Template Question"
+}
