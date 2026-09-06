@@ -1,0 +1,19 @@
+{
+ "doctype": "Page",
+ "module": "AlphaX GRC",
+ "name": "grc-v04-help",
+ "page_name": "grc-v04-help",
+ "title": "GRC v0.4 Help",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "GRC Admin"},
+  {"role": "Compliance Officer"},
+  {"role": "GRC Auditor"},
+  {"role": "Risk Owner"},
+  {"role": "GRC Assessor"},
+  {"role": "GRC Executive"},
+  {"role": "Vendor Owner"},
+  {"role": "Privacy Officer"},
+  {"role": "Aramco Compliance Owner"}
+ ]
+}

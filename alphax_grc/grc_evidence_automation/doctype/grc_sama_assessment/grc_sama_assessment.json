@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "autoname": "format:SAMA-{#####}",
+ "creation": "2026-08-16 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "assessment_title",
+  "client",
+  "engagement",
+  "cb_head",
+  "entity_type",
+  "assessment_date",
+  "status",
+  "sec_score",
+  "overall_maturity",
+  "subdomains_at_target",
+  "cb_score",
+  "applicable_subdomains",
+  "pct_at_target",
+  "lowest_domain",
+  "sec_lines",
+  "lines",
+  "sec_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "assessment_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "GRC Client Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "engagement",
+   "fieldtype": "Link",
+   "label": "Engagement",
+   "options": "GRC Engagement"
+  },
+  {
+   "fieldname": "cb_head",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Bank",
+   "description": "Non-bank types exclude sub-domains 3.2.3, 3.3.12 and 3.3.13 (SAMA CSF 1.4)",
+   "fieldname": "entity_type",
+   "fieldtype": "Select",
+   "label": "Member Organization Type",
+   "options": "Bank\nInsurance / Reinsurance\nFinancing Company\nCredit Bureau\nFinancial Market Infrastructure"
+  },
+  {
+   "fieldname": "assessment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Assessment Date"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nSubmitted to SAMA"
+  },
+  {
+   "fieldname": "sec_score",
+   "fieldtype": "Section Break",
+   "label": "Maturity Result"
+  },
+  {
+   "description": "Mean across applicable sub-domains. SAMA expects level 3 or higher.",
+   "fieldname": "overall_maturity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Overall Maturity Level",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subdomains_at_target",
+   "fieldtype": "Int",
+   "label": "Sub-domains At Target",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_score",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "applicable_subdomains",
+   "fieldtype": "Int",
+   "label": "Applicable Sub-domains",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pct_at_target",
+   "fieldtype": "Percent",
+   "label": "% At Target",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lowest_domain",
+   "fieldtype": "Data",
+   "label": "Weakest Domain",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_lines",
+   "fieldtype": "Section Break",
+   "label": "Sub-domain Assessment"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "GRC SAMA Assessment Line"
+  },
+  {
+   "fieldname": "sec_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC SAMA Assessment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "assessment_title",
+ "track_changes": 1
+}

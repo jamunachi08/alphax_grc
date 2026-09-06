@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "creation": "2026-08-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subdomain",
+  "subdomain_title",
+  "domain",
+  "current_level",
+  "target_level",
+  "meets_target",
+  "applicable",
+  "evidence_summary",
+  "gap_description",
+  "remediation_action",
+  "owner_user",
+  "target_date"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "subdomain",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub-domain",
+   "options": "GRC SAMA Subdomain",
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "fetch_from": "subdomain.subdomain_title",
+   "fieldname": "subdomain_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "subdomain.domain",
+   "fieldname": "domain",
+   "fieldtype": "Data",
+   "label": "Domain",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "current_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Current",
+   "options": "\n0 - Non-existent\n1 - Ad-hoc\n2 - Repeatable but informal\n3 - Structured and formalized\n4 - Managed and measurable\n5 - Adaptive",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "default": "3 - Structured and formalized",
+   "fieldname": "target_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Target",
+   "options": "\n0 - Non-existent\n1 - Ad-hoc\n2 - Repeatable but informal\n3 - Structured and formalized\n4 - Managed and measurable\n5 - Adaptive"
+  },
+  {
+   "columns": 1,
+   "fieldname": "meets_target",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Meets Target",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "applicable",
+   "fieldtype": "Check",
+   "label": "Applicable"
+  },
+  {
+   "fieldname": "evidence_summary",
+   "fieldtype": "Small Text",
+   "label": "Evidence"
+  },
+  {
+   "fieldname": "gap_description",
+   "fieldtype": "Small Text",
+   "label": "Gap"
+  },
+  {
+   "fieldname": "remediation_action",
+   "fieldtype": "Small Text",
+   "label": "Remediation"
+  },
+  {
+   "fieldname": "owner_user",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "target_date",
+   "fieldtype": "Date",
+   "label": "Target Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC SAMA Assessment Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

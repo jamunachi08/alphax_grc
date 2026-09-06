@@ -1,0 +1,175 @@
+{
+ "name": "GRC Problem Record",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:PRB-{#####}",
+ "title_field": "problem_title",
+ "description": "Problem Management record - tracks root cause analysis and permanent fixes for recurring incidents",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Risk Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "problem_title",
+   "fieldtype": "Data",
+   "label": "Problem Title",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "problem_number",
+   "fieldtype": "Data",
+   "label": "Problem Number",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reported_on",
+   "fieldtype": "Date",
+   "label": "Reported On"
+  },
+  {
+   "fieldname": "reported_by",
+   "fieldtype": "Link",
+   "label": "Reported By",
+   "options": "User"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nCritical\nHigh\nMedium\nLow",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Investigation\nRCA Complete\nFix in Progress\nResolved\nClosed\nKnown Error",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "linked_incident",
+   "fieldtype": "Link",
+   "label": "Linked Incident",
+   "options": "GRC Incident"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nCybersecurity\nPrivacy\nCompliance\nOperational\nInfrastructure\nApplication\nProcess"
+  },
+  {
+   "fieldname": "symptoms",
+   "fieldtype": "Text Editor",
+   "label": "Symptoms"
+  },
+  {
+   "fieldname": "root_cause_analysis",
+   "fieldtype": "Text Editor",
+   "label": "Root Cause Analysis (RCA)"
+  },
+  {
+   "fieldname": "root_cause_identified",
+   "fieldtype": "Check",
+   "label": "Root Cause Identified"
+  },
+  {
+   "fieldname": "known_error",
+   "fieldtype": "Check",
+   "label": "Known Error (KEDB Entry)"
+  },
+  {
+   "fieldname": "workaround",
+   "fieldtype": "Text Editor",
+   "label": "Workaround"
+  },
+  {
+   "fieldname": "permanent_fix",
+   "fieldtype": "Text Editor",
+   "label": "Permanent Fix Description"
+  },
+  {
+   "fieldname": "fix_owner",
+   "fieldtype": "Link",
+   "label": "Fix Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "target_resolution_date",
+   "fieldtype": "Date",
+   "label": "Target Resolution Date"
+  },
+  {
+   "fieldname": "resolved_on",
+   "fieldtype": "Date",
+   "label": "Resolved On"
+  },
+  {
+   "fieldname": "lessons_learned",
+   "fieldtype": "Text Editor",
+   "label": "Lessons Learned"
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "label": "Linked Risk",
+   "options": "GRC Risk Register"
+  },
+  {
+   "fieldname": "recurrence_count",
+   "fieldtype": "Int",
+   "label": "Recurrence Count"
+  }
+ ],
+ "field_order": [
+  "client"
+ ]
+}

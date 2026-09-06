@@ -1,0 +1,387 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:client",
+ "creation": "2026-04-25 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "client_name",
+  "country",
+  "sector",
+  "snapshot_section",
+  "snapshot_time",
+  "snapshot_age_seconds",
+  "headline_section",
+  "compliance_score",
+  "maturity_score",
+  "critical_risks",
+  "open_risks",
+  "open_findings",
+  "overdue_actions",
+  "active_exceptions",
+  "accepted_risks",
+  "kris_breached",
+  "vulnerabilities_open",
+  "vulnerabilities_critical",
+  "vulnerabilities_overdue",
+  "vulnerabilities_total",
+  "kpis_total",
+  "kpis_on_target",
+  "controls_implemented",
+  "controls_total",
+  "totals_section",
+  "total_risks",
+  "total_findings",
+  "total_assessments",
+  "total_assets",
+  "total_kris",
+  "total_frameworks",
+  "engagement_section",
+  "billable_hours_30d",
+  "billable_amount_30d",
+  "consultants_active_30d",
+  "details_section",
+  "by_severity_json",
+  "by_rating_json",
+  "by_framework_json",
+  "heatmap_json",
+  "top_risks_json",
+  "recent_findings_json",
+  "kris_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "label": "Client Name",
+   "in_list_view": 1,
+   "fetch_from": "client.client_name"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "in_list_view": 1,
+   "fetch_from": "client.country"
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Data",
+   "label": "Sector",
+   "in_list_view": 1,
+   "fetch_from": "client.sector"
+  },
+  {
+   "fieldname": "snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Snapshot"
+  },
+  {
+   "fieldname": "snapshot_time",
+   "fieldtype": "Datetime",
+   "label": "Snapshot Time",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "snapshot_age_seconds",
+   "fieldtype": "Int",
+   "label": "Age (seconds)",
+   "read_only": 1,
+   "description": "Seconds since this snapshot was last refreshed"
+  },
+  {
+   "fieldname": "headline_section",
+   "fieldtype": "Section Break",
+   "label": "Headline KPIs",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "compliance_score",
+   "fieldtype": "Float",
+   "label": "Compliance Score (%)",
+   "read_only": 1,
+   "precision": "1"
+  },
+  {
+   "fieldname": "maturity_score",
+   "fieldtype": "Float",
+   "label": "Maturity Score (%)",
+   "read_only": 1,
+   "precision": "1"
+  },
+  {
+   "fieldname": "critical_risks",
+   "fieldtype": "Int",
+   "label": "Critical Risks",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "open_risks",
+   "fieldtype": "Int",
+   "label": "Open Risks",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "open_findings",
+   "fieldtype": "Int",
+   "label": "Open Findings",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "overdue_actions",
+   "fieldtype": "Int",
+   "label": "Overdue Actions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "active_exceptions",
+   "fieldtype": "Int",
+   "label": "Active Exceptions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accepted_risks",
+   "fieldtype": "Int",
+   "label": "Accepted Risks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kris_breached",
+   "fieldtype": "Int",
+   "label": "KRIs in Breach",
+   "read_only": 1
+  },
+  {
+   "fieldname": "controls_implemented",
+   "fieldtype": "Int",
+   "label": "Controls Implemented",
+   "read_only": 1
+  },
+  {
+   "fieldname": "controls_total",
+   "fieldtype": "Int",
+   "label": "Controls Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "total_risks",
+   "fieldtype": "Int",
+   "label": "Total Risks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_findings",
+   "fieldtype": "Int",
+   "label": "Total Findings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_assessments",
+   "fieldtype": "Int",
+   "label": "Total Assessments",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_assets",
+   "fieldtype": "Int",
+   "label": "Total Assets",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_kris",
+   "fieldtype": "Int",
+   "label": "Total KRIs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_frameworks",
+   "fieldtype": "Int",
+   "label": "Total Frameworks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "engagement_section",
+   "fieldtype": "Section Break",
+   "label": "Engagement Metrics (last 30 days)",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "billable_hours_30d",
+   "fieldtype": "Float",
+   "label": "Billable Hours",
+   "read_only": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "billable_amount_30d",
+   "fieldtype": "Currency",
+   "label": "Billable Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consultants_active_30d",
+   "fieldtype": "Int",
+   "label": "Consultants Active",
+   "read_only": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Aggregated detail (JSON)",
+   "collapsible": 1,
+   "description": "Pre-computed JSON blobs the dashboards read directly. Refreshed by the snapshot scheduler."
+  },
+  {
+   "fieldname": "by_severity_json",
+   "fieldtype": "Long Text",
+   "label": "Findings by Severity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "by_rating_json",
+   "fieldtype": "Long Text",
+   "label": "Risks by Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "by_framework_json",
+   "fieldtype": "Long Text",
+   "label": "Compliance by Framework",
+   "read_only": 1
+  },
+  {
+   "fieldname": "heatmap_json",
+   "fieldtype": "Long Text",
+   "label": "Risk Heatmap (5x5)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "top_risks_json",
+   "fieldtype": "Long Text",
+   "label": "Top Open Risks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recent_findings_json",
+   "fieldtype": "Long Text",
+   "label": "Recent Findings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kris_json",
+   "fieldtype": "Long Text",
+   "label": "KRI Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vulnerabilities_open",
+   "fieldtype": "Int",
+   "label": "Vulnerabilities Open",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "vulnerabilities_critical",
+   "fieldtype": "Int",
+   "label": "Vulnerabilities Critical",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vulnerabilities_overdue",
+   "fieldtype": "Int",
+   "label": "Vulnerabilities Overdue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vulnerabilities_total",
+   "fieldtype": "Int",
+   "label": "Vulnerabilities Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kpis_total",
+   "fieldtype": "Int",
+   "label": "KPIs Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kpis_on_target",
+   "fieldtype": "Int",
+   "label": "KPIs On Target",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-04-25 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC Dashboard Snapshot",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "snapshot_time",
+ "sort_order": "DESC",
+ "title_field": "client_name",
+ "track_changes": 0
+}

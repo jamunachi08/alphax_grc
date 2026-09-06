@@ -1,0 +1,132 @@
+{
+ "name": "GRC ISO27001 Document",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:ISO-{#####}",
+ "title_field": "document_title",
+ "description": "ISO 27001:2022 mandatory document checklist — 93 required documents across clauses 4-10 and Annex A",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "clause_number",
+   "fieldtype": "Data",
+   "label": "ISO Clause No.",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "clause_title",
+   "fieldtype": "Data",
+   "label": "Clause Title"
+  },
+  {
+   "fieldname": "document_title",
+   "fieldtype": "Data",
+   "label": "Document / Record Title",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "control_area",
+   "fieldtype": "Select",
+   "label": "Control Area",
+   "options": "\nA.5 Organizational Controls\nA.6 People Controls\nA.7 Physical Controls\nA.8 Technological Controls\nClause 4-10 ISMS"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "label": "Document Type",
+   "options": "\nPolicy\nProcedure\nRecord\nPlan\nRegister\nManual\nAssessment\nReport\nChecklist\nTemplate"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Not Started\nIn Draft\nReview Pending\nApproved\nPublished\nRetired",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "document_owner",
+   "fieldtype": "Link",
+   "label": "Document Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "document_reference",
+   "fieldtype": "Data",
+   "label": "Document Reference / Version"
+  },
+  {
+   "fieldname": "linked_policy",
+   "fieldtype": "Link",
+   "label": "Linked GRC Policy",
+   "options": "GRC Policy"
+  },
+  {
+   "fieldname": "linked_evidence",
+   "fieldtype": "Link",
+   "label": "Evidence",
+   "options": "GRC Evidence"
+  },
+  {
+   "fieldname": "last_reviewed",
+   "fieldtype": "Date",
+   "label": "Last Reviewed"
+  },
+  {
+   "fieldname": "next_review",
+   "fieldtype": "Date",
+   "label": "Next Review"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes / Gaps"
+  }
+ ],
+ "field_order": [
+  "client"
+ ]
+}

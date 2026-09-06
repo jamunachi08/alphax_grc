@@ -1,0 +1,19 @@
+{
+ "doctype": "Page",
+ "module": "AlphaX GRC",
+ "name": "grc-neo-hub",
+ "page_name": "grc-neo-hub",
+ "title": "GRC Neo Hub",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "GRC Admin"},
+  {"role": "Compliance Officer"},
+  {"role": "GRC Auditor"},
+  {"role": "Risk Owner"},
+  {"role": "GRC Assessor"},
+  {"role": "GRC Executive"},
+  {"role": "Vendor Owner"},
+  {"role": "Privacy Officer"},
+  {"role": "Aramco Compliance Owner"}
+ ]
+}

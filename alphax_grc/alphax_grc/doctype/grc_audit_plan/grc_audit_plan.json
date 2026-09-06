@@ -1,0 +1,289 @@
+{
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "creation": "2026-04-04 00:00:00.000000",
+ "modified": "2026-04-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": [],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "allow_rename": 1,
+ "name": "GRC Audit Plan",
+ "autoname": "format:AUD-{#####}",
+ "field_order": [
+  "client",
+  "audit_title",
+  "audit_type",
+  "audit_owner",
+  "planned_start_date",
+  "planned_end_date",
+  "status",
+  "linked_framework",
+  "scope_summary",
+  "audit_standard",
+  "audit_methodology",
+  "management_summary",
+  "audit_scope_details",
+  "report_summary",
+  "nca_section",
+  "audit_id",
+  "audit_or_review",
+  "lead_auditor",
+  "team_responsible",
+  "audit_methods",
+  "criteria",
+  "sampling",
+  "evidence_needed",
+  "duration_estimate",
+  "schedule_notes",
+  "cost",
+  "frequency",
+  "is_recurring_template",
+  "parent_audit_plan"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "audit_title",
+   "fieldtype": "Data",
+   "label": "Audit Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "audit_type",
+   "fieldtype": "Select",
+   "label": "Audit Type",
+   "options": "Internal\nExternal\nRegulatory\nVendor",
+   "default": "Internal"
+  },
+  {
+   "fieldname": "audit_owner",
+   "fieldtype": "Link",
+   "label": "Audit Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "planned_start_date",
+   "fieldtype": "Date",
+   "label": "Planned Start Date"
+  },
+  {
+   "fieldname": "planned_end_date",
+   "fieldtype": "Date",
+   "label": "Planned End Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPlanned\nIn Progress\nCompleted\nClosed",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "linked_framework",
+   "fieldtype": "Link",
+   "label": "Linked Framework",
+   "options": "GRC Framework"
+  },
+  {
+   "fieldname": "scope_summary",
+   "fieldtype": "Text Editor",
+   "label": "Scope Summary"
+  },
+  {
+   "fieldname": "audit_standard",
+   "fieldtype": "Data",
+   "label": "Audit Standard"
+  },
+  {
+   "fieldname": "audit_methodology",
+   "fieldtype": "Text Editor",
+   "label": "Audit Methodology"
+  },
+  {
+   "fieldname": "management_summary",
+   "fieldtype": "Text Editor",
+   "label": "Management Summary"
+  },
+  {
+   "fieldname": "audit_scope_details",
+   "fieldtype": "Text Editor",
+   "label": "Audit Scope Details"
+  },
+  {
+   "fieldname": "report_summary",
+   "fieldtype": "Text Editor",
+   "label": "Report Summary"
+  },
+  {
+   "fieldname": "nca_section",
+   "fieldtype": "Section Break",
+   "label": "NCA Audit Plan fields",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "audit_id",
+   "fieldtype": "Data",
+   "label": "Audit ID",
+   "description": "A001/A002 for audits, R001/R002 for reviews",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "audit_or_review",
+   "fieldtype": "Select",
+   "label": "Audit or Review",
+   "options": "Audit\nReview",
+   "default": "Audit",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "lead_auditor",
+   "fieldtype": "Link",
+   "options": "User",
+   "label": "Lead Auditor",
+   "description": "Person leading this audit/review (separate from the audit sponsor)"
+  },
+  {
+   "fieldname": "team_responsible",
+   "fieldtype": "Select",
+   "label": "Team Responsible",
+   "options": "\nCybersecurity Organization\nInternal Audit Organization\nThird Party"
+  },
+  {
+   "fieldname": "audit_methods",
+   "fieldtype": "Small Text",
+   "label": "Methods",
+   "description": "e.g. Inquiry, Inspection, Re-performance"
+  },
+  {
+   "fieldname": "criteria",
+   "fieldtype": "Small Text",
+   "label": "Criteria",
+   "description": "Reference framework / control list (e.g. NCA ECC 1-5)"
+  },
+  {
+   "fieldname": "sampling",
+   "fieldtype": "Text",
+   "label": "Sampling Approach"
+  },
+  {
+   "fieldname": "evidence_needed",
+   "fieldtype": "Text",
+   "label": "Evidence Needed"
+  },
+  {
+   "fieldname": "duration_estimate",
+   "fieldtype": "Data",
+   "label": "Estimated Duration",
+   "description": "Free text, e.g. '2-3 weeks'"
+  },
+  {
+   "fieldname": "schedule_notes",
+   "fieldtype": "Text",
+   "label": "Schedule Notes"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "\nOne-time\nMonthly\nQuarterly\nSemi-Annual\nAnnual\nAd-hoc",
+   "default": "Annual",
+   "in_standard_filter": 1,
+   "in_list_view": 1,
+   "description": "Used by the Annual Audit Calendar auto-roll-forward"
+  },
+  {
+   "fieldname": "is_recurring_template",
+   "fieldtype": "Check",
+   "label": "Recurring Template",
+   "default": "0",
+   "in_standard_filter": 1,
+   "description": "If checked, this plan auto-rolls forward each year"
+  },
+  {
+   "fieldname": "parent_audit_plan",
+   "fieldtype": "Link",
+   "options": "GRC Audit Plan",
+   "label": "Rolled From",
+   "in_standard_filter": 1,
+   "description": "If this plan was auto-created from a recurring template, points back to it"
+  }
+ ]
+}

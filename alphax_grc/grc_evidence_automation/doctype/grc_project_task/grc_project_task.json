@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "creation": "2026-08-16 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wbs",
+  "task_title",
+  "start_date",
+  "end_date",
+  "duration_days",
+  "pct_complete",
+  "status",
+  "locked",
+  "responsible_role",
+  "assigned_to",
+  "depends_on",
+  "phase",
+  "is_milestone",
+  "deliverable",
+  "control_reference",
+  "notes"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "wbs",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "WBS"
+  },
+  {
+   "columns": 3,
+   "fieldname": "task_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start"
+  },
+  {
+   "columns": 1,
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End"
+  },
+  {
+   "columns": 1,
+   "default": "1",
+   "fieldname": "duration_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Days"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "pct_complete",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "%"
+  },
+  {
+   "columns": 1,
+   "default": "Not Started",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Not Started\nIn Progress\nComplete\nBlocked\nCancelled"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "description": "Keep these dates when the plan is rescheduled",
+   "fieldname": "locked",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Locked"
+  },
+  {
+   "fieldname": "responsible_role",
+   "fieldtype": "Select",
+   "label": "Responsible",
+   "options": "\nProject Manager\nGRC Consultant\nCISO\nIT Manager\nInternal Audit\nHR\nLegal\nBusiness Owner\nExternal Auditor\nClient"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "depends_on",
+   "fieldtype": "Data",
+   "label": "Depends On (WBS)"
+  },
+  {
+   "fieldname": "phase",
+   "fieldtype": "Data",
+   "label": "Phase"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_milestone",
+   "fieldtype": "Check",
+   "label": "Milestone"
+  },
+  {
+   "fieldname": "deliverable",
+   "fieldtype": "Small Text",
+   "label": "Deliverable"
+  },
+  {
+   "fieldname": "control_reference",
+   "fieldtype": "Data",
+   "label": "Control Reference"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC Project Task",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

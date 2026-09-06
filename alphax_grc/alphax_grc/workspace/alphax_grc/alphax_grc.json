@@ -1,0 +1,1319 @@
+{
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Welcome to AlphaX GRC\", \"col\": 12, \"level\": 4}}, {\"id\": \"gpm000a\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"\\ud83d\\uddfa Process Map (start here)\", \"col\": 4}}, {\"id\": \"gpm000b\", \"type\": \"paragraph\", \"data\": {\"text\": \"<b>New here?</b> Open the <b>Process Map</b> \\u2014 a clickable end-to-end flow of the GRC process. Every step opens the actual transaction (list or \\uff0b new). The <b>Lifecycle</b> page shows the same journey as a live 8-stage wheel per client.\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"NCA ECC-2:2024\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Lifecycle\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Clients\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"NCA Templates\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"KPI Dashboard\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Risk Dashboard\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vulnerabilities\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Aramco CCC\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Risk Register\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Audit Findings\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Modules\", \"col\": 12, \"level\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Dashboards & Pages\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Risk Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance & Frameworks\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Audit & ITGC\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Assets & Inventory\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Vendor & Privacy\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Incidents & DR\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Settings\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Engagement Lifecycle (v1.8+)\", \"col\": 12, \"level\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Engagement Lifecycle\", \"col\": 6}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Continuous Monitoring\", \"col\": 6}}, {\"type\": \"card\", \"data\": {\"card_name\": \"AI Governance & Data Protection\", \"col\": 12}}]",
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "shield",
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "AlphaX GRC",
+ "links": [
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ECC-2:2024 Catalog",
+   "link_count": 0,
+   "link_to": "GRC NCA ECC2 Catalog",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NCA ECC-2:2024 Dashboard",
+   "link_count": 0,
+   "link_to": "grc-ecc2-dashboard",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Aramco CCC Dashboard",
+   "link_count": 0,
+   "link_to": "grc-aramco-ccc",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Aramco CCC Engagement",
+   "link_count": 0,
+   "link_to": "GRC Aramco CCC Engagement",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Aramco Certificate",
+   "link_count": 0,
+   "link_to": "GRC Aramco Certificate",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Aramco SACS-002 Control",
+   "link_count": 0,
+   "link_to": "GRC Aramco SACS002 Control",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Aramco Audit Firm",
+   "link_count": 0,
+   "link_to": "GRC Aramco Audit Firm",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GRC Vulnerability",
+   "link_count": 0,
+   "link_to": "GRC Vulnerability",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GRC KPI",
+   "link_count": 0,
+   "link_to": "GRC KPI",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Threat Catalogue",
+   "link_count": 0,
+   "link_to": "GRC Threat Catalogue",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "KPI Dashboard",
+   "link_count": 0,
+   "link_to": "grc-kpi-dashboard",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NCA Templates Library",
+   "link_count": 0,
+   "link_to": "grc-nca-templates",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GRC Lifecycle",
+   "link_count": 0,
+   "link_to": "grc-lifecycle",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GRC Client Profile",
+   "link_count": 0,
+   "link_to": "GRC Client Profile",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Consultant Timesheet",
+   "link_count": 0,
+   "link_to": "GRC Consultant Timesheet",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NCA ECC Documents",
+   "link_count": 0,
+   "link_to": "GRC NCA ECC Document",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NCA ECC Tool Mapping",
+   "link_count": 0,
+   "link_to": "GRC NCA ECC Tool Mapping",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NCA ECC Review Calendar",
+   "link_count": 0,
+   "link_to": "GRC NCA ECC Review Calendar",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Business Impact Analysis",
+   "link_count": 0,
+   "link_to": "GRC Business Impact Analysis",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Control Matrix",
+   "link_count": 0,
+   "link_to": "GRC Risk Control Matrix",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Dashboards & Pages",
+   "link_count": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GRC Command Centre",
+   "link_count": 0,
+   "link_to": "grc-command-center",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GRC Risk Dashboard",
+   "link_count": 0,
+   "link_to": "grc-risk-dashboard",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GRC Neo Hub",
+   "link_count": 0,
+   "link_to": "grc-neo-hub",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ITGC Audit Programme",
+   "link_count": 0,
+   "link_to": "grc-itgc-program",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Inventory Dashboard",
+   "link_count": 0,
+   "link_to": "grc-asset-dashboard",
+   "link_type": "Page",
+   "type": "Link"
+  },
+  {
+   "description": "Unified work queue (v1.8.0 default landing)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Consultant Cockpit",
+   "link_count": 0,
+   "link_to": "grc-consultant-inbox",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "AI Management System framework (v1.7.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ISO 42001 Dashboard",
+   "link_count": 0,
+   "link_to": "grc-iso42001-dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Real-time control posture (v1.7.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Continuous Monitoring",
+   "link_count": 0,
+   "link_to": "grc-ccm-dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Board / audit-committee one-pager (v1.9.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Enterprise Risk Summary",
+   "link_count": 0,
+   "link_to": "grc-enterprise-risk-summary",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "EU data protection (v1.9.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GDPR Dashboard",
+   "link_count": 0,
+   "link_to": "grc-gdpr-dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Risk Summary",
+   "link_count": 0,
+   "link_to": "GRC Risk Summary",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Compliance Status",
+   "link_count": 0,
+   "link_to": "GRC Compliance Status",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Audit Findings Report",
+   "link_count": 0,
+   "link_to": "GRC Audit Findings Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "ITGC Progress",
+   "link_count": 0,
+   "link_to": "GRC ITGC Progress",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Asset Summary",
+   "link_count": 0,
+   "link_to": "GRC Asset Summary",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Management",
+   "link_count": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Register",
+   "link_count": 0,
+   "link_to": "GRC Risk Register",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "KRI Indicators",
+   "link_count": 0,
+   "link_to": "GRC KRI",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Acceptance",
+   "link_count": 0,
+   "link_to": "GRC Risk Acceptance",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Action Plans",
+   "link_count": 0,
+   "link_to": "GRC Action Plan",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "description": "Cyber Risk Quantification \u2014 FAIR + NIST 800-30 (v2.1.1)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "CRQ Scenarios",
+   "link_count": 0,
+   "link_to": "GRC CRQ Scenario",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Top scenarios by Annual Loss Expectancy (v2.1.1)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "CRQ Dashboard",
+   "link_count": 0,
+   "link_to": "grc-crq-dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance & Frameworks",
+   "link_count": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Frameworks",
+   "link_count": 0,
+   "link_to": "GRC Framework",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Controls",
+   "link_count": 0,
+   "link_to": "GRC Control",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Control Library",
+   "link_count": 0,
+   "link_to": "GRC Control Library",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Policies",
+   "link_count": 0,
+   "link_to": "GRC Policy",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exceptions",
+   "link_count": 0,
+   "link_to": "GRC Exception",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NCA ECC Controls",
+   "link_count": 0,
+   "link_to": "GRC NCA ECC Control",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "description": "Per-client Statement of Applicability (v2.2.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "ISO 27001:2022 SOA",
+   "link_count": 0,
+   "link_to": "GRC ISO27001 SOA",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit & ITGC",
+   "link_count": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit Plans",
+   "link_count": 0,
+   "link_to": "GRC Audit Plan",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit Findings",
+   "link_count": 0,
+   "link_to": "GRC Audit Finding",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ITGC Audit Items",
+   "link_count": 0,
+   "link_to": "GRC ITGC Audit Item",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit Workpapers",
+   "link_count": 0,
+   "link_to": "GRC Audit Workpaper",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assessments",
+   "link_count": 0,
+   "link_to": "GRC Assessment",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Maturity Assessments",
+   "link_count": 0,
+   "link_to": "GRC Maturity Assessment",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Remediation Actions",
+   "link_count": 0,
+   "link_to": "GRC Remediation Action",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "IT Audit Program",
+   "link_count": 0,
+   "link_to": "GRC IT Audit Program",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "description": "Year-at-a-glance audit planner (v2.0.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "Annual Audit Calendar",
+   "link_count": 0,
+   "link_to": "grc-annual-audit-calendar",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assets & Inventory",
+   "link_count": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Inventory",
+   "link_count": 0,
+   "link_to": "GRC Asset Inventory",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Evidence",
+   "link_count": 0,
+   "link_to": "GRC Evidence",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ISMS Document Register",
+   "link_count": 0,
+   "link_to": "GRC ISMS Document Register",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vendor & Privacy",
+   "link_count": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vendors",
+   "link_count": 0,
+   "link_to": "GRC Vendor",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vendor Assessments",
+   "link_count": 0,
+   "link_to": "GRC Vendor Assessment",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Incidents & DR",
+   "link_count": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Incidents",
+   "link_count": 0,
+   "link_to": "GRC Incident",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Problem Records",
+   "link_count": 0,
+   "link_to": "GRC Problem Record",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "DR Plans",
+   "link_count": 0,
+   "link_to": "GRC DR Plan",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AlphaX GRC Settings",
+   "link_count": 0,
+   "link_to": "AlphaX GRC Settings",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Theme Settings",
+   "link_count": 0,
+   "link_to": "GRC Theme Settings",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Team Members",
+   "link_count": 0,
+   "link_to": "GRC Team Member",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Language Settings",
+   "link_count": 0,
+   "link_to": "GRC Language Settings",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": null,
+   "is_query_report": 0,
+   "label": "Engagement Lifecycle",
+   "link_count": 0,
+   "link_to": null,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "description": "Master engagement records (v1.8.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Engagements",
+   "link_count": 0,
+   "link_to": "GRC Engagement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Executable work-items per gap (v1.8.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Implementation Tasks",
+   "link_count": 0,
+   "link_to": "GRC Implementation Task",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "60+ named policies/procedures tracker (v1.8.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Document Publication",
+   "link_count": 0,
+   "link_to": "GRC Document Publication",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Phases-as-data \u2014 edit lifecycle (v1.8.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Engagement Phase Templates",
+   "link_count": 0,
+   "link_to": "GRC Engagement Phase Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Append-only audit trail (v1.8.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Decision Log",
+   "link_count": 0,
+   "link_to": "GRC Engagement Decision Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": null,
+   "is_query_report": 0,
+   "label": "Continuous Monitoring",
+   "link_count": 0,
+   "link_to": null,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "description": "One-time-defined detection patterns (v1.7.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Evidence Rules",
+   "link_count": 0,
+   "link_to": "GRC Evidence Rule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Evaluation history log (v1.7.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rule Evaluations",
+   "link_count": 0,
+   "link_to": "GRC Evidence Rule Evaluation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Per-control detection-rule tracking (v2.0.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "Detection Coverage",
+   "link_count": 0,
+   "link_to": "GRC Detection Coverage",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": null,
+   "is_query_report": 0,
+   "label": "AI Governance & Data Protection",
+   "link_count": 0,
+   "link_to": null,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "description": "38 AI management controls (v1.7.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ISO 42001 Catalog",
+   "link_count": 0,
+   "link_to": "GRC ISO42001 Catalog",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Per-client AI compliance tracking (v1.7.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ISO 42001 Per-Client",
+   "link_count": 0,
+   "link_to": "GRC ISO42001 Control",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "43 GDPR articles + recitals (v1.9.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GDPR Catalog",
+   "link_count": 0,
+   "link_to": "GRC GDPR Catalog",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Per-client GDPR tracking (v1.9.0)",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "GDPR Per-Client",
+   "link_count": 0,
+   "link_to": "GRC GDPR Control",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "106 subcategories across GV/ID/PR/DE/RS/RC (v2.1.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "NIST CSF Catalog",
+   "link_count": 0,
+   "link_to": "GRC NIST CSF Catalog",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Per-client NIST CSF tier tracking (v2.1.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "NIST CSF Per-Client",
+   "link_count": 0,
+   "link_to": "GRC NIST CSF Control",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "36 BCMS clauses, Sections 4-10 (v2.1.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "ISO 22301 BCMS Catalog",
+   "link_count": 0,
+   "link_to": "GRC ISO22301 Catalog",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Per-client BCMS compliance tracking (v2.1.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "ISO 22301 Per-Client",
+   "link_count": 0,
+   "link_to": "GRC ISO22301 Control",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Function-by-function tier dashboard (v2.1.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "NIST CSF Dashboard",
+   "link_count": 0,
+   "link_to": "grc-nist-csf-dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Section-by-section BCMS dashboard (v2.1.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "ISO 22301 Dashboard",
+   "link_count": 0,
+   "link_to": "grc-iso22301-dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Saudi PDPL articles, Implementing Reg, Cross-Border (v2.2.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "PDPL Catalog",
+   "link_count": 0,
+   "link_to": "GRC PDPL Catalog",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Per-client PDPL article tracking (v2.2.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "PDPL Per-Client",
+   "link_count": 0,
+   "link_to": "GRC PDPL Control",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Data Subject Access Requests, 30-day SLA tracking (v2.2.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "DSAR Requests",
+   "link_count": 0,
+   "link_to": "GRC DSAR Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Data Protection Impact Assessments per PDPL IR-A11 (v2.2.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "DPIA Records",
+   "link_count": 0,
+   "link_to": "GRC DPIA Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "KSA Privacy posture (v2.2.0)",
+   "hidden": 0,
+   "icon": "",
+   "is_query_report": 0,
+   "label": "PDPL Dashboard",
+   "link_count": 0,
+   "link_to": "grc-pdpl-dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "module": "AlphaX GRC",
+ "name": "AlphaX GRC",
+ "onboarding": null,
+ "parent_page": "",
+ "public": 1,
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "\ud83d\uddfa Process Map (start here)",
+   "link_to": "grc-process-map",
+   "type": "Page"
+  },
+  {
+   "color": "Cyan",
+   "icon": "list-alt",
+   "label": "Tasks",
+   "link_to": "GRC Implementation Task",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "icon": "briefcase",
+   "label": "Engagements",
+   "link_to": "GRC Engagement",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "icon": "dashboard",
+   "label": "\ud83d\ude97 Consultant Cockpit",
+   "link_to": "grc-consultant-inbox",
+   "type": "Page"
+  },
+  {
+   "color": "Cyan",
+   "icon": "eye",
+   "label": "Detection Coverage",
+   "link_to": "GRC Detection Coverage",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "icon": "calendar",
+   "label": "Audit Calendar",
+   "link_to": "grc-annual-audit-calendar",
+   "type": "Page"
+  },
+  {
+   "color": "Green",
+   "icon": "refresh",
+   "label": "ISO 22301 BCMS",
+   "link_to": "grc-iso22301-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Yellow",
+   "icon": "shield",
+   "label": "NIST CSF",
+   "link_to": "grc-nist-csf-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Red",
+   "icon": "percent",
+   "label": "CRQ",
+   "link_to": "grc-crq-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Yellow",
+   "icon": "mail",
+   "label": "DSAR",
+   "link_to": "GRC DSAR Request",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "icon": "lock",
+   "label": "PDPL",
+   "link_to": "grc-pdpl-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Purple",
+   "icon": "shield",
+   "label": "GDPR (EU)",
+   "link_to": "grc-gdpr-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Pink",
+   "icon": "pie-chart",
+   "label": "Enterprise Risk",
+   "link_to": "grc-enterprise-risk-summary",
+   "type": "Page"
+  },
+  {
+   "color": "Blue",
+   "label": "NCA ECC-2:2024",
+   "link_to": "grc-ecc2-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Green",
+   "label": "Aramco CCC",
+   "link_to": "grc-aramco-ccc",
+   "type": "Page"
+  },
+  {
+   "color": "Cyan",
+   "icon": "list-alt",
+   "label": "Evidence Rules",
+   "link_to": "GRC Evidence Rule",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "icon": "chart-line",
+   "label": "Continuous Monitoring",
+   "link_to": "grc-ccm-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Pink",
+   "icon": "flag",
+   "label": "ISO 42001 (AI)",
+   "link_to": "grc-iso42001-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Red",
+   "label": "Vulnerabilities",
+   "link_to": "GRC Vulnerability",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "label": "KPI Dashboard",
+   "link_to": "grc-kpi-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Purple",
+   "label": "NCA Templates",
+   "link_to": "grc-nca-templates",
+   "type": "Page"
+  },
+  {
+   "color": "Cyan",
+   "label": "Lifecycle",
+   "link_to": "grc-lifecycle",
+   "type": "Page"
+  },
+  {
+   "color": "Blue",
+   "format": "{total_count}",
+   "label": "Clients",
+   "link_to": "GRC Client Profile",
+   "stats_filter": "{}",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "label": "Timesheets",
+   "link_to": "GRC Consultant Timesheet",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "label": "Command Centre",
+   "link_to": "grc-command-center",
+   "type": "Page"
+  },
+  {
+   "color": "Red",
+   "label": "Risk Dashboard",
+   "link_to": "grc-risk-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Blue",
+   "label": "Neo Hub",
+   "link_to": "grc-neo-hub",
+   "type": "Page"
+  },
+  {
+   "color": "Green",
+   "label": "ITGC Programme",
+   "link_to": "grc-itgc-program",
+   "type": "Page"
+  },
+  {
+   "color": "Purple",
+   "label": "Asset Dashboard",
+   "link_to": "grc-asset-dashboard",
+   "type": "Page"
+  },
+  {
+   "color": "Red",
+   "format": "{total_count}",
+   "label": "Risk Register",
+   "link_to": "GRC Risk Register",
+   "stats_filter": "{}",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "{total_count}",
+   "label": "Audit Findings",
+   "link_to": "GRC Audit Finding",
+   "stats_filter": "{}",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "format": "{total_count}",
+   "label": "Incidents",
+   "link_to": "GRC Incident",
+   "stats_filter": "{}",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "format": "{total_count}",
+   "label": "ITGC Controls",
+   "link_to": "GRC ITGC Audit Item",
+   "stats_filter": "{}",
+   "type": "DocType"
+  }
+ ],
+ "title": "AlphaX GRC"
+}

@@ -1,0 +1,216 @@
+{
+ "actions": [],
+ "autoname": "format:SAMA-REQ-{#####}",
+ "creation": "2026-08-16 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "request_type",
+  "subject",
+  "client",
+  "cb_head",
+  "subdomain",
+  "status",
+  "sec_case",
+  "reason",
+  "compensating_controls",
+  "proposal",
+  "residual_risk",
+  "sec_approvals",
+  "ciso_approver",
+  "ciso_approved_on",
+  "business_owner",
+  "cb_appr",
+  "committee_approver",
+  "committee_approved_on",
+  "committee_minutes_ref",
+  "sec_sama",
+  "submitted_by",
+  "submitted_on",
+  "cb_sama",
+  "sama_reference",
+  "sama_response_on",
+  "expiry_date"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "default": "Waiver",
+   "description": "Waiver = Appendix D/E. Framework Update = Appendix B/C.",
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Request Type",
+   "options": "Waiver\nFramework Update",
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "GRC Client Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_head",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subdomain",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Framework Control / Section",
+   "options": "GRC SAMA Subdomain"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nCISO Approval\nCommittee Approval\nSubmitted to SAMA\nApproved\nRejected\nWithdrawn"
+  },
+  {
+   "fieldname": "sec_case",
+   "fieldtype": "Section Break",
+   "label": "Case"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Text",
+   "label": "Why the control cannot be implemented",
+   "reqd": 1
+  },
+  {
+   "description": "Required for a waiver request",
+   "fieldname": "compensating_controls",
+   "fieldtype": "Text",
+   "label": "Available or suggested compensating controls"
+  },
+  {
+   "description": "Required for a framework update request",
+   "fieldname": "proposal",
+   "fieldtype": "Text",
+   "label": "Proposal"
+  },
+  {
+   "fieldname": "residual_risk",
+   "fieldtype": "Link",
+   "label": "Linked Residual Risk",
+   "options": "GRC Risk Register"
+  },
+  {
+   "fieldname": "sec_approvals",
+   "fieldtype": "Section Break",
+   "label": "Approvals"
+  },
+  {
+   "fieldname": "ciso_approver",
+   "fieldtype": "Link",
+   "label": "CISO Approval",
+   "options": "User"
+  },
+  {
+   "fieldname": "ciso_approved_on",
+   "fieldtype": "Date",
+   "label": "CISO Approved On"
+  },
+  {
+   "fieldname": "business_owner",
+   "fieldtype": "Link",
+   "label": "Business Owner Signature",
+   "options": "User"
+  },
+  {
+   "fieldname": "cb_appr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "committee_approver",
+   "fieldtype": "Link",
+   "label": "Committee Approval",
+   "options": "User"
+  },
+  {
+   "fieldname": "committee_approved_on",
+   "fieldtype": "Date",
+   "label": "Committee Approved On"
+  },
+  {
+   "fieldname": "committee_minutes_ref",
+   "fieldtype": "Data",
+   "label": "Committee Minutes Reference"
+  },
+  {
+   "fieldname": "sec_sama",
+   "fieldtype": "Section Break",
+   "label": "SAMA Submission"
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Issued to SAMA by (CEO / MD)",
+   "options": "User"
+  },
+  {
+   "fieldname": "submitted_on",
+   "fieldtype": "Date",
+   "label": "Submitted On"
+  },
+  {
+   "fieldname": "cb_sama",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sama_reference",
+   "fieldtype": "Data",
+   "label": "SAMA Reference"
+  },
+  {
+   "fieldname": "sama_response_on",
+   "fieldtype": "Date",
+   "label": "SAMA Response On"
+  },
+  {
+   "description": "The framework stays applicable until a waiver is granted, and after it lapses",
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Waiver Expires On"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC SAMA Waiver",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "subject",
+ "track_changes": 1
+}

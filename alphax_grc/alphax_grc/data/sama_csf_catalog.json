@@ -1,0 +1,950 @@
+{
+ "framework": "SAMA CSF",
+ "version": "1.0 (May 2017)",
+ "maturity_target": 3,
+ "non_bank_excluded": [
+  "3.2.3",
+  "3.3.12",
+  "3.3.13"
+ ],
+ "subdomains": [
+  {
+   "code": "3.1.1",
+   "domain": "3.1",
+   "domain_title": "Cyber Security Leadership and Governance",
+   "title": "Cyber Security Governance",
+   "control_considerations": 10,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.1.2",
+   "domain": "3.1",
+   "domain_title": "Cyber Security Leadership and Governance",
+   "title": "Cyber Security Strategy",
+   "control_considerations": 3,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.1.3",
+   "domain": "3.1",
+   "domain_title": "Cyber Security Leadership and Governance",
+   "title": "Cyber Security Policy",
+   "control_considerations": 4,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.1.4",
+   "domain": "3.1",
+   "domain_title": "Cyber Security Leadership and Governance",
+   "title": "Cyber Security Roles and Responsibilities",
+   "control_considerations": 6,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.1.5",
+   "domain": "3.1",
+   "domain_title": "Cyber Security Leadership and Governance",
+   "title": "Cyber Security in Project Management",
+   "control_considerations": 2,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.1.6",
+   "domain": "3.1",
+   "domain_title": "Cyber Security Leadership and Governance",
+   "title": "Cyber Security Awareness",
+   "control_considerations": 7,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.1.7",
+   "domain": "3.1",
+   "domain_title": "Cyber Security Leadership and Governance",
+   "title": "Cyber Security Training",
+   "control_considerations": 2,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.2.1",
+   "domain": "3.2",
+   "domain_title": "Cyber Security Risk Management and Compliance",
+   "title": "Cyber Security Risk Management",
+   "control_considerations": 11,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.2.1.1",
+   "domain": "3.2",
+   "domain_title": "Cyber Security Risk Management and Compliance",
+   "title": "Cyber Security Risk Identification",
+   "control_considerations": 3,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.2.1.2",
+   "domain": "3.2",
+   "domain_title": "Cyber Security Risk Management and Compliance",
+   "title": "Cyber Security Risk Analysis",
+   "control_considerations": 2,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.2.1.3",
+   "domain": "3.2",
+   "domain_title": "Cyber Security Risk Management and Compliance",
+   "title": "Cyber Security Risk Response",
+   "control_considerations": 7,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.2.1.4",
+   "domain": "3.2",
+   "domain_title": "Cyber Security Risk Management and Compliance",
+   "title": "Cyber Risk Monitoring and Review",
+   "control_considerations": 2,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.2.2",
+   "domain": "3.2",
+   "domain_title": "Cyber Security Risk Management and Compliance",
+   "title": "Regulatory Compliance",
+   "control_considerations": 1,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.2.3",
+   "domain": "3.2",
+   "domain_title": "Cyber Security Risk Management and Compliance",
+   "title": "Compliance with (inter)national industry standards",
+   "control_considerations": 1,
+   "excluded_for_non_banks": true
+  },
+  {
+   "code": "3.2.4",
+   "domain": "3.2",
+   "domain_title": "Cyber Security Risk Management and Compliance",
+   "title": "Cyber Security Review",
+   "control_considerations": 5,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.2.5",
+   "domain": "3.2",
+   "domain_title": "Cyber Security Risk Management and Compliance",
+   "title": "Cyber Security Audits",
+   "control_considerations": 2,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.1",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Human Resources",
+   "control_considerations": 3,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.2",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Physical Security",
+   "control_considerations": 3,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.3",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Asset Management",
+   "control_considerations": 3,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.4",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Cyber Security Architecture",
+   "control_considerations": 3,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.5",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Identity and Access Management",
+   "control_considerations": 4,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.6",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Application Security",
+   "control_considerations": 5,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.7",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Change Management",
+   "control_considerations": 4,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.8",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Infrastructure Security",
+   "control_considerations": 6,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.9",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Cryptography",
+   "control_considerations": 4,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.10",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Bring Your Own Device (BYOD)",
+   "control_considerations": 4,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.11",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Secure Disposal of Information Assets",
+   "control_considerations": 6,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.12",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Payment Systems",
+   "control_considerations": 2,
+   "excluded_for_non_banks": true
+  },
+  {
+   "code": "3.3.13",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Electronic Banking Services",
+   "control_considerations": 4,
+   "excluded_for_non_banks": true
+  },
+  {
+   "code": "3.3.14",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Cyber Security Event Management",
+   "control_considerations": 4,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.15",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Cyber Security Incident Management",
+   "control_considerations": 7,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.16",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Threat Management",
+   "control_considerations": 3,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.3.17",
+   "domain": "3.3",
+   "domain_title": "Cyber Security Operations and Technology",
+   "title": "Vulnerability Management",
+   "control_considerations": 3,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.4.1",
+   "domain": "3.4",
+   "domain_title": "Third Party Cyber Security",
+   "title": "Contract and Vendor Management",
+   "control_considerations": 6,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.4.2",
+   "domain": "3.4",
+   "domain_title": "Third Party Cyber Security",
+   "title": "Outsourcing",
+   "control_considerations": 3,
+   "excluded_for_non_banks": false
+  },
+  {
+   "code": "3.4.3",
+   "domain": "3.4",
+   "domain_title": "Third Party Cyber Security",
+   "title": "Cloud Computing",
+   "control_considerations": 4,
+   "excluded_for_non_banks": false
+  }
+ ],
+ "deliverables": [
+  {
+   "sl": 1,
+   "title": "organogram chart Template",
+   "description": "",
+   "subdomain": "3.1.1"
+  },
+  {
+   "sl": 2,
+   "title": "Version-Controlled cyber security Committee Charter",
+   "description": "A formally board-approved charter with a consistent member list.",
+   "subdomain": "3.1.1"
+  },
+  {
+   "sl": 3,
+   "title": "CEO/Board office Memo",
+   "description": "A formal office memo confirming the function's establishment.",
+   "subdomain": "3.1.1"
+  },
+  {
+   "sl": 4,
+   "title": "Approved Cybersecurity Annual Budget",
+   "description": "A dedicated budget separate from IT's, approved by the Board.",
+   "subdomain": "3.1.1"
+  },
+  {
+   "sl": 5,
+   "title": "CISO Appointment Letter",
+   "description": "A letter specifying the direct reporting line to the CEO.",
+   "subdomain": "3.1.1"
+  },
+  {
+   "sl": 6,
+   "title": "SAMA No Objection Letter (NOL)",
+   "description": "Obtain and file SAMA's approval for the CISO.",
+   "subdomain": "3.1.1"
+  },
+  {
+   "sl": 7,
+   "title": "Budget Approval Minutes",
+   "description": "Formally record the Board's approval of the cybersecurity budget",
+   "subdomain": "3.1.1"
+  },
+  {
+   "sl": 8,
+   "title": "Strategy Execution Plan",
+   "description": "A plan with clear milestones, resources, and tracking mechanisms.",
+   "subdomain": "3.1.2"
+  },
+  {
+   "sl": 9,
+   "title": "Master list of documents",
+   "description": "",
+   "subdomain": "3.1.3"
+  },
+  {
+   "sl": 10,
+   "title": "Policy Acknowledgment form",
+   "description": "Records proving the policy was communicated to and acknowledged by staff.",
+   "subdomain": "3.1.3"
+  },
+  {
+   "sl": 11,
+   "title": "Unified Policy Framework Document",
+   "description": "A document that links the main policy to all supporting standards to create a clear hierarchy.",
+   "subdomain": "3.1.3"
+  },
+  {
+   "sl": 12,
+   "title": "Control Matrix",
+   "description": "A matrix mapping policy statements to the system-level controls that enforce them.",
+   "subdomain": "3.1.3"
+  },
+  {
+   "sl": 13,
+   "title": "Board Meeting Minutes",
+   "description": "Minutes showing the Board's endorsement of the strategy, policy, and budget.",
+   "subdomain": "3.1.1"
+  },
+  {
+   "sl": 14,
+   "title": "Cybersecurity Committee Minutes",
+   "description": "Minutes with attachments showing review of risks, KPIs, and program status.",
+   "subdomain": "3.1.4"
+  },
+  {
+   "sl": 15,
+   "title": "Updated Job Descriptions",
+   "description": "Sample JDs for key roles showing embedded cybersecurity responsibilities.",
+   "subdomain": "3.1.4"
+  },
+  {
+   "sl": 16,
+   "title": "Internal Audit Annual Plan",
+   "description": "A schedule showing planned cybersecurity audits.",
+   "subdomain": "3.1.4"
+  },
+  {
+   "sl": 17,
+   "title": "Quarterly Internal Audit Report",
+   "description": "Reports detailing the findings of cybersecurity audits.",
+   "subdomain": "3.1.4"
+  },
+  {
+   "sl": 18,
+   "title": "Cyber Security in Project Management\" Policy",
+   "description": "Obtain formal CEO approval for this policy.",
+   "subdomain": "3.1.5"
+  },
+  {
+   "sl": 19,
+   "title": "Project Charters",
+   "description": "Signed charters showing cybersecurity inputs.",
+   "subdomain": "3.1.5"
+  },
+  {
+   "sl": 20,
+   "title": "Cybersecurity Risk Assessments",
+   "description": "Completed assessments for new projects.",
+   "subdomain": "3.1.5"
+  },
+  {
+   "sl": 21,
+   "title": "Security Sign-Off Forms",
+   "description": "Formal sign-off before any project go-live.",
+   "subdomain": "3.1.5"
+  },
+  {
+   "sl": 22,
+   "title": "Awareness Program Training Records",
+   "description": "Schedules, attendance logs, and campaign materials to prove the program is active.",
+   "subdomain": "3.1.6"
+  },
+  {
+   "sl": 23,
+   "title": "Customer Awareness Campaign Materials",
+   "description": "Evidence of newsletters, online tips, or emails communicating cyber safety to customers.",
+   "subdomain": "3.1.6"
+  },
+  {
+   "sl": 24,
+   "title": "Role-Based Training Materials",
+   "description": "Evidence of content tailored to specialized functions like developers or IT admins or Security operations.",
+   "subdomain": "3.1.7"
+  },
+  {
+   "sl": 25,
+   "title": "Awareness Program Calendar",
+   "description": "A schedule showing planned awareness activities for the year.",
+   "subdomain": "3.1.6"
+  },
+  {
+   "sl": 26,
+   "title": "Training Evaluation Report",
+   "description": "A report analyzing survey feedback and metrics to improve content.",
+   "subdomain": "3.1.7"
+  },
+  {
+   "sl": 27,
+   "title": "Training Attendance Logs",
+   "description": "Records showing who attended which training.",
+   "subdomain": "3.1.7"
+  },
+  {
+   "sl": 28,
+   "title": "Certificates of Completion",
+   "description": "Evidence of staff completing courses.",
+   "subdomain": "3.1.7"
+  },
+  {
+   "sl": 29,
+   "title": "Threat Landscape Assessment Report",
+   "description": "A document analyzing current threats.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 30,
+   "title": "Risk Acceptance Workflow Document",
+   "description": "A formal process for business owners to accept risks.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 31,
+   "title": "Risk Review Meeting Minutes",
+   "description": "Minutes showing joint reviews between cybersecurity and enterprise risk functions.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 32,
+   "title": "Key Risk Indicator (KRI) Dashboard",
+   "description": "A tool to track risk metrics and escalate breaches.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 33,
+   "title": "Stakeholder Workshop Minutes",
+   "description": "Evidence of structured, cross-departmental risk identification sessions.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 34,
+   "title": "Risk resulation tracker",
+   "description": "",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 35,
+   "title": "Risk Register Version History",
+   "description": "A log with timestamps showing when risks were last analyzed and by whom.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 36,
+   "title": "Threat Intelligence Integration Logs",
+   "description": "Evidence that threat data is used to inform likelihood scores.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 37,
+   "title": "Risk Acceptance Forms",
+   "description": "Signed forms from business owners for all accepted risks.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 38,
+   "title": "Risk Treatment Plan",
+   "description": "Minutes or reports showing the Cybersecurity Committee has reviewed and approved treatment decisions.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 39,
+   "title": "Treatment Monitoring Dashboard",
+   "description": "A report for management showing progress and overdue actions.",
+   "subdomain": "3.2.1"
+  },
+  {
+   "sl": 40,
+   "title": "Regulatory Compliance Register",
+   "description": "A central register of applicable laws, owners, and status.",
+   "subdomain": "3.2.2"
+  },
+  {
+   "sl": 41,
+   "title": "Meeting Minutes",
+   "description": "Records showing review of regulatory changes by key departments.",
+   "subdomain": "3.2.2"
+  },
+  {
+   "sl": 42,
+   "title": "VAPT Program Schedule",
+   "description": "A formal calendar for periodic penetration tests of all critical and internet-facing services.",
+   "subdomain": "3.2.4"
+  },
+  {
+   "sl": 43,
+   "title": "Vulnerability Remediation Tracker",
+   "description": "A tool to track findings from pen tests to closure.",
+   "subdomain": "3.2.4"
+  },
+  {
+   "sl": 44,
+   "title": "Cybersecurity Audit Charter",
+   "description": "A charter defining scope, methodology, and independence",
+   "subdomain": "3.2.5"
+  },
+  {
+   "sl": 45,
+   "title": "Signed NDAs",
+   "description": "Collect and file signed NDAs from all employees.",
+   "subdomain": "3.3.1"
+  },
+  {
+   "sl": 46,
+   "title": "Background Verification Logs",
+   "description": "Maintain records of completed background checks.",
+   "subdomain": "3.3.1"
+  },
+  {
+   "sl": 47,
+   "title": "Onboarding/Offboarding Checklists",
+   "description": "Use and file checklists to ensure all steps are completed.",
+   "subdomain": "3.3.1"
+  },
+  {
+   "sl": 48,
+   "title": "Compliance Dashboard",
+   "description": "Track HR security KPIs (e.g., % of checks completed).",
+   "subdomain": "3.3.1"
+  },
+  {
+   "sl": 49,
+   "title": "Cloud Provider Assurance Reports",
+   "description": "SOC 2 or ISO 27001 reports from GCP demonstrating physical controls at their data centers.",
+   "subdomain": "3.3.4"
+  },
+  {
+   "sl": 50,
+   "title": "Visitor Access Logs",
+   "description": "A log for tracking visitors at the corporate office.",
+   "subdomain": "3.3.2"
+  },
+  {
+   "sl": 51,
+   "title": "Physical Security KPI Report",
+   "description": "A quarterly report tracking simple metrics like visitor counts, access exceptions, and device losses.",
+   "subdomain": "3.3.2"
+  },
+  {
+   "sl": 52,
+   "title": "Asset Register",
+   "description": "A central inventory including asset ID, category, owner, location, and classification.",
+   "subdomain": "3.3.3"
+  },
+  {
+   "sl": 53,
+   "title": "Asset handover and takeover form/register",
+   "description": "",
+   "subdomain": "3.3.3"
+  },
+  {
+   "sl": 54,
+   "title": "Asset Management KPI Report",
+   "description": "A report for semi-annual reviews showing metrics like % of classified assets and ownership attribution rate.",
+   "subdomain": "3.3.3"
+  },
+  {
+   "sl": 55,
+   "title": "Design Compliance Checklist",
+   "description": "A checklist used during onboarding and platform changes to ensure adherence to architecture.",
+   "subdomain": "3.3.4"
+  },
+  {
+   "sl": 56,
+   "title": "Access Control Transition Plan",
+   "description": "A plan to reclaim access control authority over the production database from Qwist.",
+   "subdomain": "3.3.5"
+  },
+  {
+   "sl": 57,
+   "title": "Quarterly Access Review Reports/log",
+   "description": "Documented reports showing validation of user access rights for all critical systems.",
+   "subdomain": "3.3.5"
+  },
+  {
+   "sl": 58,
+   "title": "Joiner/Mover/Leaver Workflow Records",
+   "description": "Evidence from a ticketing system showing automated workflows with defined SLAs",
+   "subdomain": "3.3.5"
+  },
+  {
+   "sl": 59,
+   "title": "Roles and Responsibilities Matrix (RACI)",
+   "description": "A signed matrix defining security ownership between the company and Qwist.",
+   "subdomain": "3.3.5"
+  },
+  {
+   "sl": 60,
+   "title": "Updated Qwist Contract",
+   "description": "A contract with a cybersecurity governance appendix covering secure coding and testing.",
+   "subdomain": "3.3.6"
+  },
+  {
+   "sl": 61,
+   "title": "Quarterly SDLC Security Reports",
+   "description": "Regular reports from Qwist on vulnerabilities found, remediated, and exceptions granted.",
+   "subdomain": "3.3.6"
+  },
+  {
+   "sl": 62,
+   "title": "Read-Only Access to Jira/Version Control",
+   "description": "Granting the company access for traceability, audit, and risk assessment purposes.",
+   "subdomain": "3.3.6"
+  },
+  {
+   "sl": 63,
+   "title": "Change Advisory Board (CAB) Meeting Minutes",
+   "description": "Evidence of recurring meetings with attendance logs and approval decisions.",
+   "subdomain": "3.3.1"
+  },
+  {
+   "sl": 64,
+   "title": "Change Request Records",
+   "description": "Evidence from the ticketing system showing the full lifecycle, including risk assessments and sign-offs.",
+   "subdomain": "3.3.7"
+  },
+  {
+   "sl": 65,
+   "title": "Change Lifecycle Evidence",
+   "description": "Records for each change, including risk assessments and CAB sign-offs.",
+   "subdomain": "3.3.7"
+  },
+  {
+   "sl": 66,
+   "title": "Change Management KPI Report",
+   "description": "A dashboard tracking metrics like emergency changes and rejection rates.",
+   "subdomain": "3.3.7"
+  },
+  {
+   "sl": 67,
+   "title": "Post-Implementation Review Reports",
+   "description": "Formal reports evaluating the success and security impact of completed changes.",
+   "subdomain": "3.3.7"
+  },
+  {
+   "sl": 68,
+   "title": "Infrastructure Effectiveness Review Reports",
+   "description": "Reports detailing patch compliance rates, malware detection stats, and incident response benchmarks.",
+   "subdomain": "3.3.8"
+  },
+  {
+   "sl": 69,
+   "title": "DDoS Protection Service Agreement",
+   "description": "A formal agreement with a provider for scrubbing services.",
+   "subdomain": "3.3.8"
+  },
+  {
+   "sl": 70,
+   "title": "Backup Restoration Test Reports",
+   "description": "Documentation of successful restoration tests, performed at least annually.",
+   "subdomain": "3.3.8"
+  },
+  {
+   "sl": 71,
+   "title": "Centralized Key Management Solution (KMS) Documentation",
+   "description": "Design and process documents for a KMS or HSM.",
+   "subdomain": "3.3.9"
+  },
+  {
+   "sl": 72,
+   "title": "Encryption Inventory",
+   "description": "A complete inventory of systems using encryption, with coverage validated annually.",
+   "subdomain": "3.3.9"
+  },
+  {
+   "sl": 73,
+   "title": "Cryptographic Compliance Checklist",
+   "description": "A checklist for use in periodic audits.",
+   "subdomain": "3.3.9"
+  },
+  {
+   "sl": 74,
+   "title": "Policy Violation Logs",
+   "description": "A log to track and manage any deviations from the standard.",
+   "subdomain": "3.3.1"
+  },
+  {
+   "sl": 75,
+   "title": "KPI Dashboard",
+   "description": "A report tracking metrics like encryption coverage and key rotation success rates.",
+   "subdomain": "3.3.9"
+  },
+  {
+   "sl": 76,
+   "title": "MDM Deployment Logs",
+   "description": "Evidence showing MDM with sandboxing and encryption is active on user devices.",
+   "subdomain": "3.3.10"
+  },
+  {
+   "sl": 77,
+   "title": "Signed BYOD User Agreements",
+   "description": "Signed forms from all users acknowledging the policy.",
+   "subdomain": "3.3.10"
+  },
+  {
+   "sl": 78,
+   "title": "BYOD Device Inventory",
+   "description": "A register of all authorized BYOD devices and their security status.",
+   "subdomain": "3.3.10"
+  },
+  {
+   "sl": 79,
+   "title": "BYOD Awareness Training Records",
+   "description": "Logs showing who has completed the training.",
+   "subdomain": "3.1.6"
+  },
+  {
+   "sl": 80,
+   "title": "Asset Disposal Register",
+   "description": "A maintained log of all disposed assets.",
+   "subdomain": "3.3.11"
+  },
+  {
+   "sl": 81,
+   "title": "Signed Disposal Certificates",
+   "description": "Certificates from third-party vendors confirming secure disposal.",
+   "subdomain": "3.3.11"
+  },
+  {
+   "sl": 82,
+   "title": "Third-Party Vendor/External Audit Reports",
+   "description": "Records of audits conducted on disposal vendors to ensure compliance.",
+   "subdomain": "3.3.11"
+  },
+  {
+   "sl": 83,
+   "title": "SOC Performance KPI",
+   "description": "Quarterly performance dashboards with metrics on alert volume, false positives, and incident closure trends.",
+   "subdomain": "3.3.14"
+  },
+  {
+   "sl": 84,
+   "title": "Approved Security Event Monitoring Standard",
+   "description": "A standalone, formally approved standard that includes source classification and retention policies.",
+   "subdomain": "3.3.1"
+  },
+  {
+   "sl": 85,
+   "title": "Red Team Simulation Report",
+   "description": "A report from an annual drill to assess response quality.",
+   "subdomain": "3.3.14"
+  },
+  {
+   "sl": 86,
+   "title": "SOC Analyst Training Records",
+   "description": "Documentation of continuous training for SOC staff.",
+   "subdomain": "3.1.7"
+  },
+  {
+   "sl": 87,
+   "title": "Incident RCA Reports",
+   "description": "Redacted incident reports with root-cause analysis and executive sign-off.",
+   "subdomain": "3.3.15"
+  },
+  {
+   "sl": 88,
+   "title": "Incident Classification Register",
+   "description": "A registry showing how incidents are categorized and mapped to SAMA thresholds.",
+   "subdomain": "3.3.15"
+  },
+  {
+   "sl": 89,
+   "title": "Clause Ownership Matrix",
+   "description": "A document assigning and tracking specific owners for each sub-clause (a–k) of the control.",
+   "subdomain": "3.3.15"
+  },
+  {
+   "sl": 90,
+   "title": "SAMA Reporting Simulation Records",
+   "description": "Documentation of a drill to validate readiness for regulatory reporting.",
+   "subdomain": "3.3.15"
+  },
+  {
+   "sl": 91,
+   "title": "Crisis Communication Plan",
+   "description": "A plan that includes the SAMA 'no objection' workflow for media interactions.",
+   "subdomain": "3.1.1"
+  },
+  {
+   "sl": 92,
+   "title": "SAMA Formal Incident Report Template",
+   "description": "A pre-approved template for post-incident regulatory reporting.",
+   "subdomain": "3.3.15"
+  },
+  {
+   "sl": 93,
+   "title": "Threat Ingestion Prioritization Matrix",
+   "description": "A matrix to score and prioritize threats based on origin and business impact.",
+   "subdomain": "3.3.16"
+  },
+  {
+   "sl": 94,
+   "title": "Threat Validation Records",
+   "description": "Evidence (e.g., IoCs confirmed, IPs blocked) to support effectiveness.",
+   "subdomain": "3.3.16"
+  },
+  {
+   "sl": 95,
+   "title": "Threat Intelligence KPI Dashboard",
+   "description": "A quarterly report tracking metrics like \"% of new threats mitigated\" and \"% of recurring threats\".",
+   "subdomain": "3.3.16"
+  },
+  {
+   "sl": 96,
+   "title": "Stakeholder Communication Log",
+   "description": "A log showing that threat intelligence is shared with and acted upon by business and risk functions",
+   "subdomain": "3.3.16"
+  },
+  {
+   "sl": 97,
+   "title": "Vulnerability Management KPI Report",
+   "description": "A quarterly report for management detailing remediation timelines, recurrence rates, and compliance.",
+   "subdomain": "3.3.17"
+  },
+  {
+   "sl": 98,
+   "title": "Vulnerability Tracker Logs",
+   "description": "System logs evidencing assigned owners, timestamps, and SLA status for all vulnerabilities.",
+   "subdomain": "3.3.17"
+  },
+  {
+   "sl": 99,
+   "title": "Remediation Audit Logs",
+   "description": "An audit trail with justifications for any closed, deferred, or false-positive vulnerabilities.",
+   "subdomain": "3.3.17"
+  },
+  {
+   "sl": 100,
+   "title": "Cybersecurity Committee Minutes",
+   "description": "Meeting records from quarterly reviews covering vulnerability trends, coverage gaps, and key decisions.",
+   "subdomain": "3.1.4"
+  },
+  {
+   "sl": 101,
+   "title": "Vulnerability Escalation Records",
+   "description": "Proof that the formal escalation process was followed for high-risk, overdue vulnerabilities.",
+   "subdomain": "3.3.17"
+  },
+  {
+   "sl": 102,
+   "title": "Quarterly Vendor Performance Reports",
+   "description": "Management reports that track vendor compliance against contractual SLAs and security KPIs.",
+   "subdomain": "3.4.1"
+  },
+  {
+   "sl": 103,
+   "title": "Outsourcing Register",
+   "description": "A log that tracks all outsourced functions, materiality, and review status.",
+   "subdomain": "3.4.2"
+  },
+  {
+   "sl": 104,
+   "title": "SAMA NOC Request Sample",
+   "description": "Evidence of coordinating with SAMA for material outsourcing.",
+   "subdomain": "3.4.2"
+  },
+  {
+   "sl": 105,
+   "title": "Outsourcing KPI Reports",
+   "description": "Reports on SLA breaches and security compliance for outsourced functions.",
+   "subdomain": "3.4.2"
+  },
+  {
+   "sl": 106,
+   "title": "Cloud Provider Risk Assessment Report",
+   "description": "A formal risk assessment for the current cloud provider (GCP).",
+   "subdomain": "3.4.3"
+  },
+  {
+   "sl": 107,
+   "title": "SAMA Approval",
+   "description": "The formal approval letter for using non-Saudi cloud services.",
+   "subdomain": "3.4.3"
+  },
+  {
+   "sl": 108,
+   "title": "Cloud Security KPI",
+   "description": "Metrics to track the effectiveness of cloud controls",
+   "subdomain": "3.4.3"
+  }
+ ]
+}

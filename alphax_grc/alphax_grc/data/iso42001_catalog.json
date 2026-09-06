@@ -1,0 +1,357 @@
+[
+  {
+    "control_code": "A.2.2",
+    "domain_code": "A.2",
+    "domain_label": "AI Policies",
+    "control_title": "AI policy",
+    "implementation_guidance": "Establish an organizational AI policy aligned with business strategy, organizational values, and risk appetite. The policy should commit to responsible AI principles, regulatory compliance, and continual improvement of the AI Management System. Align with organizational mission and AI objectives. Make the policy available to all interested parties (employees, contractors, customers, regulators).",
+    "document_to_prepare_code": "AIMS-POL-001",
+    "document_to_prepare_title": "AI Policy Document",
+    "iso_xrefs": "ISO 23894 (AI risk management); ISO 22989 (AI terminology)"
+  },
+  {
+    "control_code": "A.2.3",
+    "domain_code": "A.2",
+    "domain_label": "AI Policies",
+    "control_title": "Alignment with other organizational policies",
+    "implementation_guidance": "Review existing organizational policies covering IT, HR, Data Protection, Ethics, and Information Security. Identify conflicts or overlaps with the AI policy. Update those policies to reference the AI policy where needed. Create and maintain a cross-reference matrix.",
+    "document_to_prepare_code": "AIMS-POL-002",
+    "document_to_prepare_title": "Policy Alignment Matrix"
+  },
+  {
+    "control_code": "A.2.4",
+    "domain_code": "A.2",
+    "domain_label": "AI Policies",
+    "control_title": "Review of AI policy",
+    "implementation_guidance": "Define a review frequency of at least annually. Use management review results as input. Document triggers for ad-hoc review (incidents, regulation changes, major AI system additions). Record review outcomes and changes.",
+    "document_to_prepare_code": "AIMS-POL-003",
+    "document_to_prepare_title": "Policy Review Schedule"
+  },
+  {
+    "control_code": "A.3.2",
+    "domain_code": "A.3",
+    "domain_label": "Internal Organization",
+    "control_title": "AI roles and responsibilities",
+    "implementation_guidance": "Define key roles such as Chief AI Officer, AI Ethics Lead, AI Risk Manager, AI System Owners. Allocate responsibilities for risk management, impact assessments, security, privacy, development, human oversight, data quality, and legal compliance. Document in a RACI matrix. Communicate to all relevant parties.",
+    "document_to_prepare_code": "AIMS-RRA-001",
+    "document_to_prepare_title": "AI Roles & Responsibilities Matrix"
+  },
+  {
+    "control_code": "A.3.3",
+    "domain_code": "A.3",
+    "domain_label": "Internal Organization",
+    "control_title": "Reporting of concerns",
+    "implementation_guidance": "Establish a confidential or anonymous reporting channel available to all staff and contractors. Assign qualified investigators to triage and address concerns. Define escalation paths to senior management. Protect reporters from reprisal. Ensure timely response.",
+    "document_to_prepare_code": "AIMS-CON-001",
+    "document_to_prepare_title": "Concern Reporting Procedure",
+    "iso_xrefs": "ISO 37002 (whistleblowing)"
+  },
+  {
+    "control_code": "A.4.2",
+    "domain_code": "A.4",
+    "domain_label": "Resources for AI Systems",
+    "control_title": "Resource documentation",
+    "implementation_guidance": "Document all resources used by AI systems including data, tools, computing, and human resources. Use data flow diagrams and architecture diagrams. Identify resources sourced from the organization, customers, and third parties. Link to impact assessments.",
+    "document_to_prepare_code": "AIMS-RES-001",
+    "document_to_prepare_title": "AI Resource Inventory"
+  },
+  {
+    "control_code": "A.4.3",
+    "domain_code": "A.4",
+    "domain_label": "Resources for AI Systems",
+    "control_title": "Data resources",
+    "implementation_guidance": "Document data provenance and last-updated dates. Categorize machine-learning data by lifecycle stage (training, validation, test, production). Document labeling approach and intended use. Record data quality metrics. Document retention and disposal policies. Document known biases.",
+    "document_to_prepare_code": "AIMS-DAT-001",
+    "document_to_prepare_title": "Data Resource Register",
+    "iso_xrefs": "ISO/IEC 5259 (data quality for ML)"
+  },
+  {
+    "control_code": "A.4.4",
+    "domain_code": "A.4",
+    "domain_label": "Resources for AI Systems",
+    "control_title": "Tooling resources",
+    "implementation_guidance": "Document algorithms and ML models used. Record data conditioning and optimization tools. Document evaluation and provisioning tools. Include software and hardware requirements per environment.",
+    "document_to_prepare_code": "AIMS-TOOL-001",
+    "document_to_prepare_title": "AI Tooling Inventory",
+    "iso_xrefs": "ISO/IEC 23053 (ML framework)"
+  },
+  {
+    "control_code": "A.4.5",
+    "domain_code": "A.4",
+    "domain_label": "Resources for AI Systems",
+    "control_title": "System and computing resources",
+    "implementation_guidance": "Document compute, network, and storage requirements per AI system. Specify location (on-premises, cloud, edge). Consider environmental impact of hardware. Note that development, deployment, and operation environments may have different requirements.",
+    "document_to_prepare_code": "AIMS-SYS-001",
+    "document_to_prepare_title": "System Resource Specification"
+  },
+  {
+    "control_code": "A.4.6",
+    "domain_code": "A.4",
+    "domain_label": "Resources for AI Systems",
+    "control_title": "Human resources",
+    "implementation_guidance": "Identify required expertise: data scientists, human-oversight roles, trustworthiness experts, AI researchers, domain experts. Consider demographic diversity for training-dataset relevance. Document competency requirements per role. Plan training and development.",
+    "document_to_prepare_code": "AIMS-HR-001",
+    "document_to_prepare_title": "AI Competency Matrix"
+  },
+  {
+    "control_code": "A.5.2",
+    "domain_code": "A.5",
+    "domain_label": "Assessing Impacts of AI Systems",
+    "control_title": "Impact assessment process",
+    "implementation_guidance": "Define triggers for assessment: new AI systems, material changes, incidents, regulatory updates. Include phases: identification, analysis, evaluation, treatment, documentation. Specify who performs assessments. Define how results inform design and use. Identify potentially impacted individuals and societies.",
+    "document_to_prepare_code": "AIMS-IA-PROC-001",
+    "document_to_prepare_title": "Impact Assessment Procedure",
+    "iso_xrefs": "ISO/IEC 23894 (AI risk management)"
+  },
+  {
+    "control_code": "A.5.3",
+    "domain_code": "A.5",
+    "domain_label": "Assessing Impacts of AI Systems",
+    "control_title": "Documentation of impact assessments",
+    "implementation_guidance": "Document intended use and foreseeable misuse. Record positive and negative impacts. Include predictable failures and mitigations. Identify relevant demographic groups. Document system complexity and human-oversight role. Include employment and staff-skilling impacts.",
+    "document_to_prepare_code": "AIMS-IA-001",
+    "document_to_prepare_title": "Impact Assessment per AI System"
+  },
+  {
+    "control_code": "A.5.4",
+    "domain_code": "A.5",
+    "domain_label": "Assessing Impacts of AI Systems",
+    "control_title": "Impact on individuals",
+    "implementation_guidance": "Assess fairness, accountability, transparency, explainability. Assess security, privacy, safety, health, and financial consequences. Assess accessibility and human rights. Give special protection to children, impaired persons, the elderly, and workers.",
+    "document_to_prepare_code": "AIMS-IA-IND-001",
+    "document_to_prepare_title": "Individual Impact Analysis"
+  },
+  {
+    "control_code": "A.5.5",
+    "domain_code": "A.5",
+    "domain_label": "Assessing Impacts of AI Systems",
+    "control_title": "Societal impacts",
+    "implementation_guidance": "Assess environmental sustainability, economic impacts, government and public-sector impacts, health and safety at societal level, and impacts on norms, culture, and values.",
+    "document_to_prepare_code": "AIMS-IA-SOC-001",
+    "document_to_prepare_title": "Societal Impact Analysis",
+    "iso_xrefs": "ISO/IEC TR 24368 (AI ethics)"
+  },
+  {
+    "control_code": "A.6.1.2",
+    "domain_code": "A.6",
+    "domain_label": "AI System Lifecycle",
+    "control_title": "Objectives for responsible development",
+    "implementation_guidance": "Integrate AI objectives from clause 6.2 into design and development. Define measurable targets for each objective. Ensure objectives cover fairness, safety, security, and privacy. Link objectives to specific design decisions.",
+    "document_to_prepare_code": "AIMS-DEV-OBJ-001",
+    "document_to_prepare_title": "Development Objectives"
+  },
+  {
+    "control_code": "A.6.1.3",
+    "domain_code": "A.6",
+    "domain_label": "AI System Lifecycle",
+    "control_title": "Processes for responsible AI design and development",
+    "implementation_guidance": "Define lifecycle stages with testing requirements. Specify human oversight at each stage. Define when impact assessments are performed. Set training-data rules and developer-expertise requirements. Define release criteria, approvals, and change control. Include usability and interested-party engagement.",
+    "document_to_prepare_code": "AIMS-DEV-PROC-001",
+    "document_to_prepare_title": "AI Development Process",
+    "iso_xrefs": "ISO/IEC 22989 (AI terminology)"
+  },
+  {
+    "control_code": "A.6.2.2",
+    "domain_code": "A.6",
+    "domain_label": "AI System Lifecycle",
+    "control_title": "AI system requirements and specification",
+    "implementation_guidance": "Document why the AI system is being developed. Document how the model is trained and the data requirements. Requirements must span the entire lifecycle. Revisit requirements if the system cannot operate as intended.",
+    "document_to_prepare_code": "AIMS-REQ-001",
+    "document_to_prepare_title": "AI System Requirements Specification",
+    "iso_xrefs": "ISO/IEC 5338; ISO 9241-210"
+  },
+  {
+    "control_code": "A.6.2.3",
+    "domain_code": "A.6",
+    "domain_label": "AI System Lifecycle",
+    "control_title": "Documentation of AI system design",
+    "implementation_guidance": "Document ML approach and algorithm/model type. Record training-data quality measures. Document evaluation and refinement approach. Include hardware and software requirements. Document security threats specific to AI: data poisoning, model stealing, model inversion. Describe output presentation and human interaction. Document interoperability requirements.",
+    "document_to_prepare_code": "AIMS-DES-001",
+    "document_to_prepare_title": "AI System Design Document"
+  },
+  {
+    "control_code": "A.6.2.4",
+    "domain_code": "A.6",
+    "domain_label": "AI System Lifecycle",
+    "control_title": "AI system verification and validation",
+    "implementation_guidance": "Create an evaluation plan covering reliability and safety. Define acceptable error rates. Include responsible-AI objectives in testing. Define methods to evaluate whether interested parties can interpret outputs. If the system cannot meet criteria, reconsider intended use.",
+    "document_to_prepare_code": "AIMS-VV-001",
+    "document_to_prepare_title": "V&V Plan and Results",
+    "iso_xrefs": "ISO/IEC TR 24029-1 (robustness of neural networks)"
+  },
+  {
+    "control_code": "A.6.2.5",
+    "domain_code": "A.6",
+    "domain_label": "AI System Lifecycle",
+    "control_title": "AI system deployment",
+    "implementation_guidance": "Document the deployment plan. Consider differences between development and deployment environments. Define release criteria: V&V passed, metrics met, user testing done, approvals obtained. Include a rollback plan.",
+    "document_to_prepare_code": "AIMS-DEP-001",
+    "document_to_prepare_title": "Deployment Plan"
+  },
+  {
+    "control_code": "A.6.2.6",
+    "domain_code": "A.6",
+    "domain_label": "AI System Lifecycle",
+    "control_title": "AI system operation and monitoring",
+    "implementation_guidance": "Define minimum monitoring requirements: system monitoring, performance monitoring, repairs, updates, support. Monitor for concept drift and data drift. Document AI-specific security threats. Define escalation procedures.",
+    "document_to_prepare_code": "AIMS-OPS-001",
+    "document_to_prepare_title": "Operations & Monitoring Plan"
+  },
+  {
+    "control_code": "A.6.2.7",
+    "domain_code": "A.6",
+    "domain_label": "AI System Lifecycle",
+    "control_title": "AI system technical documentation",
+    "implementation_guidance": "Per interested party include: general description, usage instructions, technical assumptions, limitations, monitoring capabilities. Lifecycle documentation: design spec, design choices, data used, V&V records, operational changes, impact-assessment docs. Include failure-management plan, rollback plan, observability processes, SOPs, event-log prioritization, and accountability roles.",
+    "document_to_prepare_code": "AIMS-TECH-001",
+    "document_to_prepare_title": "Technical Documentation"
+  },
+  {
+    "control_code": "A.6.2.8",
+    "domain_code": "A.6",
+    "domain_label": "AI System Lifecycle",
+    "control_title": "AI system recording of event logs",
+    "implementation_guidance": "At minimum, log when the AI system is in use. Enable traceability and detection of out-of-spec performance. Log time/date of use, production data used, outputs outside intended range. Retention is the longer of: required for intended use, data retention policies, legal requirements.",
+    "document_to_prepare_code": "AIMS-LOG-001",
+    "document_to_prepare_title": "Event Logging Specification"
+  },
+  {
+    "control_code": "A.7.2",
+    "domain_code": "A.7",
+    "domain_label": "Data for AI Systems",
+    "control_title": "Data for development and enhancement",
+    "implementation_guidance": "Address privacy and security of data. Consider security and safety threats from data. Ensure transparency and explainability including data provenance. Verify representativeness of training data versus the operational domain. Maintain accuracy and integrity.",
+    "document_to_prepare_code": "AIMS-DAT-DEV-001",
+    "document_to_prepare_title": "Data Management Plan"
+  },
+  {
+    "control_code": "A.7.3",
+    "domain_code": "A.7",
+    "domain_label": "Data for AI Systems",
+    "control_title": "Acquisition of data",
+    "implementation_guidance": "Document categories needed and quantity. Record sources and source characteristics. Document subject demographics and biases. Record prior handling of data. Verify data rights including PII and copyright. Include metadata and provenance.",
+    "document_to_prepare_code": "AIMS-DAT-ACQ-001",
+    "document_to_prepare_title": "Data Acquisition Procedure",
+    "iso_xrefs": "ISO/IEC 19944-1 (cloud data)"
+  },
+  {
+    "control_code": "A.7.4",
+    "domain_code": "A.7",
+    "domain_label": "Data for AI Systems",
+    "control_title": "Quality of data for AI systems",
+    "implementation_guidance": "For supervised ML: define, measure, and improve quality of training, validation, test, and production data. Include data-quality metrics and thresholds. Define data-quality improvement process.",
+    "document_to_prepare_code": "AIMS-DAT-QA-001",
+    "document_to_prepare_title": "Data Quality Standards",
+    "iso_xrefs": "ISO/IEC 25024; ISO/IEC TR 24027"
+  },
+  {
+    "control_code": "A.7.5",
+    "domain_code": "A.7",
+    "domain_label": "Data for AI Systems",
+    "control_title": "Data provenance",
+    "implementation_guidance": "Record creation, update, transcription, validation events. Record transfer, sharing, and transformations. Maintain chain of custody for sensitive data.",
+    "document_to_prepare_code": "AIMS-DAT-PROV-001",
+    "document_to_prepare_title": "Data Provenance Log",
+    "iso_xrefs": "ISO 8000-2 (data provenance)"
+  },
+  {
+    "control_code": "A.7.6",
+    "domain_code": "A.7",
+    "domain_label": "Data for AI Systems",
+    "control_title": "Data preparation",
+    "implementation_guidance": "Document criteria for selecting preparation methods. Document all transforms used. Include data cleaning, normalization, augmentation. Record any data exclusions and reasons.",
+    "document_to_prepare_code": "AIMS-DAT-PREP-001",
+    "document_to_prepare_title": "Data Preparation Procedure"
+  },
+  {
+    "control_code": "A.8.2",
+    "domain_code": "A.8",
+    "domain_label": "Information for Interested Parties",
+    "control_title": "System documentation and info for users",
+    "implementation_guidance": "Include AI-system purpose and notification of AI interaction. Explain how to interact and when/how to override. Document technical limitations and human-oversight needs. Provide accuracy information and impact-assessment results. Include benefits and harms by demographic. Provide updates and contact information.",
+    "document_to_prepare_code": "AIMS-USR-001",
+    "document_to_prepare_title": "User Information Guide"
+  },
+  {
+    "control_code": "A.8.3",
+    "domain_code": "A.8",
+    "domain_label": "Information for Interested Parties",
+    "control_title": "External reporting",
+    "implementation_guidance": "Provide a capability for external parties to report adverse impacts. Define reporting channels and response procedures. Set response timeframes. Document and track all reports.",
+    "document_to_prepare_code": "AIMS-EXT-RPT-001",
+    "document_to_prepare_title": "External Reporting Procedure"
+  },
+  {
+    "control_code": "A.8.4",
+    "domain_code": "A.8",
+    "domain_label": "Information for Interested Parties",
+    "control_title": "Communication of incidents",
+    "implementation_guidance": "Understand legal and regulatory notification obligations. Document types of incidents requiring notification. Define notification timelines. Identify authorities to notify. Specify details required in notifications.",
+    "document_to_prepare_code": "AIMS-INC-COM-001",
+    "document_to_prepare_title": "Incident Communication Procedure"
+  },
+  {
+    "control_code": "A.8.5",
+    "domain_code": "A.8",
+    "domain_label": "Information for Interested Parties",
+    "control_title": "Information for interested parties",
+    "implementation_guidance": "Regulators may require technical documentation, datasets, and algorithmic choices. Prepare V&V records, risks, impact assessments, and logs. Create summary documents for different audiences. Maintain a document index for audit readiness.",
+    "document_to_prepare_code": "AIMS-IP-INFO-001",
+    "document_to_prepare_title": "Interested Party Information Pack"
+  },
+  {
+    "control_code": "A.9.2",
+    "domain_code": "A.9",
+    "domain_label": "Use of AI Systems",
+    "control_title": "Processes for responsible use",
+    "implementation_guidance": "Consider cost, sourcing requirements, legal requirements. Define acceptable-use policies. Establish monitoring and review processes. Define escalation and incident handling.",
+    "document_to_prepare_code": "AIMS-USE-PROC-001",
+    "document_to_prepare_title": "Responsible Use Procedure"
+  },
+  {
+    "control_code": "A.9.3",
+    "domain_code": "A.9",
+    "domain_label": "Use of AI Systems",
+    "control_title": "Objectives for responsible use",
+    "implementation_guidance": "Include fairness, accountability, transparency, explainability, reliability, safety, robustness, privacy, security, and accessibility. Human oversight must be incorporated at appropriate lifecycle stages, including reviewers checking outputs with override authority, monitoring performance, reporting concerns, and considering whether automation is appropriate.",
+    "document_to_prepare_code": "AIMS-USE-OBJ-001",
+    "document_to_prepare_title": "Responsible Use Objectives"
+  },
+  {
+    "control_code": "A.9.4",
+    "domain_code": "A.9",
+    "domain_label": "Use of AI Systems",
+    "control_title": "Intended use of AI system",
+    "implementation_guidance": "Deploy per documentation. Keep event logs to demonstrate correct use. Communicate concerns to suppliers. Define boundaries of intended use. Document known limitations.",
+    "document_to_prepare_code": "AIMS-USE-001",
+    "document_to_prepare_title": "Intended Use Statement"
+  },
+  {
+    "control_code": "A.10.2",
+    "domain_code": "A.10",
+    "domain_label": "Third Party and Customer Relationships",
+    "control_title": "Allocating responsibilities",
+    "implementation_guidance": "Document all parties in the AI lifecycle and their roles. For PII processing split responsibilities between PII processors and controllers. Create a responsibility matrix with third parties.",
+    "document_to_prepare_code": "AIMS-TP-RESP-001",
+    "document_to_prepare_title": "Third Party Responsibility Matrix",
+    "iso_xrefs": "ISO/IEC 29100; ISO/IEC 27701"
+  },
+  {
+    "control_code": "A.10.3",
+    "domain_code": "A.10",
+    "domain_label": "Third Party and Customer Relationships",
+    "control_title": "Suppliers",
+    "implementation_guidance": "Document AI-component integration requirements. Require corrective action if supplier AI causes harm. Ensure supplier provides adequate documentation per A.6.2.7 and A.8.2. Include AI requirements in vendor contracts. Define audit rights.",
+    "document_to_prepare_code": "AIMS-SUP-MGT-001",
+    "document_to_prepare_title": "Supplier Management Procedure"
+  },
+  {
+    "control_code": "A.10.4",
+    "domain_code": "A.10",
+    "domain_label": "Third Party and Customer Relationships",
+    "control_title": "Customers",
+    "implementation_guidance": "Understand customer expectations. Communicate domain limits clearly. Define where responsibility lies between organization and customer. Provide customer guidance on responsible use.",
+    "document_to_prepare_code": "AIMS-CUS-MGT-001",
+    "document_to_prepare_title": "Customer Guidance Document"
+  }
+]

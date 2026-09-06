@@ -1,0 +1,183 @@
+{
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "creation": "2026-04-04 00:00:00.000000",
+ "modified": "2026-04-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": [],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Vendor Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "allow_rename": 1,
+ "name": "GRC Vendor",
+ "autoname": "field:vendor_name",
+ "field_order": [
+  "client",
+  "vendor_name",
+  "vendor_category",
+  "criticality",
+  "risk_owner",
+  "assessment_required",
+  "status",
+  "review_frequency",
+  "notes",
+  "blocked_vendor",
+  "next_assessment_date",
+  "last_assessment_score",
+  "assessment_score",
+  "next_review_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Data",
+   "label": "Vendor Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "vendor_category",
+   "fieldtype": "Select",
+   "label": "Vendor Category",
+   "options": "Cloud\nTechnology\nConsulting\nOutsourcing\nPayment\nOther",
+   "default": "Other"
+  },
+  {
+   "fieldname": "criticality",
+   "fieldtype": "Select",
+   "label": "Criticality",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "risk_owner",
+   "fieldtype": "Link",
+   "label": "Risk Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "assessment_required",
+   "fieldtype": "Check",
+   "label": "Assessment Required",
+   "default": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nBlocked\nUnder Review",
+   "default": "Active"
+  },
+  {
+   "fieldname": "review_frequency",
+   "fieldtype": "Select",
+   "label": "Review Frequency",
+   "options": "Monthly\nQuarterly\nHalf-Yearly\nYearly",
+   "default": "Yearly"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "blocked_vendor",
+   "fieldtype": "Check",
+   "label": "Blocked Vendor",
+   "default": 0
+  },
+  {
+   "fieldname": "next_assessment_date",
+   "fieldtype": "Date",
+   "label": "Next Assessment Date"
+  },
+  {
+   "fieldname": "last_assessment_score",
+   "fieldtype": "Percent",
+   "label": "Last Assessment Score"
+  },
+  {
+   "fieldname": "assessment_score",
+   "fieldtype": "Percent",
+   "label": "Assessment Score",
+   "default": 0
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  }
+ ]
+}

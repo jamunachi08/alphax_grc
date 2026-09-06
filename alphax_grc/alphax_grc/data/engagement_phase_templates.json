@@ -1,0 +1,1368 @@
+[
+ {
+  "engagement_type": "Standard NCA Engagement",
+  "phase_number": 1,
+  "phase_code": "DISCOVERY",
+  "phase_label": "Discovery",
+  "icon": "🔍",
+  "purpose_summary": "Understand the client. Identify stakeholders, scope boundaries, business context, existing certifications, and any audit-driven deadlines. The output is a kickoff document and a stakeholder map.",
+  "expected_duration_days": 14,
+  "entry_criteria": "Client Profile created. SOW signed. Lead consultant assigned.",
+  "completion_criteria": "Kickoff call held. Executive sponsor named. Stakeholder map populated. System inventory has at least one entry. Scope summary written.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Hold kickoff call with executive sponsor",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Identify and confirm executive sponsor",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Build stakeholder map (CISO, CTO, Heads of dept)",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Capture business context: industry, size, geography",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Inventory existing certifications and audit reports",
+    "task_type": "Manual",
+    "responsible_team": "Client Side",
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Capture system inventory (in-scope IT systems)",
+    "task_type": "Manual",
+    "responsible_team": "Client Side",
+    "default_offset_days": 10
+   },
+   {
+    "task_description": "Document scope summary in engagement record",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 12
+   }
+  ]
+ },
+ {
+  "engagement_type": "Standard NCA Engagement",
+  "phase_number": 2,
+  "phase_code": "SCOPING",
+  "phase_label": "Framework Scoping",
+  "icon": "🎯",
+  "purpose_summary": "Decide which compliance frameworks apply, with documented reasoning. NCA ECC-2:2024 is mandatory for KSA entities; PDPL applies if PII is processed at scale; SACS-002 if Aramco vendor; ISO 27001 for maturity.",
+  "expected_duration_days": 7,
+  "entry_criteria": "Discovery completed. Stakeholders confirmed. Scope summary written.",
+  "completion_criteria": "All applicable frameworks adopted on Client Profile. Scope memo signed off by executive sponsor. Decision rationale logged.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Confirm NCA ECC-2:2024 applicability",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 1
+   },
+   {
+    "task_description": "Assess PDPL scope (PII volume, sensitivity)",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 2
+   },
+   {
+    "task_description": "Check Aramco vendor scope (SACS-002)",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 2
+   },
+   {
+    "task_description": "Decide ISO 27001 in-scope (maturity uplift)",
+    "task_type": "Manual",
+    "responsible_team": "Top Management",
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Decide ISO 42001 in-scope (AI usage)",
+    "task_type": "Manual",
+    "responsible_team": "Top Management",
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Adopt frameworks on Client Profile (auto-creates per-client controls)",
+    "task_type": "Auto-complete",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 4
+   },
+   {
+    "task_description": "Get scope memo signed off by sponsor",
+    "task_type": "Approval Gate",
+    "responsible_team": "Top Management",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   }
+  ]
+ },
+ {
+  "engagement_type": "Standard NCA Engagement",
+  "phase_number": 3,
+  "phase_code": "ASSESSMENT",
+  "phase_label": "Current-State Assessment",
+  "icon": "📋",
+  "purpose_summary": "Run interviews, request evidence, walk through every applicable control. For each control capture implementation status, evidence reviewed, gaps observed, assessor opinion. Output is a gap analysis with severities.",
+  "expected_duration_days": 28,
+  "entry_criteria": "Frameworks adopted. Per-client control records exist. Assessment team assigned.",
+  "completion_criteria": "100% of in-scope controls have a compliance status set (not 'Not Started'). Gap analysis report drafted. Findings raised for every gap.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Distribute control assessment workload to team",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 1
+   },
+   {
+    "task_description": "Schedule interview sessions with each domain owner",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Conduct Cybersecurity Governance domain interviews",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 10
+   },
+   {
+    "task_description": "Conduct Cybersecurity Defense domain interviews",
+    "task_type": "Manual",
+    "responsible_team": "Cyber Security Team",
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Conduct Cybersecurity Resilience domain interviews",
+    "task_type": "Manual",
+    "responsible_team": "IT Team",
+    "default_offset_days": 18
+   },
+   {
+    "task_description": "Conduct Third-Party & Cloud domain interviews",
+    "task_type": "Manual",
+    "responsible_team": "Purchase Team",
+    "default_offset_days": 21
+   },
+   {
+    "task_description": "Set compliance status on every in-scope control",
+    "task_type": "Auto-check",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "auto_check_method": "alphax_grc.engagement_automation.check_all_controls_assessed",
+    "default_offset_days": 25
+   },
+   {
+    "task_description": "Raise audit findings for every gap",
+    "task_type": "Auto-complete",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 26
+   },
+   {
+    "task_description": "Draft gap analysis report",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 28
+   }
+  ]
+ },
+ {
+  "engagement_type": "Standard NCA Engagement",
+  "phase_number": 4,
+  "phase_code": "RISK_ANALYSIS",
+  "phase_label": "Risk Analysis",
+  "icon": "⚖️",
+  "purpose_summary": "Build the risk register. For each gap map to threats, rate likelihood and impact, calculate residual risk. Add strategic and emerging risks not tied to specific controls.",
+  "expected_duration_days": 14,
+  "entry_criteria": "Assessment substantially complete. Gap analysis drafted.",
+  "completion_criteria": "Every Open finding has a corresponding Risk Register entry. All risks rated. Threat catalog mappings populated.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Auto-create risk entries from open findings",
+    "task_type": "Auto-complete",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 1
+   },
+   {
+    "task_description": "Rate likelihood and impact for every risk",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Map risks to NCA threat catalog entries",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 9
+   },
+   {
+    "task_description": "Add strategic / emerging risks not tied to gaps",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 11
+   },
+   {
+    "task_description": "Calculate residual risk per entry",
+    "task_type": "Auto-check",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 12
+   },
+   {
+    "task_description": "Risk register reviewed with executive sponsor",
+    "task_type": "Approval Gate",
+    "responsible_team": "Top Management",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   }
+  ]
+ },
+ {
+  "engagement_type": "Standard NCA Engagement",
+  "phase_number": 5,
+  "phase_code": "TREATMENT",
+  "phase_label": "Treatment Planning",
+  "icon": "🧭",
+  "purpose_summary": "For every High/Critical risk and every gap propose a treatment (mitigate, transfer, avoid, accept). Treatments become an Implementation Task backlog ranked, scheduled, and owned.",
+  "expected_duration_days": 14,
+  "entry_criteria": "Risk register complete and rated. Findings raised.",
+  "completion_criteria": "Every High/Critical risk has a treatment strategy. Implementation Task backlog generated. Owners and target dates assigned. Budget envelope agreed.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Choose treatment strategy per High/Critical risk",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Auto-generate Implementation Tasks from gaps",
+    "task_type": "Auto-complete",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 6
+   },
+   {
+    "task_description": "Assign owners and target dates to every task",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 9
+   },
+   {
+    "task_description": "Estimate effort and cost per task",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 11
+   },
+   {
+    "task_description": "Roadmap reviewed and budget agreed with sponsor",
+    "task_type": "Approval Gate",
+    "responsible_team": "Top Management",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   }
+  ]
+ },
+ {
+  "engagement_type": "Standard NCA Engagement",
+  "phase_number": 6,
+  "phase_code": "EXECUTION",
+  "phase_label": "Execution Oversight",
+  "icon": "🚧",
+  "purpose_summary": "Tasks get executed by client teams; we chase, escalate, and re-test. Continuous Control Monitoring (Evidence Rules) updates posture in real time. Findings close as evidence is uploaded.",
+  "expected_duration_days": 180,
+  "entry_criteria": "Treatment plan signed off. Task backlog complete. Owners notified.",
+  "completion_criteria": "All Critical findings closed. >80% of High findings closed. Evidence Rule pass rate >85% across all rules. Audit-readiness pack draft generated.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Weekly status meeting cadence established",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Evidence Rules active for ERPNext-integrated controls",
+    "task_type": "Auto-check",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Monthly progress report delivered to sponsor",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 30
+   },
+   {
+    "task_description": "Re-test closed findings to confirm remediation",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 90
+   },
+   {
+    "task_description": "All Critical findings closed",
+    "task_type": "Auto-check",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "auto_check_method": "alphax_grc.engagement_automation.check_critical_findings_closed",
+    "default_offset_days": 150
+   },
+   {
+    "task_description": "Generate draft Audit Readiness pack",
+    "task_type": "Auto-complete",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 175
+   }
+  ]
+ },
+ {
+  "engagement_type": "Standard NCA Engagement",
+  "phase_number": 7,
+  "phase_code": "AUDIT_READY",
+  "phase_label": "Audit Readiness",
+  "icon": "🛡️",
+  "purpose_summary": "Final audit pack assembled. Inspector visits supported. Closeout report delivered. Continuous monitoring continues post-engagement.",
+  "expected_duration_days": 30,
+  "entry_criteria": "Execution targets met. Draft pack generated.",
+  "completion_criteria": "Inspection pack PDF generated and signed off. Closeout report delivered. Lessons-learned captured. Engagement closed.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Run full Inspection Pack generation",
+    "task_type": "Auto-complete",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Sponsor review of inspection pack",
+    "task_type": "Approval Gate",
+    "responsible_team": "Top Management",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Mock audit interview with key stakeholders",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Closeout report drafted and delivered",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 25
+   },
+   {
+    "task_description": "Lessons-learned session with delivery team",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 28
+   },
+   {
+    "task_description": "Engagement closed in system",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 30
+   }
+  ]
+ },
+ {
+  "engagement_type": "Aramco CCC Pursuit",
+  "phase_number": 1,
+  "phase_code": "ARAMCO_SCOPING",
+  "phase_label": "CCC Scoping",
+  "icon": "🎯",
+  "purpose_summary": "Determine Aramco service class and tier (Critical / High / Medium / Low). Identify which SACS-002 controls apply to that tier.",
+  "expected_duration_days": 10,
+  "entry_criteria": "Client confirmed as Aramco vendor. SOW signed.",
+  "completion_criteria": "Service class confirmed. Applicable SACS-002 controls identified. Tier letter received from Aramco.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Confirm Aramco contract scope and service classification",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Receive tier letter from Aramco Cybersecurity",
+    "task_type": "Manual",
+    "responsible_team": "Client Side",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Determine in-scope SACS-002 controls per tier",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 10
+   }
+  ]
+ },
+ {
+  "engagement_type": "Aramco CCC Pursuit",
+  "phase_number": 2,
+  "phase_code": "ARAMCO_SELF_ASSESS",
+  "phase_label": "Self-Assessment",
+  "icon": "📝",
+  "purpose_summary": "Vendor completes Aramco self-assessment questionnaire against in-scope SACS-002 controls.",
+  "expected_duration_days": 30,
+  "entry_criteria": "Tier confirmed. In-scope controls identified.",
+  "completion_criteria": "Self-assessment workbook completed. Evidence collected for every claim. Internal review passed.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Distribute self-assessment questions to control owners",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Collect evidence for every claim",
+    "task_type": "Manual",
+    "responsible_team": "Cyber Security Team",
+    "is_blocker": 1,
+    "default_offset_days": 21
+   },
+   {
+    "task_description": "Internal QA review of self-assessment workbook",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 28
+   }
+  ]
+ },
+ {
+  "engagement_type": "Aramco CCC Pursuit",
+  "phase_number": 3,
+  "phase_code": "ARAMCO_AUDIT_SCHEDULED",
+  "phase_label": "Audit Scheduled",
+  "icon": "📅",
+  "purpose_summary": "Independent assessment booked with an Aramco-accredited audit firm.",
+  "expected_duration_days": 14,
+  "entry_criteria": "Self-assessment complete. Aramco invoice paid.",
+  "completion_criteria": "Audit firm engaged, dates locked, fieldwork plan agreed.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Select Aramco-accredited audit firm",
+    "task_type": "Manual",
+    "responsible_team": "Top Management",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Sign engagement letter and pay deposit",
+    "task_type": "Manual",
+    "responsible_team": "Top Management",
+    "is_blocker": 1,
+    "default_offset_days": 10
+   },
+   {
+    "task_description": "Audit fieldwork dates confirmed",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   }
+  ]
+ },
+ {
+  "engagement_type": "Aramco CCC Pursuit",
+  "phase_number": 4,
+  "phase_code": "ARAMCO_AUDIT_FIELDWORK",
+  "phase_label": "Audit In Progress",
+  "icon": "🔬",
+  "purpose_summary": "Audit firm conducts inspection, inquiry, sample testing, evidence review.",
+  "expected_duration_days": 14,
+  "entry_criteria": "Audit firm on-site (or remote sessions started).",
+  "completion_criteria": "All audit sessions completed. Auditor's questions answered. Draft findings circulated.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Provide opening meeting and walkthroughs",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 1
+   },
+   {
+    "task_description": "Respond to all evidence requests within 24h",
+    "task_type": "Manual",
+    "responsible_team": "Cyber Security Team",
+    "default_offset_days": 10
+   },
+   {
+    "task_description": "Receive draft findings from audit firm",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   }
+  ]
+ },
+ {
+  "engagement_type": "Aramco CCC Pursuit",
+  "phase_number": 5,
+  "phase_code": "ARAMCO_FINDINGS",
+  "phase_label": "Findings Reviewed",
+  "icon": "📋",
+  "purpose_summary": "Audit findings raised, severity classified, ownership assigned.",
+  "expected_duration_days": 7,
+  "entry_criteria": "Draft findings received from audit firm.",
+  "completion_criteria": "All findings logged in GRC Audit Finding. Severities agreed. Owners assigned.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Log each audit finding in system",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 2
+   },
+   {
+    "task_description": "Negotiate severity ratings with audit firm",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Assign remediation owner per finding",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   }
+  ]
+ },
+ {
+  "engagement_type": "Aramco CCC Pursuit",
+  "phase_number": 6,
+  "phase_code": "ARAMCO_REMEDIATION",
+  "phase_label": "Remediation",
+  "icon": "🛠️",
+  "purpose_summary": "Findings tracked to closure; controls re-tested by audit firm.",
+  "expected_duration_days": 60,
+  "entry_criteria": "Findings logged with owners.",
+  "completion_criteria": "All findings closed and re-tested. Audit firm signs off.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Implement remediation actions per finding",
+    "task_type": "Manual",
+    "responsible_team": "Cyber Security Team",
+    "is_blocker": 1,
+    "default_offset_days": 30
+   },
+   {
+    "task_description": "Upload remediation evidence to system",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 45
+   },
+   {
+    "task_description": "Audit firm re-tests every closed finding",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 55
+   },
+   {
+    "task_description": "Final audit report received with no open findings",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 60
+   }
+  ]
+ },
+ {
+  "engagement_type": "Aramco CCC Pursuit",
+  "phase_number": 7,
+  "phase_code": "ARAMCO_CERTIFIED",
+  "phase_label": "Certified",
+  "icon": "🏅",
+  "purpose_summary": "Certificate issued by Aramco. Scope, dates, certificate number recorded.",
+  "expected_duration_days": 30,
+  "entry_criteria": "Audit firm submitted final report to Aramco.",
+  "completion_criteria": "Certificate issued. Recorded in GRC Aramco Certificate. Renewal date set.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Audit firm submits final report to Aramco",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Aramco issues certificate",
+    "task_type": "Manual",
+    "responsible_team": "Client Side",
+    "is_blocker": 1,
+    "default_offset_days": 21
+   },
+   {
+    "task_description": "Record certificate in GRC Aramco Certificate doctype",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 25
+   },
+   {
+    "task_description": "Set renewal alert (180/90/30/0d)",
+    "task_type": "Auto-complete",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 27
+   }
+  ]
+ },
+ {
+  "engagement_type": "Aramco CCC Pursuit",
+  "phase_number": 8,
+  "phase_code": "ARAMCO_RENEWAL",
+  "phase_label": "Renewal Cycle",
+  "icon": "🔄",
+  "purpose_summary": "Continuous monitoring until renewal due. 180/90/30/0d alerts. Re-engagement triggered.",
+  "expected_duration_days": 365,
+  "entry_criteria": "Certificate live.",
+  "completion_criteria": "Renewal cycle re-triggered (new engagement created at 180d alert).",
+  "auto_advance_when_complete": 1,
+  "default_checklist_items": [
+   {
+    "task_description": "Continuous monitoring of SACS-002 control posture",
+    "task_type": "Auto-check",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 30
+   },
+   {
+    "task_description": "180-day renewal alert fired",
+    "task_type": "Auto-complete",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 185
+   },
+   {
+    "task_description": "90-day renewal alert fired",
+    "task_type": "Auto-complete",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 275
+   },
+   {
+    "task_description": "30-day renewal alert fired",
+    "task_type": "Auto-complete",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 335
+   },
+   {
+    "task_description": "Renewal engagement created",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 360
+   }
+  ]
+ },
+ {
+  "engagement_type": "GDPR Compliance",
+  "phase_number": 1,
+  "phase_code": "GDPR_DISCOVERY",
+  "phase_label": "Data Discovery",
+  "icon": "🔍",
+  "purpose_summary": "Map every personal-data processing activity. Identify controllers, processors, joint controllers, sub-processors. Identify data flows including third-country transfers.",
+  "expected_duration_days": 21,
+  "entry_criteria": "Engagement kicked off. DPO or privacy lead identified.",
+  "completion_criteria": "Records of Processing Activities (RoPA) populated for all material activities. Data flow map complete.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Identify all personal-data processing activities",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Build Records of Processing Activities (RoPA)",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Map data flows including third-country transfers",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 18
+   },
+   {
+    "task_description": "Identify controller / processor / joint-controller relationships",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 20
+   }
+  ]
+ },
+ {
+  "engagement_type": "GDPR Compliance",
+  "phase_number": 2,
+  "phase_code": "GDPR_LAWFUL_BASIS",
+  "phase_label": "Lawful Basis & DPIA",
+  "icon": "⚖️",
+  "purpose_summary": "Determine lawful basis for every processing activity. Conduct DPIAs for high-risk processing. Document Legitimate Interests Assessments where used.",
+  "expected_duration_days": 14,
+  "entry_criteria": "RoPA complete.",
+  "completion_criteria": "Every processing activity has documented lawful basis. DPIAs complete for all high-risk activities.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Assign Art-6 lawful basis per processing activity",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Conduct Legitimate Interests Assessments where applicable",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 8
+   },
+   {
+    "task_description": "Identify Art-35 high-risk processing requiring DPIAs",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 9
+   },
+   {
+    "task_description": "Conduct DPIAs",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   }
+  ]
+ },
+ {
+  "engagement_type": "GDPR Compliance",
+  "phase_number": 3,
+  "phase_code": "GDPR_RIGHTS",
+  "phase_label": "Data Subject Rights",
+  "icon": "👤",
+  "purpose_summary": "Build mechanisms for all data-subject rights (access, rectification, erasure, restriction, portability, objection, automated decision-making).",
+  "expected_duration_days": 21,
+  "entry_criteria": "Lawful bases established.",
+  "completion_criteria": "DSAR process operational. Privacy notices live. Rights mechanisms tested.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Build DSAR intake and response process",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 10
+   },
+   {
+    "task_description": "Publish layered privacy notices (Art-13/14)",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Implement consent management (Art-7)",
+    "task_type": "Manual",
+    "responsible_team": "IT Team",
+    "default_offset_days": 18
+   },
+   {
+    "task_description": "Test rights workflows end-to-end",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 21
+   }
+  ]
+ },
+ {
+  "engagement_type": "GDPR Compliance",
+  "phase_number": 4,
+  "phase_code": "GDPR_SECURITY",
+  "phase_label": "Security & Breach Response",
+  "icon": "🛡️",
+  "purpose_summary": "Implement Art-32 security measures. Build 72-hour breach notification capability. Conduct breach drills.",
+  "expected_duration_days": 28,
+  "entry_criteria": "Privacy notices live; rights mechanisms working.",
+  "completion_criteria": "Art-32 measures in place. Breach response plan tested.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Implement Art-32 technical and organisational measures",
+    "task_type": "Manual",
+    "responsible_team": "Cyber Security Team",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Build 72-hour breach notification process",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 21
+   },
+   {
+    "task_description": "Conduct breach response drill",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 26
+   }
+  ]
+ },
+ {
+  "engagement_type": "GDPR Compliance",
+  "phase_number": 5,
+  "phase_code": "GDPR_VENDOR",
+  "phase_label": "Vendor & Transfer Compliance",
+  "icon": "🌐",
+  "purpose_summary": "Sign DPAs with all processors. Conduct Transfer Impact Assessments for non-adequacy transfers. Implement supplementary measures per Schrems II.",
+  "expected_duration_days": 30,
+  "entry_criteria": "Security measures live.",
+  "completion_criteria": "DPAs in place with all processors. TIAs complete for non-adequacy transfers.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Inventory all processors and sub-processors",
+    "task_type": "Manual",
+    "responsible_team": "Purchase Team",
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Sign Art-28 Data Processing Agreements",
+    "task_type": "Manual",
+    "responsible_team": "Purchase Team",
+    "is_blocker": 1,
+    "default_offset_days": 21
+   },
+   {
+    "task_description": "Conduct Transfer Impact Assessments (post-Schrems II)",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "is_blocker": 1,
+    "default_offset_days": 28
+   }
+  ]
+ },
+ {
+  "engagement_type": "GDPR Compliance",
+  "phase_number": 6,
+  "phase_code": "GDPR_OPERATIONS",
+  "phase_label": "Continuous Operations",
+  "icon": "🔄",
+  "purpose_summary": "DPO appointed (where required). Annual review cadence. Training. Continuous monitoring of processing activities.",
+  "expected_duration_days": 365,
+  "entry_criteria": "All operational mechanisms live.",
+  "completion_criteria": "Annual review cycle established. DPO functions operational. Engagement transitions to Managed Compliance mode.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Appoint DPO (if Art-37 applicable)",
+    "task_type": "Manual",
+    "responsible_team": "Top Management",
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Annual privacy training rolled out",
+    "task_type": "Manual",
+    "responsible_team": "HR Administration",
+    "default_offset_days": 60
+   },
+   {
+    "task_description": "Annual RoPA review completed",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 365
+   },
+   {
+    "task_description": "Annual DPIA review completed",
+    "task_type": "Manual",
+    "responsible_team": "GRC Team",
+    "default_offset_days": 365
+   },
+   {
+    "task_description": "Compliance maturity assessment",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "default_offset_days": 360
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 1,
+  "phase_code": "DATA_DISCOVERY",
+  "phase_label": "Data Discovery & Mapping",
+  "icon": "🗺️",
+  "purpose_summary": "Identify every system processing personal data, document data elements, flows, and dependencies. The output is a data inventory and preliminary data flow map.",
+  "expected_duration_days": 14,
+  "entry_criteria": "Engagement signed. Lead consultant assigned. Initial stakeholder map drafted.",
+  "completion_criteria": "Data inventory populated for all in-scope systems. Data flow diagram drafted. Sensitive data tagged.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Identify all systems processing personal data",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Catalog data elements per system",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 10
+   },
+   {
+    "task_description": "Tag sensitive data categories",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 0,
+    "default_offset_days": 12
+   },
+   {
+    "task_description": "Draft preliminary data flow diagram",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 0,
+    "default_offset_days": 14
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 2,
+  "phase_code": "INITIAL_ASSESSMENT",
+  "phase_label": "Initial PDPL Assessment",
+  "icon": "🔍",
+  "purpose_summary": "Assess the client's current PDPL posture. Identify scope boundaries, controller vs processor roles per activity, applicable PDPL articles. Produce a baseline assessment report.",
+  "expected_duration_days": 10,
+  "entry_criteria": "Data inventory complete from Phase 1.",
+  "completion_criteria": "Initial assessment report signed off. Scope determination documented. Controller/processor roles assigned per activity.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Run PDPL self-assessment using SDAIA tool",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Document scope and applicability per PDPL Article 2",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Assign controller/processor roles per processing activity",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Brief executive sponsor on baseline findings",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 0,
+    "default_offset_days": 10
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 3,
+  "phase_code": "BUILD_ROPA",
+  "phase_label": "Build Records of Processing Activities (RoPA)",
+  "icon": "📋",
+  "purpose_summary": "Build the Record of Processing Activities per PDPL Article 16 — one entry per activity capturing purpose, lawful basis, data categories, retention, recipients, transfers, security measures.",
+  "expected_duration_days": 21,
+  "entry_criteria": "Phase 2 sign-off. Data inventory mature.",
+  "completion_criteria": "RoPA register populated for all in-scope activities. Each entry has lawful basis and retention period. RoPA approved at appropriate level.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Use existing GRC Privacy Processing Activity doctype to capture each entry",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Determine lawful basis per activity (PDPL Article 7)",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Document retention period per activity",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 18
+   },
+   {
+    "task_description": "RoPA review and approval by DPO",
+    "task_type": "Manual",
+    "responsible_team": "DPO",
+    "is_blocker": 1,
+    "default_offset_days": 21
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 4,
+  "phase_code": "GAP_ANALYSIS",
+  "phase_label": "Gap Analysis (Current vs Required)",
+  "icon": "📊",
+  "purpose_summary": "Map current state to PDPL articles. Identify gaps with severity ratings. Develop a prioritized remediation roadmap.",
+  "expected_duration_days": 14,
+  "entry_criteria": "RoPA from Phase 3 complete.",
+  "completion_criteria": "Gap analysis report. Per-PDPL-article compliance score. Prioritized remediation roadmap signed off.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Auto-create GRC PDPL Control records for all 31 articles",
+    "task_type": "Automation",
+    "responsible_team": "System",
+    "is_blocker": 1,
+    "default_offset_days": 1
+   },
+   {
+    "task_description": "Score each PDPL article: Implemented / Partial / Not Started",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Build prioritized remediation roadmap (90/180/365-day buckets)",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 12
+   },
+   {
+    "task_description": "Roadmap presented and approved by executive sponsor",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 5,
+  "phase_code": "POLICY_DEVELOPMENT",
+  "phase_label": "Develop Required Policies",
+  "icon": "📝",
+  "purpose_summary": "Develop core privacy policies: Personal Data Protection Policy, Privacy Notice & Consent, DPIA Policy, Data Retention Policy. Get executive sign-off.",
+  "expected_duration_days": 21,
+  "entry_criteria": "Gap analysis from Phase 4 complete.",
+  "completion_criteria": "Four core policies drafted, reviewed, approved, published.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Draft Personal Data Protection Policy",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Draft Privacy Notice (Arabic + English)",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 10
+   },
+   {
+    "task_description": "Draft DPIA Policy",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Draft Data Retention Policy",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 16
+   },
+   {
+    "task_description": "Executive review and approval of all 4 policies",
+    "task_type": "Manual",
+    "responsible_team": "Executive Sponsor",
+    "is_blocker": 1,
+    "default_offset_days": 21
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 6,
+  "phase_code": "DATA_CLASSIFICATION",
+  "phase_label": "Implement Data Classification Policy",
+  "icon": "🏷️",
+  "purpose_summary": "Define a data classification scheme aligned with NCA controls (Public/Internal/Restricted/Critical). Apply classification to all personal data sets.",
+  "expected_duration_days": 14,
+  "entry_criteria": "Phase 5 policies in place.",
+  "completion_criteria": "Classification scheme published. All personal data sets classified. Handling rules documented per class.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Define 4-tier classification scheme aligned with NCA",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Classify each data set in the inventory",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 10
+   },
+   {
+    "task_description": "Document handling rules per class (storage, access, transmission, destruction)",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 7,
+  "phase_code": "DSAR_PROCESS",
+  "phase_label": "Build DSAR Process",
+  "icon": "🤝",
+  "purpose_summary": "Implement the Data Subject Access Request workflow. Build the intake form, identity verification flow, scope assessment process, response templates. Train staff. Test end-to-end.",
+  "expected_duration_days": 14,
+  "entry_criteria": "Phases 5-6 complete.",
+  "completion_criteria": "DSAR process operational. GRC DSAR Request doctype actively in use. Staff trained. End-to-end test passed within 30-day SLA.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Design DSAR intake (web form, email, phone)",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Build identity verification procedure (Iqama / Passport / Account-based)",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 8
+   },
+   {
+    "task_description": "Create response templates per request type (Access/Rectify/Erase/Withdraw)",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 10
+   },
+   {
+    "task_description": "Train staff on DSAR handling and 30-day SLA",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 12
+   },
+   {
+    "task_description": "Run end-to-end DSAR test",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 8,
+  "phase_code": "KPI_DEFINITION",
+  "phase_label": "Define KPIs, KCIs, KRIs",
+  "icon": "📈",
+  "purpose_summary": "Define SMART KPIs (e.g. DSAR turnaround time), Key Control Indicators (e.g. RoPA currency), Key Risk Indicators (e.g. open privacy findings). Stand up the dashboards.",
+  "expected_duration_days": 7,
+  "entry_criteria": "Phases 1-7 substantively complete.",
+  "completion_criteria": "KPI/KCI/KRI list approved. Dashboards live. Initial baseline values captured.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Define 5-10 SMART privacy KPIs",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 3
+   },
+   {
+    "task_description": "Define KCIs aligned with PDPL article compliance scores",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 4
+   },
+   {
+    "task_description": "Define KRIs (e.g. overdue DSAR rate, breach response time)",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Capture initial baseline values",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 0,
+    "default_offset_days": 7
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 9,
+  "phase_code": "AWARENESS",
+  "phase_label": "Awareness Sessions",
+  "icon": "🎓",
+  "purpose_summary": "Run privacy awareness sessions for all staff. Role-specific deep training for IT/HR/Marketing/CS. Track completion as a KPI.",
+  "expected_duration_days": 21,
+  "entry_criteria": "Policies in place from Phase 5.",
+  "completion_criteria": "All staff trained. Role-specific deep dives completed. Training completion >95%.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Develop privacy awareness curriculum (Arabic + English)",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 7
+   },
+   {
+    "task_description": "Roll out general staff awareness training",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Conduct role-specific deep training (IT/HR/Marketing/CS)",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 18
+   },
+   {
+    "task_description": "Verify training completion >=95%",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 21
+   }
+  ]
+ },
+ {
+  "engagement_type": "PDPL Implementation",
+  "phase_number": 10,
+  "phase_code": "VENDOR_BREACH_PLAN",
+  "phase_label": "Third-Party Management & Breach Response Plan",
+  "icon": "🚨",
+  "purpose_summary": "Implement Data Processing Agreements with all processors. Build the breach response plan including 72-hour SDAIA notification. Run a tabletop exercise.",
+  "expected_duration_days": 21,
+  "entry_criteria": "Phase 5 policies in place.",
+  "completion_criteria": "DPAs signed with all material processors. Breach response plan published. Tabletop exercise completed with findings tracked.",
+  "auto_advance_when_complete": 0,
+  "default_checklist_items": [
+   {
+    "task_description": "Develop standard DPA template per PDPL Article 20",
+    "task_type": "Manual",
+    "responsible_team": "Legal",
+    "is_blocker": 1,
+    "default_offset_days": 5
+   },
+   {
+    "task_description": "Sign DPAs with all material processors",
+    "task_type": "Manual",
+    "responsible_team": "Legal",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Build breach response plan with 72-hour SDAIA notification trigger",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 14
+   },
+   {
+    "task_description": "Pre-approve breach notification templates per IR-A14",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 16
+   },
+   {
+    "task_description": "Run breach tabletop exercise",
+    "task_type": "Manual",
+    "responsible_team": "Privacy Lead",
+    "is_blocker": 1,
+    "default_offset_days": 21
+   },
+   {
+    "task_description": "Track tabletop findings as Implementation Tasks",
+    "task_type": "Manual",
+    "responsible_team": "Lead Consultant",
+    "is_blocker": 0,
+    "default_offset_days": 21
+   }
+  ]
+ }
+]

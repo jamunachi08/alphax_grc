@@ -1,0 +1,392 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:client_code",
+ "creation": "2026-04-25 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client_section",
+  "client_code",
+  "client_name",
+  "client_name_ar",
+  "column_break_1",
+  "country",
+  "sector",
+  "is_active",
+  "engagement_section",
+  "engagement_type",
+  "engagement_start",
+  "engagement_end",
+  "column_break_2",
+  "lead_consultant",
+  "primary_contact",
+  "contact_email",
+  "scope_section",
+  "applicable_frameworks",
+  "scope_notes",
+  "section_risk_appetite",
+  "appetite_strategic",
+  "appetite_operational",
+  "appetite_financial",
+  "column_break_appetite_1",
+  "appetite_compliance",
+  "appetite_cybersecurity",
+  "appetite_privacy",
+  "column_break_appetite_2",
+  "appetite_third_party",
+  "appetite_reputational",
+  "appetite_statement",
+  "summary_section",
+  "compliance_score",
+  "open_risks",
+  "open_findings",
+  "logo_section",
+  "client_logo",
+  "billing_section",
+  "default_hourly_rate",
+  "billing_currency",
+  "auto_adopt_section",
+  "auto_adopt_nca_policies",
+  "auto_adopt_nca_procedures",
+  "auto_adopt_nca_forms",
+  "adoption_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "client_section",
+   "fieldtype": "Section Break",
+   "label": "Client Identity"
+  },
+  {
+   "fieldname": "client_code",
+   "fieldtype": "Data",
+   "label": "Client Code",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Short code: ACME, ARAMCO, SAMA-BANK1 etc."
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "label": "Client Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "client_name_ar",
+   "fieldtype": "Data",
+   "label": "Client Name (Arabic)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Select",
+   "label": "Country",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "options": "Saudi Arabia\nUAE\nBahrain\nKuwait\nQatar\nOman\nEgypt\nJordan\nOther"
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Select",
+   "label": "Sector",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "options": "Government\nBanking & Finance\nAramco Supply Chain\nHealthcare\nEnergy & Utilities\nTelecom\nEducation\nGeneral Private\nOther"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active Engagement",
+   "default": "1",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "engagement_section",
+   "fieldtype": "Section Break",
+   "label": "Engagement"
+  },
+  {
+   "fieldname": "engagement_type",
+   "fieldtype": "Select",
+   "label": "Engagement Type",
+   "options": "One-off Assessment\nRetainer\nImplementation Project\nOngoing Managed Service\nAdvisory"
+  },
+  {
+   "fieldname": "engagement_start",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "engagement_end",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_consultant",
+   "fieldtype": "Link",
+   "options": "User",
+   "label": "Lead Consultant"
+  },
+  {
+   "fieldname": "primary_contact",
+   "fieldtype": "Data",
+   "label": "Primary Contact (Client side)"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "options": "Email",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "scope_section",
+   "fieldtype": "Section Break",
+   "label": "Scope"
+  },
+  {
+   "fieldname": "applicable_frameworks",
+   "fieldtype": "Small Text",
+   "label": "Applicable Frameworks",
+   "description": "Auto-populated based on country + sector. You can override."
+  },
+  {
+   "fieldname": "scope_notes",
+   "fieldtype": "Text",
+   "label": "Scope Notes"
+  },
+  {
+   "fieldname": "section_risk_appetite",
+   "fieldtype": "Section Break",
+   "label": "Risk Appetite (Enterprise)",
+   "collapsible": 1,
+   "description": "Board-approved appetite per risk category. Used by EGRC dashboards to flag risks above tolerance."
+  },
+  {
+   "fieldname": "appetite_strategic",
+   "fieldtype": "Select",
+   "label": "Strategic",
+   "options": "\nNone\nLow\nModerate\nHigh",
+   "default": "Low"
+  },
+  {
+   "fieldname": "appetite_operational",
+   "fieldtype": "Select",
+   "label": "Operational",
+   "options": "\nNone\nLow\nModerate\nHigh",
+   "default": "Moderate"
+  },
+  {
+   "fieldname": "appetite_financial",
+   "fieldtype": "Select",
+   "label": "Financial",
+   "options": "\nNone\nLow\nModerate\nHigh",
+   "default": "Low"
+  },
+  {
+   "fieldname": "column_break_appetite_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appetite_compliance",
+   "fieldtype": "Select",
+   "label": "Compliance",
+   "options": "\nNone\nLow\nModerate\nHigh",
+   "default": "None",
+   "description": "Most regulated entities should be 'None'"
+  },
+  {
+   "fieldname": "appetite_cybersecurity",
+   "fieldtype": "Select",
+   "label": "Cybersecurity",
+   "options": "\nNone\nLow\nModerate\nHigh",
+   "default": "Low"
+  },
+  {
+   "fieldname": "appetite_privacy",
+   "fieldtype": "Select",
+   "label": "Privacy",
+   "options": "\nNone\nLow\nModerate\nHigh",
+   "default": "None"
+  },
+  {
+   "fieldname": "column_break_appetite_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appetite_third_party",
+   "fieldtype": "Select",
+   "label": "Third-Party",
+   "options": "\nNone\nLow\nModerate\nHigh",
+   "default": "Low"
+  },
+  {
+   "fieldname": "appetite_reputational",
+   "fieldtype": "Select",
+   "label": "Reputational",
+   "options": "\nNone\nLow\nModerate\nHigh",
+   "default": "Low"
+  },
+  {
+   "fieldname": "appetite_statement",
+   "fieldtype": "Text",
+   "label": "Risk Appetite Statement",
+   "description": "Free-text board-level statement, e.g. 'We accept up to two High Operational risks at any time, but zero High Compliance risks.'"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Live Summary",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "compliance_score",
+   "fieldtype": "Percent",
+   "label": "Compliance Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "open_risks",
+   "fieldtype": "Int",
+   "label": "Open Risks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "open_findings",
+   "fieldtype": "Int",
+   "label": "Open Findings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "logo_section",
+   "fieldtype": "Section Break",
+   "label": "Branding",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "client_logo",
+   "fieldtype": "Attach Image",
+   "label": "Client Logo"
+  },
+  {
+   "fieldname": "billing_section",
+   "fieldtype": "Section Break",
+   "label": "Billing",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "default_hourly_rate",
+   "fieldtype": "Currency",
+   "label": "Default Hourly Rate"
+  },
+  {
+   "fieldname": "billing_currency",
+   "fieldtype": "Link",
+   "options": "Currency",
+   "label": "Billing Currency",
+   "default": "SAR"
+  },
+  {
+   "fieldname": "auto_adopt_section",
+   "fieldtype": "Section Break",
+   "label": "NCA Library Auto-Adopt",
+   "collapsible": 1,
+   "description": "Automatically create draft Policy / Procedure / Form records pre-populated from the NCA library when this client is created or saved."
+  },
+  {
+   "fieldname": "auto_adopt_nca_policies",
+   "fieldtype": "Check",
+   "label": "Auto-adopt all NCA Policies on save",
+   "description": "Creates 35 GRC Policy records (one per NCA policy template) in Draft status. Only triggers when count of policies for this client is 0."
+  },
+  {
+   "fieldname": "auto_adopt_nca_procedures",
+   "fieldtype": "Check",
+   "label": "Auto-adopt all NCA Procedures on save",
+   "description": "Creates 4 ISMS Document Register records for NCA procedures."
+  },
+  {
+   "fieldname": "auto_adopt_nca_forms",
+   "fieldtype": "Check",
+   "label": "Auto-adopt all NCA Forms on save",
+   "description": "Creates 6 ISMS Document Register records for NCA forms."
+  },
+  {
+   "fieldname": "adoption_status",
+   "fieldtype": "Small Text",
+   "label": "Adoption Status",
+   "read_only": 1,
+   "description": "Last auto-adoption result"
+  }
+ ],
+ "links": [],
+ "modified": "2026-04-25 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC Client Profile",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "client_name",
+ "track_changes": 1
+}

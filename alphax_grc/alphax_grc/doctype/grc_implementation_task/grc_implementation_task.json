@@ -1,0 +1,314 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TASK-{####}",
+ "creation": "2026-05-03 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "task_title",
+  "engagement",
+  "client",
+  "column_break_1",
+  "control_reference",
+  "framework",
+  "phase_origin",
+  "section_classification",
+  "category",
+  "responsible_team",
+  "priority",
+  "column_break_2",
+  "status",
+  "responsible_owner",
+  "section_dates",
+  "start_date",
+  "due_date",
+  "completed_date",
+  "column_break_3",
+  "estimated_hours",
+  "actual_hours",
+  "section_details",
+  "task_description",
+  "deliverable",
+  "section_evidence",
+  "evidence_attached",
+  "evidence_link",
+  "section_links",
+  "linked_finding",
+  "linked_risk",
+  "linked_iso42001_control",
+  "linked_ecc_control",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "task_title",
+   "fieldtype": "Data",
+   "label": "Task",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "engagement",
+   "fieldtype": "Link",
+   "options": "GRC Engagement",
+   "label": "Engagement",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "fetch_from": "engagement.client",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "control_reference",
+   "fieldtype": "Data",
+   "label": "Control",
+   "in_standard_filter": 1,
+   "description": "e.g. 1-9-3-1, A.6.2.4, SACS-001-2"
+  },
+  {
+   "fieldname": "framework",
+   "fieldtype": "Select",
+   "label": "Framework",
+   "options": "\nNCA ECC-2:2024\nISO 27001\nISO 42001\nAramco SACS-002\nPDPL\nGDPR\nCustom\nNIST CSF 2.0\nISO 22301",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "phase_origin",
+   "fieldtype": "Data",
+   "label": "Phase Origin",
+   "read_only": 1,
+   "description": "Engagement phase that created this task"
+  },
+  {
+   "fieldname": "section_classification",
+   "fieldtype": "Section Break",
+   "label": "Classification"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Policy\nProcedure\nStandard/Guideline\nDocument Creating\nSetup/Structure\nConfiguration/System Check\nRevision\nTraining and Development\nHuman Resource\nAssessment\nRecruitment and Onboarding",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "responsible_team",
+   "fieldtype": "Select",
+   "label": "Team",
+   "options": "GRC Team\nIT Team\nCyber Security Team\nIT Audit Team\nHR Administration\nTop Management\nPurchase Team\nClient Side\nLead Consultant",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Critical\nHigh\nMedium\nLow",
+   "default": "Medium",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nIn Progress\nCompleted\nBlocked\nCancelled",
+   "default": "Pending",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "responsible_owner",
+   "fieldtype": "Link",
+   "options": "User",
+   "label": "Owner",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "section_dates",
+   "fieldtype": "Section Break",
+   "label": "Dates"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "completed_date",
+   "fieldtype": "Date",
+   "label": "Completed Date"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_hours",
+   "fieldtype": "Float",
+   "label": "Estimated Hours",
+   "default": 0
+  },
+  {
+   "fieldname": "actual_hours",
+   "fieldtype": "Float",
+   "label": "Actual Hours",
+   "default": 0
+  },
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "deliverable",
+   "fieldtype": "Small Text",
+   "label": "Expected Deliverable",
+   "description": "What concrete artifact comes out of this task?"
+  },
+  {
+   "fieldname": "section_evidence",
+   "fieldtype": "Section Break",
+   "label": "Evidence",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "evidence_attached",
+   "fieldtype": "Check",
+   "label": "Evidence Attached",
+   "default": "0",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "evidence_link",
+   "fieldtype": "Data",
+   "label": "Evidence Link/Reference"
+  },
+  {
+   "fieldname": "section_links",
+   "fieldtype": "Section Break",
+   "label": "Linked Records",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "linked_finding",
+   "fieldtype": "Link",
+   "options": "GRC Audit Finding",
+   "label": "Source Finding"
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "options": "GRC Risk Register",
+   "label": "Linked Risk"
+  },
+  {
+   "fieldname": "linked_iso42001_control",
+   "fieldtype": "Link",
+   "options": "GRC ISO42001 Control",
+   "label": "Linked ISO 42001 Control"
+  },
+  {
+   "fieldname": "linked_ecc_control",
+   "fieldtype": "Data",
+   "label": "Linked NCA ECC Control"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-03 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC Implementation Task",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "due_date",
+ "sort_order": "ASC",
+ "title_field": "task_title",
+ "track_changes": 1
+}

@@ -1,0 +1,23 @@
+{
+ "name": "GRC Language Settings",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "issingle": 1,
+ "description": "Multilingual settings for AlphaX GRC — controls UI language (Arabic/English/French), text direction (RTL/LTR), and date/number formatting",
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1},
+  {"role": "GRC Admin", "read": 1, "write": 1}
+ ],
+ "fields": [
+  {"fieldname": "primary_language", "fieldtype": "Select", "label": "Primary Language", "options": "English\nArabic\nFrench\nUrdu", "default": "English"},
+  {"fieldname": "text_direction", "fieldtype": "Select", "label": "Text Direction", "options": "LTR (Left to Right)\nRTL (Right to Left)", "default": "LTR (Left to Right)"},
+  {"fieldname": "enable_bilingual_labels", "fieldtype": "Check", "label": "Enable Bilingual Labels (EN + AR)", "default": "1"},
+  {"fieldname": "date_format", "fieldtype": "Select", "label": "Date Format", "options": "DD/MM/YYYY\nMM/DD/YYYY\nYYYY-MM-DD\nDD-MMM-YYYY", "default": "DD/MM/YYYY"},
+  {"fieldname": "number_format", "fieldtype": "Select", "label": "Number Format", "options": "1,234,567.89\n1.234.567,89\n1 234 567,89", "default": "1,234,567.89"},
+  {"fieldname": "currency_symbol", "fieldtype": "Data", "label": "Currency Symbol", "default": "SAR"},
+  {"fieldname": "hijri_calendar", "fieldtype": "Check", "label": "Show Hijri Calendar Dates", "default": "0"},
+  {"fieldname": "section_translation", "fieldtype": "Section Break", "label": "Report & Dashboard Language"},
+  {"fieldname": "report_language", "fieldtype": "Select", "label": "Report Language", "options": "English\nArabic\nBilingual (EN + AR)", "default": "Bilingual (EN + AR)"},
+  {"fieldname": "dashboard_language", "fieldtype": "Select", "label": "Dashboard Language", "options": "English\nArabic\nBilingual (EN + AR)", "default": "Bilingual (EN + AR)"}
+ ]
+}

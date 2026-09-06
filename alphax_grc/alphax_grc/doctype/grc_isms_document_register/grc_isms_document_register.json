@@ -1,0 +1,139 @@
+{
+ "name": "GRC ISMS Document Register",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:ISMS-{#####}",
+ "title_field": "document_title",
+ "description": "ISO 27001:2022 ISMS mandatory document register — tracks all required policy, procedure, and record documents across all clauses (4-10) and Annex A controls (A.5-A.8)",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "document_title",
+   "fieldtype": "Data",
+   "label": "Document Title",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "clause_number",
+   "fieldtype": "Data",
+   "label": "ISO 27001 Clause / Control",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "clause_name",
+   "fieldtype": "Data",
+   "label": "Clause Name"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "label": "Document Type",
+   "options": "\nPolicy\nProcedure\nRegister / Log\nPlan\nReport\nTemplate\nPresentation\nGuideline\nManual\nChecklist",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "iso_section",
+   "fieldtype": "Select",
+   "label": "ISO Section",
+   "options": "\nClause 4 - Context\nClause 5 - Leadership\nClause 6 - Planning\nClause 7 - Support\nClause 8 - Operation\nClause 9 - Performance\nClause 10 - Improvement\nA.5 Organizational Controls\nA.6 People Controls\nA.7 Physical Controls\nA.8 Technological Controls",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "document_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Not Started\nDraft\nIn Review\nApproved\nPublished\nExpired\nNot Applicable",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "document_owner",
+   "fieldtype": "Link",
+   "label": "Document Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version",
+   "default": "1.0"
+  },
+  {
+   "fieldname": "last_reviewed",
+   "fieldtype": "Date",
+   "label": "Last Reviewed"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review"
+  },
+  {
+   "fieldname": "linked_policy",
+   "fieldtype": "Link",
+   "label": "Linked GRC Policy",
+   "options": "GRC Policy"
+  },
+  {
+   "fieldname": "document_location",
+   "fieldtype": "Data",
+   "label": "Document Location / URL"
+  },
+  {
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "label": "Mandatory Document",
+   "default": "1"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "field_order": [
+  "client"
+ ]
+}

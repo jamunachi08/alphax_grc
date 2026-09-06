@@ -1,0 +1,211 @@
+{
+ "name": "GRC IT Audit Program",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:ITAP-{#####}",
+ "title_field": "program_title",
+ "description": "IT General Controls Audit Program — tracks all control domains, requested artifacts, delivery status, and auditor notes across GLBA, DLP, Patch, Vendor, Network, InfoSec, and Incident Response domains",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "program_title",
+   "fieldtype": "Data",
+   "label": "Audit Program Title",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "audit_year",
+   "fieldtype": "Data",
+   "label": "Audit Year / Period",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "auditor_name",
+   "fieldtype": "Link",
+   "label": "Lead Auditor",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Program Status",
+   "options": "Planning\nIn Progress\nPending Evidence\nUnder Review\nCompleted\nArchived",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "scope_section",
+   "fieldtype": "Section Break",
+   "label": "Scope"
+  },
+  {
+   "fieldname": "in_scope_glba",
+   "fieldtype": "Check",
+   "label": "GLBA 501(b) Compliance",
+   "default": "1"
+  },
+  {
+   "fieldname": "in_scope_dlp",
+   "fieldtype": "Check",
+   "label": "Data Loss Prevention",
+   "default": "1"
+  },
+  {
+   "fieldname": "in_scope_patch",
+   "fieldtype": "Check",
+   "label": "Patch Management",
+   "default": "1"
+  },
+  {
+   "fieldname": "in_scope_vendor",
+   "fieldtype": "Check",
+   "label": "Vendor Management",
+   "default": "1"
+  },
+  {
+   "fieldname": "in_scope_network",
+   "fieldtype": "Check",
+   "label": "Network Security",
+   "default": "1"
+  },
+  {
+   "fieldname": "in_scope_isp",
+   "fieldtype": "Check",
+   "label": "Information Security Program",
+   "default": "1"
+  },
+  {
+   "fieldname": "in_scope_ir",
+   "fieldtype": "Check",
+   "label": "Incident Response",
+   "default": "1"
+  },
+  {
+   "fieldname": "col_break_scope",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_framework",
+   "fieldtype": "Link",
+   "label": "Primary Framework",
+   "options": "GRC Framework"
+  },
+  {
+   "fieldname": "linked_audit_plan",
+   "fieldtype": "Link",
+   "label": "Linked Audit Plan",
+   "options": "GRC Audit Plan"
+  },
+  {
+   "fieldname": "audit_start_date",
+   "fieldtype": "Date",
+   "label": "Audit Start Date"
+  },
+  {
+   "fieldname": "audit_end_date",
+   "fieldtype": "Date",
+   "label": "Audit End Date"
+  },
+  {
+   "fieldname": "stats_section",
+   "fieldtype": "Section Break",
+   "label": "Progress Statistics"
+  },
+  {
+   "fieldname": "total_controls",
+   "fieldtype": "Int",
+   "label": "Total Controls",
+   "read_only": 1
+  },
+  {
+   "fieldname": "artifacts_requested",
+   "fieldtype": "Int",
+   "label": "Artifacts Requested",
+   "read_only": 1
+  },
+  {
+   "fieldname": "artifacts_delivered",
+   "fieldtype": "Int",
+   "label": "Artifacts Delivered",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_pct",
+   "fieldtype": "Percent",
+   "label": "Delivery %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "controls_section",
+   "fieldtype": "Section Break",
+   "label": "Control Items"
+  },
+  {
+   "fieldname": "control_items",
+   "fieldtype": "Table",
+   "label": "Control Items",
+   "options": "GRC IT Audit Control Item"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Audit Notes"
+  },
+  {
+   "fieldname": "overall_notes",
+   "fieldtype": "Text Editor",
+   "label": "Overall Auditor Notes"
+  },
+  {
+   "fieldname": "management_response",
+   "fieldtype": "Text Editor",
+   "label": "Management Response"
+  }
+ ],
+ "field_order": [
+  "client"
+ ]
+}

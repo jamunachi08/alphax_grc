@@ -1,0 +1,86 @@
+{
+ "name": "GRC Audit Finding Workflow",
+ "document_type": "GRC Audit Finding",
+ "is_active": 1,
+ "override_status": 0,
+ "send_email_alert": 1,
+ "workflow_name": "GRC Audit Finding Workflow",
+ "states": [
+  {
+   "state": "Open",
+   "doc_status": "0",
+   "allow_edit": "GRC Auditor",
+   "style": "Danger"
+  },
+  {
+   "state": "In Remediation",
+   "doc_status": "0",
+   "allow_edit": "Risk Owner",
+   "style": "Warning"
+  },
+  {
+   "state": "Pending Verification",
+   "doc_status": "0",
+   "allow_edit": "GRC Auditor",
+   "style": "Primary"
+  },
+  {
+   "state": "Verified",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Success"
+  },
+  {
+   "state": "Closed",
+   "doc_status": "1",
+   "allow_edit": "GRC Admin",
+   "style": "Success"
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Open",
+   "action": "Assign for Remediation",
+   "next_state": "In Remediation",
+   "allowed": "GRC Auditor",
+   "condition": "doc.owner is not None"
+  },
+  {
+   "state": "In Remediation",
+   "action": "Submit for Verification",
+   "next_state": "Pending Verification",
+   "allowed": "Risk Owner"
+  },
+  {
+   "state": "In Remediation",
+   "action": "Re-Open",
+   "next_state": "Open",
+   "allowed": "GRC Auditor"
+  },
+  {
+   "state": "Pending Verification",
+   "action": "Verify",
+   "next_state": "Verified",
+   "allowed": "GRC Auditor",
+   "condition": "doc.closure_evidence is not None and doc.closure_evidence != ''"
+  },
+  {
+   "state": "Pending Verification",
+   "action": "Reject Evidence",
+   "next_state": "In Remediation",
+   "allowed": "GRC Auditor"
+  },
+  {
+   "state": "Verified",
+   "action": "Close",
+   "next_state": "Closed",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Verified",
+   "action": "Re-Open",
+   "next_state": "Open",
+   "allowed": "GRC Admin"
+  }
+ ]
+}
