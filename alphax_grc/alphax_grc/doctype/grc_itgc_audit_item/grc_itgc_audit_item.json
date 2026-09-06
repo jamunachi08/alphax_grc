@@ -1,0 +1,353 @@
+{
+ "name": "GRC ITGC Audit Item",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:ITGC-{#####}",
+ "title_field": "control_name",
+ "description": "IT General Controls Audit Program — 147 controls across GLBA, DLP, Patch Mgmt, Vendor, Network Security, InfoSec Program, Incident Response. Includes full framework mappings (NIST, ISO, COBIT, CIS, PCI DSS, GLBA, FFIEC).",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Risk Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "sb_identity",
+   "fieldtype": "Section Break",
+   "label": "Control Identity"
+  },
+  {
+   "fieldname": "control_domain",
+   "fieldtype": "Select",
+   "label": "Control Domain",
+   "options": "\nGLBA Compliance\nData Loss Prevention\nPatch Management\nVendor Management\nNetwork Security\nInformation Security Program\nIncident Response",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "section_code",
+   "fieldtype": "Data",
+   "label": "Section Code",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_b1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_id",
+   "fieldtype": "Data",
+   "label": "Section ID"
+  },
+  {
+   "fieldname": "item_number",
+   "fieldtype": "Int",
+   "label": "Item #",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "audit_year",
+   "fieldtype": "Int",
+   "label": "Audit Year"
+  },
+  {
+   "fieldname": "sb_control",
+   "fieldtype": "Section Break",
+   "label": "Control Details"
+  },
+  {
+   "fieldname": "control_name",
+   "fieldtype": "Data",
+   "label": "Control Name / Sub-Domain",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "control_description",
+   "fieldtype": "Text Editor",
+   "label": "Control Description & Audit Questions"
+  },
+  {
+   "fieldname": "requested_artifacts",
+   "fieldtype": "Text Editor",
+   "label": "Requested Artifacts & Evidence"
+  },
+  {
+   "fieldname": "sb_delivery",
+   "fieldtype": "Section Break",
+   "label": "Delivery & Status"
+  },
+  {
+   "fieldname": "delivery_status",
+   "fieldtype": "Select",
+   "label": "Delivery Status",
+   "options": "\nDelivered\nPartially Delivered\nNot Applicable\nPending\nOverdue",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "review_status",
+   "fieldtype": "Select",
+   "label": "Review Status",
+   "options": "Not Started\nIn Review\nSatisfactory\nRequires Improvement\nUnsatisfactory\nNot Applicable",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_b2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "proposed_business_owner",
+   "fieldtype": "Link",
+   "label": "Proposed Business Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "delivered_artifacts",
+   "fieldtype": "Small Text",
+   "label": "Delivered Artifacts (file names/types)"
+  },
+  {
+   "fieldname": "number_of_files",
+   "fieldtype": "Int",
+   "label": "# Files Provided"
+  },
+  {
+   "fieldname": "auditor_notes",
+   "fieldtype": "Text Editor",
+   "label": "Auditor Notes & Comments"
+  },
+  {
+   "fieldname": "sb_control_type",
+   "fieldtype": "Section Break",
+   "label": "Control Classification"
+  },
+  {
+   "fieldname": "ctrl_administrative",
+   "fieldtype": "Check",
+   "label": "Management / Administrative"
+  },
+  {
+   "fieldname": "ctrl_technical",
+   "fieldtype": "Check",
+   "label": "Technical"
+  },
+  {
+   "fieldname": "ctrl_physical",
+   "fieldtype": "Check",
+   "label": "Physical"
+  },
+  {
+   "fieldname": "col_b3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_preventative",
+   "fieldtype": "Check",
+   "label": "Preventative"
+  },
+  {
+   "fieldname": "time_detective",
+   "fieldtype": "Check",
+   "label": "Detective"
+  },
+  {
+   "fieldname": "time_corrective",
+   "fieldtype": "Check",
+   "label": "Corrective"
+  },
+  {
+   "fieldname": "col_b4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area_people",
+   "fieldtype": "Check",
+   "label": "People"
+  },
+  {
+   "fieldname": "area_process",
+   "fieldtype": "Check",
+   "label": "Process"
+  },
+  {
+   "fieldname": "area_technology",
+   "fieldtype": "Check",
+   "label": "Technology"
+  },
+  {
+   "fieldname": "sb_mappings",
+   "fieldtype": "Section Break",
+   "label": "Framework & Regulatory Mappings"
+  },
+  {
+   "fieldname": "map_glba",
+   "fieldtype": "Check",
+   "label": "GLBA"
+  },
+  {
+   "fieldname": "map_ncua",
+   "fieldtype": "Check",
+   "label": "NCUA"
+  },
+  {
+   "fieldname": "map_ffiec",
+   "fieldtype": "Check",
+   "label": "FFIEC"
+  },
+  {
+   "fieldname": "map_nist",
+   "fieldtype": "Check",
+   "label": "NIST"
+  },
+  {
+   "fieldname": "map_pci_dss",
+   "fieldtype": "Check",
+   "label": "PCI DSS"
+  },
+  {
+   "fieldname": "map_gdpr",
+   "fieldtype": "Check",
+   "label": "GDPR"
+  },
+  {
+   "fieldname": "col_b5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "map_iso",
+   "fieldtype": "Check",
+   "label": "ISO 27001"
+  },
+  {
+   "fieldname": "map_cobit",
+   "fieldtype": "Check",
+   "label": "COBIT"
+  },
+  {
+   "fieldname": "map_cis",
+   "fieldtype": "Check",
+   "label": "CIS Top 20"
+  },
+  {
+   "fieldname": "map_nca_ecc",
+   "fieldtype": "Check",
+   "label": "NCA ECC"
+  },
+  {
+   "fieldname": "map_sama",
+   "fieldtype": "Check",
+   "label": "SAMA CSF"
+  },
+  {
+   "fieldname": "map_pdpl",
+   "fieldtype": "Check",
+   "label": "PDPL"
+  },
+  {
+   "fieldname": "sb_links",
+   "fieldtype": "Section Break",
+   "label": "GRC Linkage"
+  },
+  {
+   "fieldname": "linked_audit_plan",
+   "fieldtype": "Link",
+   "label": "Linked Audit Plan",
+   "options": "GRC Audit Plan"
+  },
+  {
+   "fieldname": "linked_audit_finding",
+   "fieldtype": "Link",
+   "label": "Linked Audit Finding",
+   "options": "GRC Audit Finding"
+  },
+  {
+   "fieldname": "linked_evidence",
+   "fieldtype": "Link",
+   "label": "Linked Evidence",
+   "options": "GRC Evidence"
+  },
+  {
+   "fieldname": "col_b6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "label": "Linked Risk",
+   "options": "GRC Risk Register"
+  },
+  {
+   "fieldname": "linked_policy",
+   "fieldtype": "Link",
+   "label": "Linked Policy",
+   "options": "GRC Policy"
+  },
+  {
+   "fieldname": "linked_remediation",
+   "fieldtype": "Link",
+   "label": "Linked Remediation",
+   "options": "GRC Remediation Action"
+  },
+  {
+   "fieldname": "risk_rating",
+   "fieldtype": "Select",
+   "label": "Control Risk Rating",
+   "options": "\nCritical\nHigh\nMedium\nLow",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "past_audit_findings",
+   "fieldtype": "Check",
+   "label": "Has Past Audit Findings"
+  }
+ ],
+ "field_order": [
+  "client"
+ ]
+}

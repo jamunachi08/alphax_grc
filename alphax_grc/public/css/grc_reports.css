@@ -1,0 +1,6 @@
+
+.grc-report-shell { padding: 16px; }
+.grc-report-actions { margin-bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+.grc-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.grc-card h3 { margin-top: 0; }
+.grc-card pre { white-space: pre-wrap; word-break: break-word; }

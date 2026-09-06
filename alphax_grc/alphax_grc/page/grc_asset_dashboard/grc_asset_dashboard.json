@@ -1,0 +1,16 @@
+{
+ "doctype": "Page",
+ "module": "AlphaX GRC",
+ "name": "grc-asset-dashboard",
+ "page_name": "grc-asset-dashboard",
+ "title": "Asset Inventory Dashboard",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "GRC Admin"},
+  {"role": "Compliance Officer"},
+  {"role": "GRC Auditor"},
+  {"role": "Risk Owner"},
+  {"role": "GRC Assessor"},
+  {"role": "GRC Executive"}
+ ]
+}

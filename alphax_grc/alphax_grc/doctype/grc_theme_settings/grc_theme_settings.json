@@ -1,0 +1,307 @@
+{
+ "name": "GRC Theme Settings",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "issingle": 1,
+ "description": "Global and per-component colour theme settings for AlphaX GRC dashboards and reports",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "section_global",
+   "fieldtype": "Section Break",
+   "label": "Global Theme"
+  },
+  {
+   "fieldname": "theme_preset",
+   "fieldtype": "Select",
+   "label": "Theme Preset",
+   "options": "Odoo Mauve\nAlphaX Navy (Default)\nSaudi Green\nCorporate Blue\nDark Mode\nSand & Gold\nCustom",
+   "default": "Odoo Mauve",
+   "description": "Selecting a preset overwrites all colour values below. Change to Custom to set individual colours."
+  },
+  {
+   "fieldname": "global_primary",
+   "fieldtype": "Color",
+   "label": "Primary Colour",
+   "default": "#0B132B",
+   "description": "Used for headers, nav, and dominant backgrounds"
+  },
+  {
+   "fieldname": "global_accent",
+   "fieldtype": "Color",
+   "label": "Accent / Action Colour",
+   "default": "#2563EB",
+   "description": "Used for buttons, links, highlights, and progress bars"
+  },
+  {
+   "fieldname": "global_secondary",
+   "fieldtype": "Color",
+   "label": "Secondary Colour",
+   "default": "#1C2541",
+   "description": "Used for subheadings and card borders"
+  },
+  {
+   "fieldname": "global_bg",
+   "fieldtype": "Color",
+   "label": "Page Background",
+   "default": "#F8FAFC"
+  },
+  {
+   "fieldname": "global_card_bg",
+   "fieldtype": "Color",
+   "label": "Card Background",
+   "default": "#FFFFFF"
+  },
+  {
+   "fieldname": "global_text",
+   "fieldtype": "Color",
+   "label": "Body Text Colour",
+   "default": "#1E293B"
+  },
+  {
+   "fieldname": "global_muted",
+   "fieldtype": "Color",
+   "label": "Muted / Label Text",
+   "default": "#64748B"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "colour_critical",
+   "fieldtype": "Color",
+   "label": "Critical / Red",
+   "default": "#DC2626",
+   "description": "Critical risk, breach, overdue"
+  },
+  {
+   "fieldname": "colour_high",
+   "fieldtype": "Color",
+   "label": "High Risk / Orange",
+   "default": "#D97706"
+  },
+  {
+   "fieldname": "colour_medium",
+   "fieldtype": "Color",
+   "label": "Medium / Amber",
+   "default": "#F59E0B"
+  },
+  {
+   "fieldname": "colour_low",
+   "fieldtype": "Color",
+   "label": "Low / Green",
+   "default": "#16A34A"
+  },
+  {
+   "fieldname": "colour_ok",
+   "fieldtype": "Color",
+   "label": "OK / Positive",
+   "default": "#10B981"
+  },
+  {
+   "fieldname": "colour_info",
+   "fieldtype": "Color",
+   "label": "Info / Neutral",
+   "default": "#0EA5E4"
+  },
+  {
+   "fieldname": "section_command",
+   "fieldtype": "Section Break",
+   "label": "Command Center Colours"
+  },
+  {
+   "fieldname": "cc_header_bg",
+   "fieldtype": "Color",
+   "label": "Command Center Header BG",
+   "default": "#0B132B"
+  },
+  {
+   "fieldname": "cc_kpi_bar_colour",
+   "fieldtype": "Color",
+   "label": "KPI Bar / Chart Colour",
+   "default": "#0EA5E4"
+  },
+  {
+   "fieldname": "cc_heatmap_low",
+   "fieldtype": "Color",
+   "label": "Heatmap Low Cell",
+   "default": "#DCFCE7"
+  },
+  {
+   "fieldname": "cc_heatmap_medium",
+   "fieldtype": "Color",
+   "label": "Heatmap Medium Cell",
+   "default": "#FEF3C7"
+  },
+  {
+   "fieldname": "cc_heatmap_high",
+   "fieldtype": "Color",
+   "label": "Heatmap High Cell",
+   "default": "#FEE2E2"
+  },
+  {
+   "fieldname": "cc_heatmap_critical",
+   "fieldtype": "Color",
+   "label": "Heatmap Critical Cell",
+   "default": "#991B1B"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cc_chart_bar_1",
+   "fieldtype": "Color",
+   "label": "Chart Colour 1",
+   "default": "#2563EB"
+  },
+  {
+   "fieldname": "cc_chart_bar_2",
+   "fieldtype": "Color",
+   "label": "Chart Colour 2",
+   "default": "#0EA5E4"
+  },
+  {
+   "fieldname": "cc_chart_bar_3",
+   "fieldtype": "Color",
+   "label": "Chart Colour 3",
+   "default": "#10B981"
+  },
+  {
+   "fieldname": "cc_chart_bar_4",
+   "fieldtype": "Color",
+   "label": "Chart Colour 4",
+   "default": "#F59E0B"
+  },
+  {
+   "fieldname": "cc_chart_bar_5",
+   "fieldtype": "Color",
+   "label": "Chart Colour 5",
+   "default": "#EF4444"
+  },
+  {
+   "fieldname": "section_neo",
+   "fieldtype": "Section Break",
+   "label": "Neo Hub Colours"
+  },
+  {
+   "fieldname": "neo_bg_start",
+   "fieldtype": "Color",
+   "label": "Neo Hub BG Gradient Start",
+   "default": "#0B132B"
+  },
+  {
+   "fieldname": "neo_bg_end",
+   "fieldtype": "Color",
+   "label": "Neo Hub BG Gradient End",
+   "default": "#3A506B"
+  },
+  {
+   "fieldname": "neo_accent",
+   "fieldtype": "Color",
+   "label": "Neo Hub Accent",
+   "default": "#00B4D8"
+  },
+  {
+   "fieldname": "neo_card_bg",
+   "fieldtype": "Color",
+   "label": "Neo Hub Card BG",
+   "default": "#FFFFFF"
+  },
+  {
+   "fieldname": "section_report",
+   "fieldtype": "Section Break",
+   "label": "Report / Print Format Colours"
+  },
+  {
+   "fieldname": "report_cover_bg",
+   "fieldtype": "Color",
+   "label": "Report Cover BG",
+   "default": "#0B132B"
+  },
+  {
+   "fieldname": "report_accent",
+   "fieldtype": "Color",
+   "label": "Report Accent / Header",
+   "default": "#2563EB"
+  },
+  {
+   "fieldname": "report_gap_critical",
+   "fieldtype": "Color",
+   "label": "Gap Register Critical Row",
+   "default": "#FEF2F2"
+  },
+  {
+   "fieldname": "report_gap_medium",
+   "fieldtype": "Color",
+   "label": "Gap Register Medium Row",
+   "default": "#FFFBEB"
+  },
+  {
+   "fieldname": "report_table_header",
+   "fieldtype": "Color",
+   "label": "Report Table Header",
+   "default": "#1E293B"
+  },
+  {
+   "fieldname": "section_risk_matrix",
+   "fieldtype": "Section Break",
+   "label": "Risk Matrix Colours"
+  },
+  {
+   "fieldname": "matrix_very_low",
+   "fieldtype": "Color",
+   "label": "Very Low Cell",
+   "default": "#DCFCE7"
+  },
+  {
+   "fieldname": "matrix_low",
+   "fieldtype": "Color",
+   "label": "Low Cell",
+   "default": "#D1FAE5"
+  },
+  {
+   "fieldname": "matrix_medium",
+   "fieldtype": "Color",
+   "label": "Medium Cell",
+   "default": "#FEF3C7"
+  },
+  {
+   "fieldname": "matrix_high",
+   "fieldtype": "Color",
+   "label": "High Cell",
+   "default": "#FEE2E2"
+  },
+  {
+   "fieldname": "matrix_critical",
+   "fieldtype": "Color",
+   "label": "Critical Cell",
+   "default": "#991B1B"
+  },
+  {
+   "fieldname": "section_presets_info",
+   "fieldtype": "Section Break",
+   "label": "Theme Presets Reference"
+  },
+  {
+   "fieldname": "preset_info",
+   "fieldtype": "HTML",
+   "label": "",
+   "options": "<div style='background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;font-size:12px;color:#475569'><strong>Preset Colour Schemes:</strong><br><br><b>AlphaX Navy (Default)</b> — Navy #0B132B + Blue accent #2563EB<br><b>Saudi Green</b> — Deep Green #065F46 + Gold accent #D97706<br><b>Corporate Blue</b> — Royal Blue #1D4ED8 + Cyan accent #0EA5E4<br><b>Dark Mode</b> — Slate #0F172A + Purple accent #7C3AED<br><b>Sand &amp; Gold</b> — Sand #78716C + Gold accent #B45309<br><br>Switching to a preset will apply all colours automatically on save.</div>"
+  }
+ ]
+}

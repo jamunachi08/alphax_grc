@@ -1,0 +1,194 @@
+{
+ "doctype": "DocType",
+ "name": "GRC Vendor Assessment",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "allow_rename": 1,
+ "field_order": [
+  "client",
+  "vendor",
+  "assessment_type",
+  "security_score",
+  "compliance_score",
+  "risk_level",
+  "documents_submitted",
+  "approval_status",
+  "next_review_date",
+  "questionnaire"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Link",
+   "label": "Vendor",
+   "options": "GRC Vendor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assessment_type",
+   "fieldtype": "Select",
+   "label": "Assessment Type",
+   "options": "Security\nPrivacy\nOperational\nFinancial\nFull-Scope",
+   "default": "Security"
+  },
+  {
+   "fieldname": "security_score",
+   "fieldtype": "Percent",
+   "label": "Security Score",
+   "default": 0
+  },
+  {
+   "fieldname": "compliance_score",
+   "fieldtype": "Percent",
+   "label": "Compliance Score",
+   "default": 0
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "label": "Risk Level",
+   "options": "Critical\nHigh\nMedium\nLow",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "documents_submitted",
+   "fieldtype": "Small Text",
+   "label": "Documents Submitted"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Draft\nUnder Review\nApproved\nConditionally Approved\nRejected",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "questionnaire",
+   "fieldtype": "Table",
+   "label": "Questionnaire",
+   "options": "GRC Vendor Question Item"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Risk Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  },
+  {
+   "role": "Vendor Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "creation": "2026-04-14 00:00:00",
+ "modified": "2026-04-14 00:00:00",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": []
+}

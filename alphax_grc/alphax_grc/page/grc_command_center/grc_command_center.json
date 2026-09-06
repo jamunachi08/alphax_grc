@@ -1,0 +1,19 @@
+{
+ "doctype": "Page",
+ "module": "AlphaX GRC",
+ "name": "grc-command-center",
+ "page_name": "grc-command-center",
+ "title": "GRC Command Centre",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "GRC Admin"},
+  {"role": "Compliance Officer"},
+  {"role": "GRC Auditor"},
+  {"role": "Risk Owner"},
+  {"role": "GRC Assessor"},
+  {"role": "GRC Executive"},
+  {"role": "Vendor Owner"},
+  {"role": "Privacy Officer"},
+  {"role": "Aramco Compliance Owner"}
+ ]
+}

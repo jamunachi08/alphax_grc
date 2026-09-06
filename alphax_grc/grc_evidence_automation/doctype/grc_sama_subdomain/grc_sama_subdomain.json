@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "autoname": "field:code",
+ "creation": "2026-08-16 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "subdomain_title",
+  "domain",
+  "cb1",
+  "domain_title",
+  "control_considerations",
+  "excluded_for_non_banks",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "description": "e.g. 3.3.15",
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "subdomain_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sub-domain",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "domain",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Domain"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 3,
+   "fieldname": "domain_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Domain Title"
+  },
+  {
+   "columns": 1,
+   "fieldname": "control_considerations",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Control Considerations"
+  },
+  {
+   "default": "0",
+   "description": "SAMA CSF 1.4 — excluded for insurance, financing and credit bureaus",
+   "fieldname": "excluded_for_non_banks",
+   "fieldtype": "Check",
+   "label": "Excluded for Non-Banks"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC SAMA Subdomain",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "subdomain_title",
+ "track_changes": 1
+}

@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:report_title",
+ "creation": "2026-08-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "report_title",
+  "definition_type",
+  "cb0",
+  "category",
+  "is_active",
+  "sec_src",
+  "source_doctype",
+  "filters_json",
+  "cb1",
+  "group_by",
+  "aggregate",
+  "aggregate_field",
+  "sec_builtin",
+  "builtin_key",
+  "sec_view",
+  "chart_type",
+  "cb2",
+  "detail_columns",
+  "sec_desc",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "report_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Report Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "columns": 1,
+   "default": "Builder",
+   "fieldname": "definition_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Builder\nBuilt-in"
+  },
+  {
+   "fieldname": "cb0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "\nPrivacy\nRisk\nCompliance\nSAMA\nIncidents\nAssets\nPolicies\nVendors\nDelivery\nGeneral"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "depends_on": "eval:doc.definition_type=='Builder'",
+   "fieldname": "sec_src",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "description": "Any AlphaX GRC doctype. Rows the viewer cannot read are excluded automatically.",
+   "fieldname": "source_doctype",
+   "fieldtype": "Link",
+   "label": "Source DocType",
+   "options": "DocType"
+  },
+  {
+   "description": "Frappe filter list, e.g. [[\"status\",\"in\",[\"Open\",\"Monitoring\"]]]",
+   "fieldname": "filters_json",
+   "fieldtype": "Small Text",
+   "label": "Filters (JSON)"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "group_by",
+   "fieldtype": "Data",
+   "label": "Group By Field"
+  },
+  {
+   "default": "Count",
+   "fieldname": "aggregate",
+   "fieldtype": "Select",
+   "label": "Aggregate",
+   "options": "Count\nSum\nAverage"
+  },
+  {
+   "description": "Numeric field for Sum / Average",
+   "fieldname": "aggregate_field",
+   "fieldtype": "Data",
+   "label": "Aggregate Field"
+  },
+  {
+   "depends_on": "eval:doc.definition_type=='Built-in'",
+   "fieldname": "sec_builtin",
+   "fieldtype": "Section Break",
+   "label": "Built-in"
+  },
+  {
+   "fieldname": "builtin_key",
+   "fieldtype": "Select",
+   "label": "Built-in Report",
+   "options": "\nsama_maturity_by_domain\ndsr_aging_by_type\nincidents_past_sama_notification\npolicy_publication_pct\nrisks_above_appetite_by_category\nassets_unclassified"
+  },
+  {
+   "fieldname": "sec_view",
+   "fieldtype": "Section Break",
+   "label": "Presentation"
+  },
+  {
+   "default": "Bar",
+   "fieldname": "chart_type",
+   "fieldtype": "Select",
+   "label": "Chart",
+   "options": "Bar\nDonut\nNumber\nTable only"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Comma-separated fieldnames for the drill-down table; blank = sensible defaults",
+   "fieldname": "detail_columns",
+   "fieldtype": "Small Text",
+   "label": "Detail Columns"
+  },
+  {
+   "fieldname": "sec_desc",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC Report Definition",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "report_title",
+ "track_changes": 1
+}

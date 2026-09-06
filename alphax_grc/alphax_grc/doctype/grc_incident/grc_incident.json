@@ -1,0 +1,167 @@
+{
+ "doctype": "DocType",
+ "name": "GRC Incident",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "incident_title",
+  "incident_type",
+  "severity",
+  "reported_on",
+  "reported_by",
+  "linked_risk",
+  "status",
+  "summary",
+  "resolution_notes",
+  "business_impact",
+  "category",
+  "sla_due_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "incident_title",
+   "fieldtype": "Data",
+   "label": "Incident Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_type",
+   "fieldtype": "Select",
+   "label": "Incident Type",
+   "options": "Cybersecurity\nPrivacy\nCompliance\nOperational",
+   "reqd": 1
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Severity",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "reported_on",
+   "fieldtype": "Datetime",
+   "label": "Reported On"
+  },
+  {
+   "fieldname": "reported_by",
+   "fieldtype": "Link",
+   "label": "Reported By",
+   "options": "User"
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "label": "Linked Risk",
+   "options": "GRC Risk Register"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "New\nInvestigating\nContained\nResolved\nClosed",
+   "default": "New"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text Editor",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "resolution_notes",
+   "fieldtype": "Small Text",
+   "label": "Resolution Notes"
+  },
+  {
+   "fieldname": "business_impact",
+   "fieldtype": "Select",
+   "label": "Business Impact",
+   "options": "Critical\nHigh\nMedium\nLow",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category"
+  },
+  {
+   "fieldname": "sla_due_date",
+   "fieldtype": "Datetime",
+   "label": "SLA Due Date"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  }
+ ],
+ "allow_rename": 1,
+ "creation": "2026-04-04 00:00:00.000000",
+ "modified": "2026-04-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": [],
+ "autoname": "autoincrement"
+}

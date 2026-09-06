@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:template_name",
+ "creation": "2026-08-16 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template_name",
+  "framework",
+  "cb1",
+  "engagement_type",
+  "is_active",
+  "default_working_days",
+  "sec_desc",
+  "description",
+  "source_reference",
+  "task_count",
+  "indicative_duration_days",
+  "phase_count",
+  "sec_tasks",
+  "tasks"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "framework",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Framework",
+   "options": "\nSAMA CSF\nNCA ECC-2:2024\nISO 27001:2022\nISO 22301\nISO 42001\nSDAIA PDPL\nPCI DSS\nNIST CSF 2.0\nAramco SACS-002\nGeneral"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Matches GRC Engagement types, so the right template is offered on a plan",
+   "fieldname": "engagement_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Engagement Type",
+   "options": "\nStandard NCA Engagement\nAramco CCC Pursuit\nISO 27001 Certification\nISO 42001 AI Governance\nManaged Compliance (ongoing)\nGDPR Compliance\nCustom"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "default": "Sun-Thu (KSA)",
+   "description": "Carried into any plan created from this template",
+   "fieldname": "default_working_days",
+   "fieldtype": "Select",
+   "label": "Default Working Week",
+   "options": "Sun-Thu (KSA)\nMon-Fri\nSat-Thu (6 day)\nAll days"
+  },
+  {
+   "fieldname": "sec_desc",
+   "fieldtype": "Section Break",
+   "label": "Scope"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "description": "Which published framework or methodology this plan follows",
+   "fieldname": "source_reference",
+   "fieldtype": "Data",
+   "label": "Source Reference"
+  },
+  {
+   "fieldname": "task_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Tasks",
+   "read_only": 1
+  },
+  {
+   "description": "Sum of task durations — the real end date depends on the start date, weekends and holidays",
+   "fieldname": "indicative_duration_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Indicative Working Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phase_count",
+   "fieldtype": "Int",
+   "label": "Phases",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_tasks",
+   "fieldtype": "Section Break",
+   "label": "Tasks"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "Tasks",
+   "options": "GRC Plan Template Task"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-16 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC Plan Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "template_name",
+ "track_changes": 1
+}

@@ -1,0 +1,171 @@
+{
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "creation": "2026-04-04 00:00:00.000000",
+ "modified": "2026-04-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": [],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "allow_rename": 1,
+ "name": "GRC Assessment",
+ "autoname": "format:ASM-{#####}",
+ "field_order": [
+  "client",
+  "assessment_title",
+  "framework",
+  "assessment_type",
+  "assessment_owner",
+  "start_date",
+  "end_date",
+  "status",
+  "compliance_score",
+  "summary",
+  "domain",
+  "maturity_score",
+  "target_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "assessment_title",
+   "fieldtype": "Data",
+   "label": "Assessment Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "framework",
+   "fieldtype": "Link",
+   "label": "Framework",
+   "options": "GRC Framework"
+  },
+  {
+   "fieldname": "assessment_type",
+   "fieldtype": "Select",
+   "label": "Assessment Type",
+   "options": "Compliance\nRisk\nMaturity\nPrivacy\nCybersecurity",
+   "default": "Compliance"
+  },
+  {
+   "fieldname": "assessment_owner",
+   "fieldtype": "Link",
+   "label": "Assessment Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nOpen\nIn Progress\nCompleted\nClosed",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "compliance_score",
+   "fieldtype": "Percent",
+   "label": "Compliance Score",
+   "default": "0"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text Editor",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "domain",
+   "fieldtype": "Data",
+   "label": "Domain"
+  },
+  {
+   "fieldname": "maturity_score",
+   "fieldtype": "Percent",
+   "label": "Maturity Score"
+  },
+  {
+   "fieldname": "target_score",
+   "fieldtype": "Percent",
+   "label": "Target Score"
+  }
+ ]
+}

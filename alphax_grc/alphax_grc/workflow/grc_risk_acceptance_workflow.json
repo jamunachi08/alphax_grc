@@ -1,0 +1,91 @@
+{
+ "name": "GRC Risk Acceptance Workflow",
+ "workflow_name": "GRC Risk Acceptance Workflow",
+ "document_type": "GRC Risk Acceptance",
+ "is_active": 1,
+ "override_status": 0,
+ "send_email_alert": 1,
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "allow_edit": "Risk Owner",
+   "style": "Warning"
+  },
+  {
+   "state": "Pending Approval",
+   "doc_status": "0",
+   "allow_edit": "Compliance Officer",
+   "style": "Primary"
+  },
+  {
+   "state": "Accepted",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Success"
+  },
+  {
+   "state": "Rejected",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Danger"
+  },
+  {
+   "state": "Expired",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Danger"
+  },
+  {
+   "state": "Revoked",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Inverse"
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Draft",
+   "action": "Submit for Approval",
+   "next_state": "Pending Approval",
+   "allowed": "Risk Owner"
+  },
+  {
+   "state": "Pending Approval",
+   "action": "Approve",
+   "next_state": "Accepted",
+   "allowed": "GRC Admin",
+   "condition": "doc.approved_by is not None and doc.expiry_date is not None"
+  },
+  {
+   "state": "Pending Approval",
+   "action": "Reject",
+   "next_state": "Rejected",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Pending Approval",
+   "action": "Return to Draft",
+   "next_state": "Draft",
+   "allowed": "Compliance Officer"
+  },
+  {
+   "state": "Accepted",
+   "action": "Mark Expired",
+   "next_state": "Expired",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Accepted",
+   "action": "Revoke",
+   "next_state": "Revoked",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Expired",
+   "action": "Resubmit for Approval",
+   "next_state": "Pending Approval",
+   "allowed": "Risk Owner"
+  }
+ ]
+}

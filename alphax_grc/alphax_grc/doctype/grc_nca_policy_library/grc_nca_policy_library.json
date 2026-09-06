@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:template_code",
+ "creation": "2026-04-25 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template_code",
+  "template_name",
+  "template_name_ar",
+  "column_break_1",
+  "kind",
+  "category",
+  "ecc_controls",
+  "details_section",
+  "description",
+  "applicability",
+  "downloads_section",
+  "official_word_url",
+  "official_pdf_url",
+  "version",
+  "last_updated_by_nca",
+  "internal_section",
+  "is_active",
+  "internal_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_code",
+   "fieldtype": "Data",
+   "label": "Template Code",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Short slug, e.g. NCA-POL-IAM"
+  },
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "label": "Template Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "template_name_ar",
+   "fieldtype": "Data",
+   "label": "Name (Arabic)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kind",
+   "fieldtype": "Data",
+   "label": "Kind",
+   "default": "Policy",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Governance\nAccess\nAsset\nNetwork\nApplication\nData\nPhysical\nThird Party\nResilience\nIncident\nMonitoring\nVulnerability\nOther",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "ecc_controls",
+   "fieldtype": "Data",
+   "label": "Mapped ECC Controls",
+   "description": "Comma-separated, e.g. 1-3-1,1-3-3,2-1-1"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "applicability",
+   "fieldtype": "Small Text",
+   "label": "Applicability",
+   "description": "When/where this template applies"
+  },
+  {
+   "fieldname": "downloads_section",
+   "fieldtype": "Section Break",
+   "label": "Official Downloads"
+  },
+  {
+   "fieldname": "official_word_url",
+   "fieldtype": "Data",
+   "options": "URL",
+   "label": "Word Template URL (NCA)"
+  },
+  {
+   "fieldname": "official_pdf_url",
+   "fieldtype": "Data",
+   "options": "URL",
+   "label": "PDF Template URL (NCA)"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "last_updated_by_nca",
+   "fieldtype": "Date",
+   "label": "Last NCA Update"
+  },
+  {
+   "fieldname": "internal_section",
+   "fieldtype": "Section Break",
+   "label": "Internal",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active in Catalogue",
+   "default": "1",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text",
+   "label": "Internal Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2026-04-25 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC NCA Policy Library",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "Risk Owner",
+   "read": 1,
+   "report": 1
+  },
+  {
+   "role": "Privacy Officer",
+   "read": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "template_code",
+ "sort_order": "ASC",
+ "title_field": "template_name",
+ "track_changes": 0
+}

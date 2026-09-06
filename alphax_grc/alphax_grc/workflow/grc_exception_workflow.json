@@ -1,0 +1,91 @@
+{
+ "name": "GRC Exception Workflow",
+ "document_type": "GRC Exception",
+ "is_active": 1,
+ "override_status": 0,
+ "send_email_alert": 1,
+ "workflow_name": "GRC Exception Workflow",
+ "states": [
+  {
+   "state": "Pending Approval",
+   "doc_status": "0",
+   "allow_edit": "Compliance Officer",
+   "style": "Warning"
+  },
+  {
+   "state": "Approved",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Success"
+  },
+  {
+   "state": "Active",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Primary"
+  },
+  {
+   "state": "Expired",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Danger"
+  },
+  {
+   "state": "Rejected",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Danger"
+  },
+  {
+   "state": "Closed",
+   "doc_status": "1",
+   "allow_edit": "GRC Admin",
+   "style": "Inverse"
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Pending Approval",
+   "action": "Approve",
+   "next_state": "Approved",
+   "allowed": "GRC Admin",
+   "condition": "doc.approved_by is not None and doc.expiry_date is not None"
+  },
+  {
+   "state": "Pending Approval",
+   "action": "Reject",
+   "next_state": "Rejected",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Approved",
+   "action": "Activate",
+   "next_state": "Active",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Active",
+   "action": "Mark Expired",
+   "next_state": "Expired",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Active",
+   "action": "Close",
+   "next_state": "Closed",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Expired",
+   "action": "Re-Submit",
+   "next_state": "Pending Approval",
+   "allowed": "Compliance Officer"
+  },
+  {
+   "state": "Expired",
+   "action": "Close",
+   "next_state": "Closed",
+   "allowed": "GRC Admin"
+  }
+ ]
+}

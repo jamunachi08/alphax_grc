@@ -1,0 +1,640 @@
+{
+ "doctype": "Workspace",
+ "name": "GRC Pathway",
+ "label": "GRC Pathway",
+ "module": "GRC Evidence Automation",
+ "public": 1,
+ "is_hidden": 0,
+ "icon": "shield",
+ "onboarding": "GRC Pathway",
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"GRC Pathway\", \"col\": 12}}, {\"id\": \"gpcShortcut\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Open Pathway Console\", \"col\": 4}}, {\"type\": \"paragraph\", \"data\": {\"text\": \"One connected pathway from client onboarding to audit-ready reporting. Follow the guided steps below for your first engagement.\", \"col\": 12}}, {\"type\": \"onboarding\", \"data\": {\"onboarding_name\": \"GRC Pathway\", \"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Overview\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"grc-card-active-engagements\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"grc-card-open-risks\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"grc-card-critical-findings\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"grc-card-open-findings\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"grc-card-published-policies\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"grc-card-blocked-vendors\", \"col\": 4}}, {\"type\": \"header\", \"data\": {\"text\": \"1. Client & engagement\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Client Profiles\", \"link_to\": \"GRC Client Profile\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Engagements\", \"link_to\": \"GRC Engagement\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"2. Compliance & frameworks\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Frameworks\", \"link_to\": \"GRC Framework\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Control Library\", \"link_to\": \"GRC Control\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"3. Risk management\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Risk Register\", \"link_to\": \"GRC Risk Register\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Risk Acceptances\", \"link_to\": \"GRC Risk Acceptance\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"4. Evidence & continuous monitoring\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Evidence\", \"link_to\": \"GRC Evidence\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Evidence Rules (CCM)\", \"link_to\": \"GRC Evidence Rule\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Evidence Connectors\", \"link_to\": \"GRC Evidence Connector\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Evidence Fetchers\", \"link_to\": \"GRC Evidence Fetcher\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"5. Audit & findings\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Audit Findings\", \"link_to\": \"GRC Audit Finding\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"6. Policy management\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Policies\", \"link_to\": \"GRC Policy\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"7. Vendor & third-party risk\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vendors\", \"link_to\": \"GRC Vendor\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vendor Assessments\", \"link_to\": \"GRC Vendor Assessment\", \"type\": \"DocType\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"8. Reporting & sign-off\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Compliance Status\", \"link_to\": \"GRC Compliance Status\", \"type\": \"Report\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Risk Summary\", \"link_to\": \"GRC Risk Summary\", \"type\": \"Report\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Audit Findings Report\", \"link_to\": \"GRC Audit Findings Report\", \"type\": \"Report\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"ITGC Progress\", \"link_to\": \"GRC ITGC Progress\", \"type\": \"Report\", \"col\": 3}}, {\"id\": \"gpPolHead\", \"type\": \"header\", \"data\": {\"text\": \"Policy Library\", \"col\": 12}}, {\"id\": \"gpPolSc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Global Policy Library\", \"col\": 3}}, {\"id\": \"gpPolSc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Client Policies\", \"col\": 3}}, {\"id\": \"gpPolSc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pathway Settings\", \"col\": 3}}, {\"id\": \"gpPlanHead\", \"type\": \"header\", \"data\": {\"text\": \"Delivery Plans\", \"col\": 12}}, {\"id\": \"gpPlanSc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Project Plans\", \"col\": 3}}, {\"id\": \"gpPlanSc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Plan Templates\", \"col\": 3}}, {\"id\": \"gpPlanSc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Gantt Chart\", \"col\": 3}}, {\"id\": \"gpSamaHead\", \"type\": \"header\", \"data\": {\"text\": \"SAMA CSF\", \"col\": 12}}, {\"id\": \"gpSamaC1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"SAMA deliverables outstanding\", \"col\": 4}}, {\"id\": \"gpSamaC2\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open SAMA waivers\", \"col\": 4}}, {\"id\": \"gpSamaSc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SAMA Assessments\", \"col\": 3}}, {\"id\": \"gpSamaSc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SAMA Deliverables\", \"col\": 3}}, {\"id\": \"gpSamaSc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SAMA Waivers\", \"col\": 3}}, {\"id\": \"gpSamaSc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SAMA Sub-domains\", \"col\": 3}}, {\"id\": \"gpCardAppetite\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Risks above appetite\", \"col\": 4}}, {\"id\": \"gpRepHead\", \"type\": \"header\", \"data\": {\"text\": \"Reports\", \"col\": 12}}, {\"id\": \"gpRepSc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Report Studio\", \"col\": 3}}, {\"id\": \"gpRepSc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Report Definitions\", \"col\": 3}}]",
+ "number_cards": [
+  {
+   "label": "grc-card-active-engagements"
+  },
+  {
+   "label": "grc-card-open-risks"
+  },
+  {
+   "label": "grc-card-critical-findings"
+  },
+  {
+   "label": "grc-card-open-findings"
+  },
+  {
+   "label": "grc-card-published-policies"
+  },
+  {
+   "label": "grc-card-blocked-vendors"
+  },
+  {
+   "label": "SAMA deliverables outstanding"
+  },
+  {
+   "label": "Open SAMA waivers"
+  },
+  {
+   "label": "Risks above appetite"
+  }
+ ],
+ "shortcuts": [
+  {
+   "type": "Page",
+   "link_to": "grc-pathway-console",
+   "label": "Open Pathway Console",
+   "doc_view": "",
+   "color": "Blue"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Client Profile",
+   "label": "Client Profiles",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Engagement",
+   "label": "Engagements",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Framework",
+   "label": "Frameworks",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Control",
+   "label": "Control Library",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Risk Register",
+   "label": "Risk Register",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Risk Acceptance",
+   "label": "Risk Acceptances",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Evidence",
+   "label": "Evidence",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Evidence Rule",
+   "label": "Evidence Rules (CCM)",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Evidence Connector",
+   "label": "Evidence Connectors",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Evidence Fetcher",
+   "label": "Evidence Fetchers",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Audit Finding",
+   "label": "Audit Findings",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Policy",
+   "label": "Policies",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Vendor",
+   "label": "Vendors",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Vendor Assessment",
+   "label": "Vendor Assessments",
+   "doc_view": "List"
+  },
+  {
+   "type": "Report",
+   "link_to": "GRC Compliance Status",
+   "label": "Compliance Status",
+   "doc_view": ""
+  },
+  {
+   "type": "Report",
+   "link_to": "GRC Risk Summary",
+   "label": "Risk Summary",
+   "doc_view": ""
+  },
+  {
+   "type": "Report",
+   "link_to": "GRC Audit Findings Report",
+   "label": "Audit Findings Report",
+   "doc_view": ""
+  },
+  {
+   "type": "Report",
+   "link_to": "GRC ITGC Progress",
+   "label": "ITGC Progress",
+   "doc_view": ""
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Global Policy",
+   "label": "Global Policy Library",
+   "doc_view": "List",
+   "color": "Blue"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Policy",
+   "label": "Client Policies",
+   "doc_view": "List",
+   "color": "Green"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Pathway Settings",
+   "label": "Pathway Settings",
+   "doc_view": ""
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Project Plan",
+   "label": "Project Plans",
+   "doc_view": "List",
+   "color": "Blue"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Plan Template",
+   "label": "Plan Templates",
+   "doc_view": "List"
+  },
+  {
+   "type": "Page",
+   "link_to": "grc-project-gantt",
+   "label": "Gantt Chart",
+   "doc_view": ""
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC SAMA Assessment",
+   "label": "SAMA Assessments",
+   "doc_view": "List",
+   "color": "Blue"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC SAMA Deliverable",
+   "label": "SAMA Deliverables",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC SAMA Waiver",
+   "label": "SAMA Waivers",
+   "doc_view": "List",
+   "color": "Orange"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC SAMA Subdomain",
+   "label": "SAMA Sub-domains",
+   "doc_view": "List"
+  },
+  {
+   "type": "Page",
+   "link_to": "grc-report-studio",
+   "label": "Report Studio",
+   "doc_view": "",
+   "color": "Purple"
+  },
+  {
+   "type": "DocType",
+   "link_to": "GRC Report Definition",
+   "label": "Report Definitions",
+   "doc_view": "List"
+  }
+ ],
+ "links": [
+  {
+   "type": "Card Break",
+   "label": "Console",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 1
+  },
+  {
+   "type": "Link",
+   "label": "Open Pathway Console",
+   "link_type": "Page",
+   "link_to": "grc-pathway-console",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "1. Client & engagement",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 2
+  },
+  {
+   "type": "Link",
+   "label": "Client Profiles",
+   "link_type": "DocType",
+   "link_to": "GRC Client Profile",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Engagements",
+   "link_type": "DocType",
+   "link_to": "GRC Engagement",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "2. Compliance & frameworks",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 2
+  },
+  {
+   "type": "Link",
+   "label": "Frameworks",
+   "link_type": "DocType",
+   "link_to": "GRC Framework",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Control Library",
+   "link_type": "DocType",
+   "link_to": "GRC Control",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "3. Risk management",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 2
+  },
+  {
+   "type": "Link",
+   "label": "Risk Register",
+   "link_type": "DocType",
+   "link_to": "GRC Risk Register",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Risk Acceptances",
+   "link_type": "DocType",
+   "link_to": "GRC Risk Acceptance",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "4. Evidence & continuous monitoring",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 4
+  },
+  {
+   "type": "Link",
+   "label": "Evidence",
+   "link_type": "DocType",
+   "link_to": "GRC Evidence",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Evidence Rules (CCM)",
+   "link_type": "DocType",
+   "link_to": "GRC Evidence Rule",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Evidence Connectors",
+   "link_type": "DocType",
+   "link_to": "GRC Evidence Connector",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Evidence Fetchers",
+   "link_type": "DocType",
+   "link_to": "GRC Evidence Fetcher",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "5. Audit & findings",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 1
+  },
+  {
+   "type": "Link",
+   "label": "Audit Findings",
+   "link_type": "DocType",
+   "link_to": "GRC Audit Finding",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "6. Policy management",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 1
+  },
+  {
+   "type": "Link",
+   "label": "Policies",
+   "link_type": "DocType",
+   "link_to": "GRC Policy",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "7. Vendor & third-party risk",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 2
+  },
+  {
+   "type": "Link",
+   "label": "Vendors",
+   "link_type": "DocType",
+   "link_to": "GRC Vendor",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Vendor Assessments",
+   "link_type": "DocType",
+   "link_to": "GRC Vendor Assessment",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "8. Reporting & sign-off",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 4
+  },
+  {
+   "type": "Link",
+   "label": "Compliance Status",
+   "link_type": "Report",
+   "link_to": "GRC Compliance Status",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Risk Summary",
+   "link_type": "Report",
+   "link_to": "GRC Risk Summary",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Audit Findings Report",
+   "link_type": "Report",
+   "link_to": "GRC Audit Findings Report",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "ITGC Progress",
+   "link_type": "Report",
+   "link_to": "GRC ITGC Progress",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Policy Library",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 3
+  },
+  {
+   "type": "Link",
+   "label": "Global Policy Library",
+   "link_type": "DocType",
+   "link_to": "GRC Global Policy",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Client Policies",
+   "link_type": "DocType",
+   "link_to": "GRC Policy",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Pathway Settings",
+   "link_type": "DocType",
+   "link_to": "GRC Pathway Settings",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Delivery Plans",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 3
+  },
+  {
+   "type": "Link",
+   "label": "Project Plans",
+   "link_type": "DocType",
+   "link_to": "GRC Project Plan",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Plan Templates",
+   "link_type": "DocType",
+   "link_to": "GRC Plan Template",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Gantt Chart",
+   "link_type": "Page",
+   "link_to": "grc-project-gantt",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "SAMA CSF",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 4
+  },
+  {
+   "type": "Link",
+   "label": "SAMA Assessments",
+   "link_type": "DocType",
+   "link_to": "GRC SAMA Assessment",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "SAMA Deliverables",
+   "link_type": "DocType",
+   "link_to": "GRC SAMA Deliverable",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "SAMA Waivers",
+   "link_type": "DocType",
+   "link_to": "GRC SAMA Waiver",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "SAMA Sub-domains",
+   "link_type": "DocType",
+   "link_to": "GRC SAMA Subdomain",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Reports",
+   "hidden": 0,
+   "onboard": 0,
+   "link_count": 2
+  },
+  {
+   "type": "Link",
+   "label": "Report Studio",
+   "link_type": "Page",
+   "link_to": "grc-report-studio",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Report Definitions",
+   "link_type": "DocType",
+   "link_to": "GRC Report Definition",
+   "is_query_report": 0,
+   "onboard": 0,
+   "hidden": 0,
+   "dependencies": ""
+  }
+ ],
+ "sequence_id": 1.0,
+ "title": "GRC Pathway"
+}

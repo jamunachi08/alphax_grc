@@ -1,0 +1,116 @@
+{
+ "name": "GRC SAMA Waiver Workflow",
+ "workflow_name": "GRC SAMA Waiver Workflow",
+ "document_type": "GRC SAMA Waiver",
+ "is_active": 1,
+ "override_status": 0,
+ "send_email_alert": 1,
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "allow_edit": "Compliance Officer",
+   "style": "Warning"
+  },
+  {
+   "state": "CISO Approval",
+   "doc_status": "0",
+   "allow_edit": "Compliance Officer",
+   "style": "Primary"
+  },
+  {
+   "state": "Committee Approval",
+   "doc_status": "0",
+   "allow_edit": "GRC Executive",
+   "style": "Primary"
+  },
+  {
+   "state": "Submitted to SAMA",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Info"
+  },
+  {
+   "state": "Approved",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Success"
+  },
+  {
+   "state": "Rejected",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Danger"
+  },
+  {
+   "state": "Withdrawn",
+   "doc_status": "0",
+   "allow_edit": "GRC Admin",
+   "style": "Inverse"
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Draft",
+   "action": "Submit for CISO Approval",
+   "next_state": "CISO Approval",
+   "allowed": "Compliance Officer"
+  },
+  {
+   "state": "CISO Approval",
+   "action": "CISO Approve",
+   "next_state": "Committee Approval",
+   "allowed": "GRC Executive",
+   "condition": "doc.ciso_approver is not None"
+  },
+  {
+   "state": "CISO Approval",
+   "action": "Return to Draft",
+   "next_state": "Draft",
+   "allowed": "GRC Executive"
+  },
+  {
+   "state": "Committee Approval",
+   "action": "Committee Approve",
+   "next_state": "Submitted to SAMA",
+   "allowed": "GRC Executive",
+   "condition": "doc.committee_approver is not None"
+  },
+  {
+   "state": "Committee Approval",
+   "action": "Reject",
+   "next_state": "Rejected",
+   "allowed": "GRC Executive"
+  },
+  {
+   "state": "Submitted to SAMA",
+   "action": "Record SAMA Approval",
+   "next_state": "Approved",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Submitted to SAMA",
+   "action": "Record SAMA Rejection",
+   "next_state": "Rejected",
+   "allowed": "GRC Admin"
+  },
+  {
+   "state": "Draft",
+   "action": "Withdraw",
+   "next_state": "Withdrawn",
+   "allowed": "Compliance Officer"
+  },
+  {
+   "state": "CISO Approval",
+   "action": "Withdraw",
+   "next_state": "Withdrawn",
+   "allowed": "Compliance Officer"
+  },
+  {
+   "state": "Committee Approval",
+   "action": "Withdraw",
+   "next_state": "Withdrawn",
+   "allowed": "GRC Executive"
+  }
+ ]
+}

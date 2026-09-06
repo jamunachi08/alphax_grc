@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "creation": "2026-08-14 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_theme",
+  "color_theme",
+  "allow_user_override",
+  "cb_theme",
+  "show_counts",
+  "show_progress_rail",
+  "compact_mode",
+  "sec_scope",
+  "default_client"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_theme",
+   "fieldtype": "Section Break",
+   "label": "Pathway Board"
+  },
+  {
+   "default": "Ocean",
+   "description": "Site-wide default for the graphical pathway on the GRC Pathway workspace",
+   "fieldname": "color_theme",
+   "fieldtype": "Select",
+   "label": "Colour Theme",
+   "options": "Ocean\nSunset\nForest\nRoyal\nDesert\nMonochrome (No Colour)\nHigh Contrast"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_user_override",
+   "fieldtype": "Check",
+   "label": "Let Users Pick Their Own Theme"
+  },
+  {
+   "fieldname": "cb_theme",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_counts",
+   "fieldtype": "Check",
+   "label": "Show Live Counts on Stages"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_progress_rail",
+   "fieldtype": "Check",
+   "label": "Show Progress Rail"
+  },
+  {
+   "default": "0",
+   "fieldname": "compact_mode",
+   "fieldtype": "Check",
+   "label": "Compact Layout"
+  },
+  {
+   "fieldname": "sec_scope",
+   "fieldtype": "Section Break",
+   "label": "Scope"
+  },
+  {
+   "description": "Leave blank to count across all clients",
+   "fieldname": "default_client",
+   "fieldtype": "Link",
+   "label": "Default Client Filter",
+   "options": "GRC Client Profile"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-08-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GRC Evidence Automation",
+ "name": "GRC Pathway Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 0
+}

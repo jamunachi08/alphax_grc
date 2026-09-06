@@ -1,0 +1,11 @@
+{
+ "doctype": "Page",
+ "name": "grc-process-map",
+ "page_name": "grc-process-map",
+ "title": "GRC Process Map",
+ "icon": "organization",
+ "module": "AlphaX GRC",
+ "standard": "Yes",
+ "system_page": 0,
+ "roles": []
+}

@@ -1,0 +1,396 @@
+{% set doc = doc %}
+{% set sections = {} %}
+{% for row in doc.responses %}
+  {% if row.section not in sections %}
+    {% set _ = sections.update({row.section: []}) %}
+  {% endif %}
+  {% set _ = sections[row.section].append(row) %}
+{% endfor %}
+
+{% set answered = doc.responses | selectattr('answer_option') | list | length %}
+{% set total_q = doc.responses | length %}
+{% set gap_items = doc.responses | selectattr('gap_score') | selectattr('answer_option', 'in', ['No', 'Not Implemented', 'Partial', 'Partially Implemented']) | list %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', Arial, sans-serif; font-size: 11pt; color: #1e293b; background: #fff; }
+
+  /* ---- Cover ---- */
+  .cover { page-break-after: always; background: linear-gradient(135deg, #0b132b 0%, #1c2541 55%, #3a506b 100%);
+    color: #fff; padding: 60px 48px; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+  .cover-logo { font-size: 13pt; font-weight: 800; letter-spacing: 2px; opacity: .7; }
+  .cover-title { font-size: 32pt; font-weight: 800; line-height: 1.15; margin: 48px 0 16px; }
+  .cover-subtitle { font-size: 14pt; opacity: .8; }
+  .cover-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+  .cover-meta-item label { font-size: 9pt; text-transform: uppercase; letter-spacing: 1px; opacity: .6; display: block; }
+  .cover-meta-item span { font-size: 12pt; font-weight: 600; }
+  .cover-score-row { display: flex; gap: 24px; margin-top: 48px; }
+  .score-pill { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+    border-radius: 16px; padding: 18px 28px; flex: 1; text-align: center; backdrop-filter: blur(8px); }
+  .score-pill .num { font-size: 36pt; font-weight: 900; line-height: 1; }
+  .score-pill .lbl { font-size: 9pt; text-transform: uppercase; letter-spacing: 1px; opacity: .7; margin-top: 6px; }
+  .score-pill.green .num { color: #4ade80; }
+  .score-pill.amber .num { color: #fbbf24; }
+  .score-pill.red   .num { color: #f87171; }
+
+  /* ---- Page layout ---- */
+  .page { padding: 36px 48px; }
+  h1 { font-size: 18pt; font-weight: 800; color: #0b132b; border-bottom: 3px solid #0b132b; padding-bottom: 8px; margin-bottom: 20px; }
+  h2 { font-size: 13pt; font-weight: 700; color: #1c2541; margin: 28px 0 10px; padding: 8px 12px;
+    background: #f0f4ff; border-left: 4px solid #3b82f6; border-radius: 0 6px 6px 0; }
+  h3 { font-size: 11pt; font-weight: 700; color: #334155; margin: 20px 0 8px; }
+
+  /* ---- KPI strip ---- */
+  .kpi-strip { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; margin-bottom: 28px; }
+  .kpi-card { border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; text-align: center; }
+  .kpi-card .val { font-size: 22pt; font-weight: 800; }
+  .kpi-card .lbl { font-size: 8.5pt; color: #64748b; margin-top: 4px; }
+  .kpi-card.green { border-color: #bbf7d0; background: #f0fdf4; } .kpi-card.green .val { color: #16a34a; }
+  .kpi-card.amber { border-color: #fde68a; background: #fffbeb; } .kpi-card.amber .val { color: #d97706; }
+  .kpi-card.red   { border-color: #fecaca; background: #fef2f2; } .kpi-card.red   .val { color: #dc2626; }
+  .kpi-card.blue  { border-color: #bfdbfe; background: #eff6ff; } .kpi-card.blue  .val { color: #2563eb; }
+  .kpi-card.slate { border-color: #e2e8f0; background: #f8fafc; } .kpi-card.slate .val { color: #475569; }
+
+  /* ---- Maturity bar ---- */
+  .maturity-wrap { margin: 20px 0 28px; }
+  .mat-track { height: 18px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
+  .mat-fill  { height: 100%; border-radius: 999px;
+    background: linear-gradient(90deg,
+      {% if doc.maturity_score >= 80 %}#16a34a, #4ade80
+      {% elif doc.maturity_score >= 60 %}#2563eb, #60a5fa
+      {% elif doc.maturity_score >= 40 %}#d97706, #fbbf24
+      {% else %}#dc2626, #f87171{% endif %});
+    width: {{ doc.maturity_score or 0 }}%; }
+  .mat-labels { display: flex; justify-content: space-between; font-size: 8pt; color: #94a3b8; margin-top: 6px; }
+  .mat-badge { display: inline-block; padding: 4px 14px; border-radius: 999px; font-weight: 700; font-size: 11pt; margin-top: 10px;
+    {% if doc.maturity_score >= 80 %}background:#dcfce7;color:#166534;
+    {% elif doc.maturity_score >= 60 %}background:#dbeafe;color:#1d4ed8;
+    {% elif doc.maturity_score >= 40 %}background:#fef3c7;color:#92400e;
+    {% else %}background:#fee2e2;color:#991b1b;{% endif %} }
+
+  /* ---- Response table ---- */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 9.5pt; }
+  th { background: #1e293b; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+  td { padding: 7px 10px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+  tr:nth-child(even) td { background: #f8fafc; }
+  .ans-yes  { background: #dcfce7; color: #166534; border-radius: 4px; padding: 2px 8px; font-weight: 700; white-space: nowrap; }
+  .ans-par  { background: #fef3c7; color: #92400e; border-radius: 4px; padding: 2px 8px; font-weight: 700; white-space: nowrap; }
+  .ans-no   { background: #fee2e2; color: #991b1b; border-radius: 4px; padding: 2px 8px; font-weight: 700; white-space: nowrap; }
+  .ans-na   { background: #f1f5f9; color: #64748b; border-radius: 4px; padding: 2px 8px; font-weight: 700; white-space: nowrap; }
+  .ans-other{ background: #ede9fe; color: #6d28d9; border-radius: 4px; padding: 2px 8px; font-weight: 700; white-space: nowrap; }
+  .gap-hi   { color: #dc2626; font-weight: 700; }
+  .gap-med  { color: #d97706; font-weight: 700; }
+  .gap-lo   { color: #16a34a; }
+
+  /* ---- Gap register ---- */
+  .gap-row  { margin-bottom: 14px; padding: 12px 14px; border-radius: 8px; border-left: 4px solid;
+    background: #fef2f2; border-color: #dc2626; }
+  .gap-row.medium { background: #fffbeb; border-color: #d97706; }
+  .gap-code { font-weight: 800; font-size: 10pt; }
+  .gap-text { margin: 4px 0; font-size: 10pt; }
+  .gap-rec  { font-size: 9.5pt; color: #475569; font-style: italic; }
+
+  /* ---- Footer ---- */
+  .footer { margin-top: 40px; padding-top: 12px; border-top: 1px solid #e2e8f0;
+    display: flex; justify-content: space-between; font-size: 8.5pt; color: #94a3b8; }
+
+  @media print {
+    .cover { min-height: 100vh; }
+    h2 { page-break-before: auto; }
+    tr { page-break-inside: avoid; }
+    .gap-row { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================================================================ COVER -->
+<div class="cover">
+  <div>
+    <div class="cover-logo">ALPHAX GRC &nbsp;|&nbsp; ASSESSMENT REPORT</div>
+    <div class="cover-title">{{ doc.assessment_title }}</div>
+    <div class="cover-subtitle">
+      {{ doc.assessment_title_ar or '' }}
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><label>Customer</label><span>{{ doc.customer_name or '—' }}</span></div>
+      <div class="cover-meta-item"><label>Country</label><span>{{ doc.customer_country or '—' }}</span></div>
+      <div class="cover-meta-item"><label>Lead Consultant</label><span>{{ doc.lead_consultant or '—' }}</span></div>
+      <div class="cover-meta-item"><label>Assessment Date</label><span>{{ doc.assessment_date or frappe.utils.today() }}</span></div>
+      <div class="cover-meta-item"><label>Template</label><span>{{ doc.assessment_template or '—' }}</span></div>
+      <div class="cover-meta-item"><label>Status</label><span>{{ doc.status }}</span></div>
+    </div>
+  </div>
+
+  <div class="cover-score-row">
+    <div class="score-pill {% if doc.maturity_score >= 80 %}green{% elif doc.maturity_score >= 40 %}amber{% else %}red{% endif %}">
+      <div class="num">{{ doc.maturity_score or 0 }}%</div>
+      <div class="lbl">Maturity Score</div>
+    </div>
+    <div class="score-pill green">
+      <div class="num">{{ doc.yes_score or 0 }}</div>
+      <div class="lbl">Yes / Compliant</div>
+    </div>
+    <div class="score-pill amber">
+      <div class="num">{{ doc.partial_score or 0 }}</div>
+      <div class="lbl">Partial</div>
+    </div>
+    <div class="score-pill red">
+      <div class="num">{{ doc.no_score or 0 }}</div>
+      <div class="lbl">No / Gap</div>
+    </div>
+    <div class="score-pill">
+      <div class="num">{{ doc.responses | length }}</div>
+      <div class="lbl">Total Questions</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================= PAGE 2: EXECUTIVE SUMMARY -->
+<div class="page">
+  <h1>Executive Summary</h1>
+
+  <div class="kpi-strip">
+    <div class="kpi-card {% if doc.maturity_score >= 80 %}green{% elif doc.maturity_score >= 40 %}amber{% else %}red{% endif %}">
+      <div class="val">{{ doc.maturity_score or 0 }}%</div>
+      <div class="lbl">Overall Maturity</div>
+    </div>
+    <div class="kpi-card {% if doc.yes_score >= (doc.responses|length * 0.7) %}green{% else %}amber{% endif %}">
+      <div class="val">{{ doc.yes_score or 0 }}</div>
+      <div class="lbl">Compliant</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="val">{{ doc.partial_score or 0 }}</div>
+      <div class="lbl">Partial</div>
+    </div>
+    <div class="kpi-card {% if (doc.no_score or 0) > 5 %}red{% else %}amber{% endif %}">
+      <div class="val">{{ doc.no_score or 0 }}</div>
+      <div class="lbl">Gaps</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="val">{{ doc.maturity_label or 'Initial' }}</div>
+      <div class="lbl">Maturity Level</div>
+    </div>
+  </div>
+
+  <div class="maturity-wrap">
+    <h3>Maturity Score: {{ doc.maturity_score or 0 }}% — {{ doc.maturity_label or 'Initial' }}</h3>
+    <div class="mat-track"><div class="mat-fill"></div></div>
+    <div class="mat-labels">
+      <span>0% Initial</span><span>20% Developing</span><span>40% Defined</span>
+      <span>60% Managed</span><span>80% Optimised</span><span>100%</span>
+    </div>
+    <div class="mat-badge">{{ doc.maturity_label or 'Initial' }}</div>
+  </div>
+
+  {% if doc.executive_summary %}
+  <h3>Consultant's Executive Summary</h3>
+  <p style="line-height:1.7; color:#334155; margin-top:8px;">{{ doc.executive_summary }}</p>
+  {% endif %}
+
+  <!-- Section breakdown -->
+  {% set ns = namespace() %}
+  {% if sections %}
+  <h3 style="margin-top:24px;">Section Breakdown</h3>
+  <table>
+    <thead>
+      <tr><th>Section</th><th>Questions</th><th>Yes</th><th>Partial</th><th>No</th><th>Section Score</th></tr>
+    </thead>
+    <tbody>
+    {% for sec, rows in sections.items() %}
+      {% set s_total_w = namespace(v=0.0) %}
+      {% set s_earned = namespace(v=0.0) %}
+      {% set s_yes = namespace(v=0) %}
+      {% set s_par = namespace(v=0) %}
+      {% set s_no  = namespace(v=0) %}
+      {% for r in rows %}
+        {% set w = (r.weight or 1)|float %}
+        {% set ans = r.answer_option or '' %}
+        {% if ans in ('Yes','Fully Implemented') %}
+          {% set s_yes.v = s_yes.v + 1 %}
+          {% set s_earned.v = s_earned.v + w * 5 %}
+          {% set s_total_w.v = s_total_w.v + w * 5 %}
+        {% elif ans in ('Partial','Partially Implemented') %}
+          {% set s_par.v = s_par.v + 1 %}
+          {% set s_earned.v = s_earned.v + w * 3 %}
+          {% set s_total_w.v = s_total_w.v + w * 5 %}
+        {% elif ans == 'Not Applicable' %}
+          {# excluded #}
+        {% else %}
+          {% set s_no.v  = s_no.v + 1 %}
+          {% set s_total_w.v = s_total_w.v + w * 5 %}
+        {% endif %}
+      {% endfor %}
+      {% set s_pct = ((s_earned.v / s_total_w.v) * 100)|round(1) if s_total_w.v > 0 else 0 %}
+      <tr>
+        <td><strong>{{ sec }}</strong></td>
+        <td>{{ rows|length }}</td>
+        <td style="color:#16a34a;font-weight:700;">{{ s_yes.v }}</td>
+        <td style="color:#d97706;font-weight:700;">{{ s_par.v }}</td>
+        <td style="color:#dc2626;font-weight:700;">{{ s_no.v }}</td>
+        <td>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="flex:1;height:8px;background:#e2e8f0;border-radius:999px;overflow:hidden;">
+              <div style="height:100%;width:{{ s_pct }}%;border-radius:999px;
+                background:{% if s_pct>=80 %}#16a34a{% elif s_pct>=50 %}#d97706{% else %}#dc2626{% endif %};"></div>
+            </div>
+            <span style="font-weight:700;min-width:40px;">{{ s_pct }}%</span>
+          </div>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <div class="footer">
+    <span>AlphaX GRC v0.8.0 — IRSAA Business Solutions — support@irsaa.com</span>
+    <span>Generated: {{ frappe.utils.now() }}</span>
+  </div>
+</div>
+
+<!-- ============================================================= PAGE 3+: DETAILED RESPONSES -->
+<div class="page" style="page-break-before:always;">
+  <h1>Detailed Assessment Responses</h1>
+
+  {% for sec, rows in sections.items() %}
+  <h2>{{ sec }}</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:8%">Code</th>
+        <th style="width:32%">Question</th>
+        <th style="width:14%">Answer</th>
+        <th style="width:8%">Score</th>
+        <th style="width:8%">Gap</th>
+        <th style="width:15%">Framework Ref</th>
+        <th style="width:15%">Observations / Evidence</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for r in rows %}
+      {% set ans = r.answer_option or '' %}
+      {% set ans_class = 'ans-yes' if ans in ('Yes','Fully Implemented') else
+                         'ans-par' if ans in ('Partial','Partially Implemented') else
+                         'ans-no'  if ans in ('No','Not Implemented') else
+                         'ans-na'  if ans == 'Not Applicable' else 'ans-other' %}
+      {% set gap = (r.gap_score or 0)|float %}
+      <tr>
+        <td><strong>{{ r.question_code }}</strong></td>
+        <td>
+          {{ r.question_text }}
+          {% if r.question_text_ar %}
+          <div style="color:#94a3b8;font-size:8.5pt;margin-top:3px;direction:rtl;">{{ r.question_text_ar }}</div>
+          {% endif %}
+        </td>
+        <td><span class="{{ ans_class }}">{{ ans or '—' }}</span></td>
+        <td style="text-align:center;font-weight:700;">{{ (r.maturity_score or 0)|round(1) }}/5</td>
+        <td style="text-align:center;" class="{% if gap >= 4 %}gap-hi{% elif gap >= 2 %}gap-med{% else %}gap-lo{% endif %}">
+          {{ gap|round(1) }}
+        </td>
+        <td style="font-size:8.5pt;color:#475569;">{{ r.framework_reference or '—' }}</td>
+        <td style="font-size:8.5pt;">
+          {% if r.observations %}{{ r.observations }}{% endif %}
+          {% if r.evidence_reference %}<div style="color:#64748b;margin-top:3px;"><em>Ref: {{ r.evidence_reference }}</em></div>{% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endfor %}
+</div>
+
+<!-- ============================================================= GAP REGISTER -->
+{% set gap_rows = [] %}
+{% for r in doc.responses %}
+  {% if r.answer_option in ('No','Not Implemented','Partial','Partially Implemented') and r.gap_score %}
+    {% set _ = gap_rows.append(r) %}
+  {% endif %}
+{% endfor %}
+
+{% if gap_rows %}
+<div class="page" style="page-break-before:always;">
+  <h1>Gap Register &amp; Recommendations</h1>
+  <p style="color:#64748b;margin-bottom:20px;">
+    {{ gap_rows|length }} gap(s) identified. Items are ordered by gap score (highest first).
+  </p>
+
+  {% for r in gap_rows | sort(attribute='gap_score', reverse=True) %}
+  {% set is_high = (r.gap_score or 0)|float >= 4 %}
+  <div class="gap-row {% if not is_high %}medium{% endif %}">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+      <div>
+        <span class="gap-code">{{ r.question_code }}</span>
+        <span style="font-size:9pt;color:#64748b;margin-left:8px;">{{ r.section }}</span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;">
+        {% if r.answer_option %}<span class="ans-{{ 'no' if r.answer_option in ('No','Not Implemented') else 'par' }}">{{ r.answer_option }}</span>{% endif %}
+        <span style="font-size:9pt;font-weight:700;color:{% if is_high %}#dc2626{% else %}#d97706{% endif %};">
+          Gap: {{ (r.gap_score or 0)|round(1) }}/5
+        </span>
+      </div>
+    </div>
+    <div class="gap-text"><strong>{{ r.question_text }}</strong></div>
+    {% if r.question_text_ar %}
+    <div style="direction:rtl;color:#64748b;font-size:9pt;margin-top:2px;">{{ r.question_text_ar }}</div>
+    {% endif %}
+    {% if r.recommendation %}
+    <div class="gap-rec" style="margin-top:6px;">
+      <strong>Recommendation / Expected Evidence:</strong> {{ r.recommendation }}
+    </div>
+    {% endif %}
+    {% if r.observations %}
+    <div class="gap-rec"><strong>Observations:</strong> {{ r.observations }}</div>
+    {% endif %}
+    {% if r.framework_reference %}
+    <div style="font-size:8.5pt;color:#94a3b8;margin-top:4px;">Framework: {{ r.framework_reference }}</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  <div class="footer">
+    <span>AlphaX GRC v0.8.0 — IRSAA Business Solutions — support@irsaa.com</span>
+    <span>{{ doc.assessment_title }} | {{ doc.assessment_date or frappe.utils.today() }}</span>
+  </div>
+</div>
+{% endif %}
+
+<!-- ============================================================= DISCLAIMER -->
+<div class="page" style="page-break-before:always;">
+  <h1>Report Notes &amp; Disclaimer</h1>
+  <div style="line-height:1.8;color:#475569;margin-top:16px;">
+    <p><strong>Assessment Scope:</strong> This report reflects responses provided by the assessed organisation
+    during a structured questionnaire session. Scores are based on stated controls and evidence provided
+    at the time of assessment and are not a guarantee of security or compliance.</p>
+    <br/>
+    <p><strong>Maturity Scale:</strong></p>
+    <table style="width:60%;margin:12px 0;">
+      <tr><th>Score</th><th>Label</th><th>Description</th></tr>
+      <tr><td>0–19%</td><td>Initial</td><td>Ad-hoc, undocumented, reactive</td></tr>
+      <tr><td>20–39%</td><td>Developing</td><td>Some controls defined, inconsistently applied</td></tr>
+      <tr><td>40–59%</td><td>Defined</td><td>Documented, formally approved, partially tested</td></tr>
+      <tr><td>60–79%</td><td>Managed</td><td>Measured, monitored, and regularly reviewed</td></tr>
+      <tr><td>80–100%</td><td>Optimised</td><td>Continuously improved, automated, benchmarked</td></tr>
+    </table>
+    <br/>
+    <p><strong>Frameworks Referenced:</strong> ISO 27001:2022, NCA ECC, SAMA CSF, PDPL (Saudi Arabia),
+    ISO 22301, IEC 62443, ISO 42001, Aramco Third Party Cybersecurity Standard.</p>
+    <br/>
+    <p><strong>Confidentiality:</strong> This report is prepared exclusively for
+    {{ doc.customer_name or 'the assessed organisation' }} and should be treated as confidential.
+    Distribution should be limited to authorised personnel only.</p>
+    <br/>
+    <p style="font-size:9pt;color:#94a3b8;">
+      Generated by AlphaX GRC v0.8.0 &nbsp;|&nbsp; IRSAA Business Solutions &nbsp;|&nbsp; support@irsaa.com<br/>
+      Report ID: {{ doc.name }} &nbsp;|&nbsp; Generated: {{ frappe.utils.now() }}
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

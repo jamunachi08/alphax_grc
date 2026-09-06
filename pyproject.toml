@@ -1,0 +1,26 @@
+[project]
+name = "alphax_grc"
+dynamic = ["version"]
+description = "AlphaX GRC for Frappe / ERPNext"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+authors = [
+    { name = "IRSAA Business Solutions", email = "support@irsaa.com" }
+]
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["alphax_grc*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "alphax_grc.__version__"}
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<17.0.0"

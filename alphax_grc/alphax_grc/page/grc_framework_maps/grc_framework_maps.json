@@ -1,0 +1,11 @@
+{
+ "doctype": "Page",
+ "name": "grc-framework-maps",
+ "page_name": "grc-framework-maps",
+ "title": "Framework Process Maps",
+ "icon": "organization",
+ "module": "AlphaX GRC",
+ "standard": "Yes",
+ "system_page": 0,
+ "roles": []
+}

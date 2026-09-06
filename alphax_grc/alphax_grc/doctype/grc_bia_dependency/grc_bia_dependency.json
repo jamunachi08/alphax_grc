@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-04-25 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "dependency_type",
+  "dependency_name",
+  "criticality",
+  "notes"
+ ],
+ "fields": [
+  {"fieldname": "dependency_type", "fieldtype": "Select",
+   "label": "Type",
+   "options": "People & Skills\nTechnology / Application\nData & Information\nThird-Party Provider\nFacility / Infrastructure",
+   "reqd": 1, "in_list_view": 1},
+  {"fieldname": "dependency_name", "fieldtype": "Data", "label": "Dependency",
+   "reqd": 1, "in_list_view": 1},
+  {"fieldname": "criticality", "fieldtype": "Select", "label": "Criticality",
+   "options": "Critical\nHigh\nMedium\nLow", "default": "High", "in_list_view": 1},
+  {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"}
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-25 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC BIA Dependency",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 0
+}

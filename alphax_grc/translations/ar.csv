@@ -1,0 +1,223 @@
+Framework Process Maps,خرائط عمليات الأطر
+GRC Process Map,خريطة عمليات الحوكمة والمخاطر والامتثال
+General Process Map,خريطة العمليات العامة
+Lifecycle Wheel,عجلة دورة الحياة
+Command Centre,مركز القيادة
+All frameworks,جميع الأطر
+Open flow,افتح المسار
+Open,افتح
+Open list,افتح القائمة
+Create new,إنشاء جديد
+steps,خطوات
+decisions,قرارات
+Overviews — the whole process at a glance,نظرة شاملة — العملية كاملة في لمحة
+Framework flows — step-by-step with transactions,مسارات الأطر — خطوة بخطوة مع المعاملات
+The full end-to-end GRC flow across all functions,مسار الحوكمة والمخاطر والامتثال الكامل عبر جميع الوظائف
+Live 8-stage journey per client,رحلة حية من ٨ مراحل لكل عميل
+Firm-wide operational overview,نظرة تشغيلية شاملة للمنشأة
+Open Lifecycle wheel,افتح عجلة دورة الحياة
+Framework maps,خرائط الأطر
+Refresh,تحديث
+"Follow the arrows top to bottom. On any step: click the name to open the list, or ＋ to create the transaction. Hover ⚠ for the gate that applies. Dashed arrows are loops / alternate paths.",اتبع الأسهم من الأعلى إلى الأسفل. في أي خطوة: انقر على الاسم لفتح القائمة، أو ＋ لإنشاء المعاملة. مرّر على ⚠ لمعرفة الشرط المطبق. الأسهم المتقطعة تمثل حلقات أو مسارات بديلة.
+"Click a name to open the list, ＋ to create. Hover ⚠ for gates. Dashed arrows are loops / alternate paths.",انقر على الاسم لفتح القائمة، و＋ للإنشاء. مرّر على ⚠ لمعرفة الشروط. الأسهم المتقطعة حلقات أو مسارات بديلة.
+Client & Engagement,العميل والارتباط
+Risk & Assessment,المخاطر والتقييم
+"Controls, Policies & Evidence",الضوابط والسياسات والأدلة
+Audit & Remediation,التدقيق والمعالجة
+Governance & Reporting,الحوكمة والتقارير
+Scope & Catalog,النطاق والدليل
+Controls & Documents,الضوابط والمستندات
+Assess,التقييم
+Remediate & Review,المعالجة والمراجعة
+Scope,النطاق
+Assess & Score,التقييم والتصنيف
+Deliverables,المخرجات
+Report,التقرير
+Third Party & Engagement,الطرف الثالث والارتباط
+Controls,الضوابط
+Assess & Audit,التقييم والتدقيق
+Certify & Notify,الشهادة والإبلاغ
+Scope & SoA,النطاق وبيان قابلية التطبيق
+Audit,التدقيق
+Certify,الشهادة
+Analyse,التحليل
+Plan & Control,التخطيط والضبط
+Exercise,التمرين
+Review,المراجعة
+Profile,الملف التعريفي
+Implement,التنفيذ
+Records,السجلات
+Controls & DPIA,الضوابط وتقييم الأثر
+Rights & Incidents,الحقوق والحوادث
+Catalog,الدليل
+Programme,البرنامج
+Scope Items,عناصر النطاق
+Test,الاختبار
+Start,البداية
+Continuous cycle,دورة مستمرة
+Maintained,قيد الاستمرارية
+Submitted,تم التقديم
+Certified,معتمد
+Certified ISMS,نظام أمن معلومات معتمد
+Resilient,جاهزية واستمرارية
+At target,عند المستوى المستهدف
+Compliant,ممتثل
+Governed,محوكم
+Concluded,مُنجز
+Client Profile,ملف العميل
+Engagement,الارتباط
+Project Plan,خطة المشروع
+Asset Inventory,سجل الأصول
+Risk Register,سجل المخاطر
+Risk Treatment,معالجة المخاطر
+Assessments & Gap Analysis,التقييمات وتحليل الفجوات
+Controls & Policies,الضوابط والسياسات
+Evidence Collection,جمع الأدلة
+Audit Plan,خطة التدقيق
+Audit Execution,تنفيذ التدقيق
+Audit Findings,ملاحظات التدقيق
+Remediation,المعالجة
+Exceptions & Acceptance,الاستثناءات والقبول
+KPIs & KRIs,مؤشرات الأداء والمخاطر الرئيسية
+Board & Regulator Reporting,تقارير مجلس الإدارة والجهات الرقابية
+Periodic Review,المراجعة الدورية
+Engagement & Scope,الارتباط والنطاق
+ECC Catalog Baseline,الأساس المرجعي لدليل الضوابط الأساسية
+Implement ECC Controls,تنفيذ الضوابط الأساسية للأمن السيبراني
+Policies & Templates,السياسات والنماذج
+Control Documents & Evidence,مستندات الضوابط والأدلة
+Tool Mapping,ربط الأدوات
+Compliance Assessment,تقييم الامتثال
+SAMA Assessment,تقييم البنك المركزي السعودي
+Waivers,الإعفاءات
+Deliverables Pack,حزمة المخرجات
+Board & Regulator Report,تقرير المجلس والجهة الرقابية
+Third-Party Profile,ملف الطرف الثالث
+CCC Engagement,ارتباط شهادة الامتثال للأمن السيبراني
+SACS-002 Controls,ضوابط SACS-002
+Control Assessment,تقييم الضوابط
+Authorized Audit Firm,مكتب تدقيق معتمد
+Certificate,الشهادة
+Incident Notification,الإبلاغ عن الحوادث
+Engagement & ISMS Scope,الارتباط ونطاق نظام أمن المعلومات
+Statement of Applicability,بيان قابلية التطبيق
+ISMS Documents & Policies,مستندات وسياسات نظام أمن المعلومات
+Evidence,الأدلة
+Internal Audit,التدقيق الداخلي
+Corrective Actions,الإجراءات التصحيحية
+Certification Readiness,الجاهزية للاعتماد
+Business Impact Analysis,تحليل الأثر على الأعمال
+Continuity Risks,مخاطر الاستمرارية
+BC Controls,ضوابط استمرارية الأعمال
+DR / BC Plans,خطط التعافي والاستمرارية
+Exercise & Test,التمرين والاختبار
+Improve Plans,تحسين الخطط
+Management Review,مراجعة الإدارة
+Catalog & Target Profile,الدليل والملف المستهدف
+Implement Controls,تنفيذ الضوابط
+Detection Coverage,تغطية الاكتشاف
+Assessment,التقييم
+Close Gaps,سد الفجوات
+KPIs & Report,مؤشرات الأداء والتقرير
+Processing Activities (RoPA),أنشطة المعالجة (سجل أنشطة المعالجة)
+Privacy Controls,ضوابط الخصوصية
+DPIA,تقييم أثر حماية البيانات
+Mitigation,التخفيف
+Data Subject Requests,طلبات أصحاب البيانات
+Breaches & Problems,الاختراقات والمشكلات
+Review & Report,المراجعة والتقرير
+AI Controls Catalog,دليل ضوابط الذكاء الاصطناعي
+Implement AI Controls,تنفيذ ضوابط الذكاء الاصطناعي
+IT Audit Program,برنامج تدقيق تقنية المعلومات
+ITGC Scope Items,عناصر نطاق الضوابط العامة لتقنية المعلومات
+Control Testing,اختبار الضوابط
+Findings & Remediation,الملاحظات والمعالجة
+Above risk\nappetite?,أعلى من\nمستوى قبول المخاطر؟
+"Control effective,\nevidence sufficient?",الضابط فعّال\nوالأدلة كافية؟
+Open\nfindings?,ملاحظات\nمفتوحة؟
+Compliant?,ممتثل؟
+Below target\nmaturity?,أقل من مستوى\nالنضج المستهدف؟
+All controls\npass?,هل اجتازت\nجميع الضوابط؟
+Nonconformities?,حالات عدم مطابقة؟
+RTO / RPO\nmet?,هل تحققت أهداف\nزمن ونقطة التعافي؟
+Target profile\nmet?,هل تحقق الملف\nالمستهدف؟
+High residual\nrisk?,خطر متبقٍ\nمرتفع؟
+Gaps?,فجوات؟
+Deficiencies?,أوجه قصور؟
+Yes,نعم
+No,لا
+Yes — treat,نعم — عالج
+No — monitor,لا — راقب
+No — gaps,لا — توجد فجوات
+Yes — uplift,نعم — ارفع المستوى
+No — at target,لا — عند المستوى المستهدف
+cannot comply,يتعذر الامتثال
+cannot remediate,يتعذر المعالجة
+re-score,إعادة التقييم
+re-test,إعادة الاختبار
+re-test evidence,إعادة اختبار الأدلة
+re-implement,إعادة التنفيذ
+uplift,رفع المستوى
+periodic,دوري
+in parallel,بالتوازي
+ongoing,مستمر
+annual cycle,دورة سنوية
+review reopens register,المراجعة تعيد فتح السجل
+keep RoPA current,حافظ على تحديث سجل أنشطة المعالجة
+strengthen,تعزيز
+No — strengthen,لا — عزّز الضوابط
+correct & re-audit,صحّح وأعد التدقيق
+update & re-test,حدّث وأعد الاختبار
+map tools,اربط الأدوات
+if incident,عند وقوع حادثة
+after completion,بعد الإنجاز
+Submit for Approval,إرسال للاعتماد
+Approve,اعتماد
+Reject,رفض
+Return to Draft,إعادة إلى المسودة
+Mark Expired,وضع علامة منتهي
+Revoke,إلغاء
+Resubmit for Approval,إعادة الإرسال للاعتماد
+Submit for CISO Approval,إرسال لاعتماد رئيس أمن المعلومات
+CISO Approve,اعتماد رئيس أمن المعلومات
+Committee Approve,اعتماد اللجنة
+Record SAMA Approval,تسجيل موافقة البنك المركزي
+Record SAMA Rejection,تسجيل رفض البنك المركزي
+Withdraw,سحب
+Submit for Review,إرسال للمراجعة
+Request Revision,طلب تعديل
+Resubmit,إعادة الإرسال
+Retire,إيقاف العمل به
+Pending Approval,بانتظار الاعتماد
+Accepted,مقبول
+Rejected,مرفوض
+Expired,منتهي الصلاحية
+Revoked,ملغى
+Draft,مسودة
+CISO Approval,اعتماد رئيس أمن المعلومات
+Committee Approval,اعتماد اللجنة
+Submitted to SAMA,مقدَّم إلى البنك المركزي
+Approved,معتمد
+Withdrawn,مسحوب
+In Review,قيد المراجعة
+Needs Revision,يتطلب تعديلاً
+Retired,متوقف العمل به
+NCA ECC-2:2024,الضوابط الأساسية للأمن السيبراني ECC-2:2024
+Saudi Essential Cybersecurity Controls,الضوابط الأساسية للأمن السيبراني السعودية
+SAMA CSF,إطار الأمن السيبراني للبنك المركزي السعودي
+Saudi Central Bank Cybersecurity Framework,إطار الأمن السيبراني للبنك المركزي السعودي
+Aramco CCC (SACS-002),شهادة الامتثال للأمن السيبراني لأرامكو (SACS-002)
+Third-party cybersecurity certification,شهادة الأمن السيبراني للأطراف الثالثة
+ISO/IEC 27001,آيزو/آي إي سي 27001
+Information Security Management System,نظام إدارة أمن المعلومات
+ISO 22301 BCMS,نظام إدارة استمرارية الأعمال آيزو 22301
+Business continuity management,إدارة استمرارية الأعمال
+NIST CSF 2.0,إطار نيست للأمن السيبراني 2.0
+Cybersecurity framework profile,ملف إطار الأمن السيبراني
+PDPL & GDPR,نظام حماية البيانات الشخصية واللائحة الأوروبية
+KSA and EU privacy compliance,الامتثال للخصوصية في السعودية والاتحاد الأوروبي
+ISO/IEC 42001,آيزو/آي إي سي 42001
+AI management system,نظام إدارة الذكاء الاصطناعي
+ITGC Programme,برنامج الضوابط العامة لتقنية المعلومات
+IT general controls audit,تدقيق الضوابط العامة لتقنية المعلومات
+GRC Data Subject Request is deprecated. Please use GRC DSAR Request instead - it tracks identity verification and statutory due dates.,تم إيقاف مستند طلب صاحب البيانات القديم. يرجى استخدام «طلب DSAR» بدلاً منه — فهو يتتبع التحقق من الهوية والمواعيد النظامية.

@@ -1,0 +1,204 @@
+{
+ "doctype": "DocType",
+ "name": "GRC Remediation Action",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "allow_rename": 1,
+ "field_order": [
+  "client",
+  "action_title",
+  "finding",
+  "priority",
+  "owner",
+  "status",
+  "completion_percentage",
+  "due_date",
+  "verification_status",
+  "evidence_link",
+  "verified_by",
+  "verified_date",
+  "action_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "action_title",
+   "fieldtype": "Data",
+   "label": "Action Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "finding",
+   "fieldtype": "Link",
+   "label": "Finding",
+   "options": "GRC Audit Finding",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Critical\nHigh\nMedium\nLow",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nPending Review\nResolved\nVerified\nClosed",
+   "default": "Open",
+   "reqd": 1
+  },
+  {
+   "fieldname": "completion_percentage",
+   "fieldtype": "Percent",
+   "label": "Completion %",
+   "default": 0
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "Pending\nAccepted\nRejected",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "evidence_link",
+   "fieldtype": "Link",
+   "label": "Evidence Link",
+   "options": "GRC Evidence"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "verified_date",
+   "fieldtype": "Date",
+   "label": "Verified Date"
+  },
+  {
+   "fieldname": "action_notes",
+   "fieldtype": "Text Editor",
+   "label": "Action Notes"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Risk Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  },
+  {
+   "role": "Vendor Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "creation": "2026-04-14 00:00:00",
+ "modified": "2026-04-14 00:00:00",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": []
+}

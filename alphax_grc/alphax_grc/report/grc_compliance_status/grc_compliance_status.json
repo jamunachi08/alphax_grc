@@ -1,0 +1,19 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "doctype": "Report",
+ "filters": [],
+ "is_standard": "Yes",
+ "module": "AlphaX GRC",
+ "name": "GRC Compliance Status",
+ "report_name": "GRC Compliance Status",
+ "report_type": "Script Report",
+ "ref_doctype": "GRC Control",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "GRC Admin"},
+  {"role": "GRC Executive"},
+  {"role": "Compliance Officer"},
+  {"role": "GRC Auditor"}
+ ]
+}

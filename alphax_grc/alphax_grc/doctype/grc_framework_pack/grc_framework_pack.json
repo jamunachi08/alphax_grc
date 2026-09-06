@@ -1,0 +1,134 @@
+{
+  "doctype": "DocType",
+  "name": "GRC Framework Pack",
+  "module": "AlphaX GRC",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "engine": "InnoDB",
+  "allow_rename": 1,
+  "field_order": [
+    "pack_name",
+    "pack_name_ar",
+    "pack_code",
+    "category",
+    "pack_description",
+    "coverage_score",
+    "mandatory_controls",
+    "status",
+    "bilingual_note",
+    "frameworks"
+  ],
+  "fields": [
+    {
+      "fieldname": "pack_name",
+      "fieldtype": "Data",
+      "label": "Pack Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pack_name_ar",
+      "fieldtype": "Data",
+      "label": "اسم الحزمة",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pack_code",
+      "fieldtype": "Data",
+      "label": "Pack Code",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "category",
+      "fieldtype": "Select",
+      "label": "Category",
+      "options": "National\nSectoral\nPrivacy\nThird Party\nIndustry\nInternal"
+    },
+    {
+      "fieldname": "pack_description",
+      "fieldtype": "Text Editor",
+      "label": "Pack Description"
+    },
+    {
+      "fieldname": "coverage_score",
+      "fieldtype": "Percent",
+      "label": "Coverage Score",
+      "default": 0
+    },
+    {
+      "fieldname": "mandatory_controls",
+      "fieldtype": "Int",
+      "label": "Mandatory Controls",
+      "default": 0
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nActive\nRetired",
+      "default": "Active"
+    },
+    {
+      "fieldname": "bilingual_note",
+      "fieldtype": "Small Text",
+      "label": "Bilingual Note"
+    },
+    {
+      "fieldname": "frameworks",
+      "fieldtype": "Table",
+      "label": "Frameworks",
+      "options": "GRC Pack Framework Item"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    },
+    {
+      "role": "Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    },
+    {
+      "role": "GRC Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    },
+    {
+      "role": "Compliance Officer",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1
+    }
+  ]
+}

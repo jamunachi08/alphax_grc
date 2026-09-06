@@ -1,0 +1,183 @@
+{
+ "name": "GRC DR Plan",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:DRP-{#####}",
+ "title_field": "plan_title",
+ "description": "Disaster Recovery Plan — step-by-step DR execution record with contacts, steps, risks, and issues",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Risk Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "plan_title",
+   "fieldtype": "Data",
+   "label": "DR Plan Title",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "document_number",
+   "fieldtype": "Data",
+   "label": "Document Number"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version",
+   "default": "1.0"
+  },
+  {
+   "fieldname": "organisation",
+   "fieldtype": "Data",
+   "label": "Organisation"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nApproved\nActive\nUnder Review\nRetired",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "last_tested",
+   "fieldtype": "Date",
+   "label": "Last Tested"
+  },
+  {
+   "fieldname": "next_test_date",
+   "fieldtype": "Date",
+   "label": "Next Test Date"
+  },
+  {
+   "fieldname": "rto_hours",
+   "fieldtype": "Float",
+   "label": "RTO (Hours)"
+  },
+  {
+   "fieldname": "rpo_hours",
+   "fieldtype": "Float",
+   "label": "RPO (Hours)"
+  },
+  {
+   "fieldname": "dr_scope",
+   "fieldtype": "Text Editor",
+   "label": "DR Scope & Introduction"
+  },
+  {
+   "fieldname": "dr_team_lead",
+   "fieldtype": "Link",
+   "label": "DR Team Lead",
+   "options": "User"
+  },
+  {
+   "fieldname": "initiation_criteria",
+   "fieldtype": "Text Editor",
+   "label": "Initiation Criteria"
+  },
+  {
+   "fieldname": "dr_steps",
+   "fieldtype": "Text Editor",
+   "label": "DR Execution Steps"
+  },
+  {
+   "fieldname": "communications_plan",
+   "fieldtype": "Text Editor",
+   "label": "Communications Plan"
+  },
+  {
+   "fieldname": "linked_bcp_assessment",
+   "fieldtype": "Link",
+   "label": "Linked BCP Assessment",
+   "options": "GRC Assessment Run"
+  },
+  {
+   "fieldname": "linked_framework",
+   "fieldtype": "Link",
+   "label": "Framework",
+   "options": "GRC Framework"
+  },
+  {
+   "fieldname": "linked_risk",
+   "fieldtype": "Link",
+   "label": "Primary Risk",
+   "options": "GRC Risk Register"
+  },
+  {
+   "fieldname": "asset_register_notes",
+   "fieldtype": "Small Text",
+   "label": "DR Asset Register Notes"
+  },
+  {
+   "fieldname": "lessons_learned",
+   "fieldtype": "Text Editor",
+   "label": "Lessons Learned / Post-Test Notes"
+  }
+ ],
+ "field_order": [
+  "client"
+ ]
+}

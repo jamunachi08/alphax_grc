@@ -1,0 +1,175 @@
+{
+ "doctype": "DocType",
+ "name": "GRC Board Report",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "allow_rename": 1,
+ "field_order": [
+  "client",
+  "report_title",
+  "report_title_ar",
+  "reporting_period",
+  "decision_type",
+  "board_review_date",
+  "status",
+  "executive_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "report_title",
+   "fieldtype": "Data",
+   "label": "Report Title",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "report_title_ar",
+   "fieldtype": "Data",
+   "label": "عنوان التقرير",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reporting_period",
+   "fieldtype": "Data",
+   "label": "Reporting Period"
+  },
+  {
+   "fieldname": "decision_type",
+   "fieldtype": "Select",
+   "label": "Decision Type",
+   "options": "Review\nApproval\nRisk Acceptance\nWaiver\nBudget\nStrategic Direction"
+  },
+  {
+   "fieldname": "board_review_date",
+   "fieldtype": "Date",
+   "label": "Board Review Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nReviewed\nApproved\nClosed",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "executive_summary",
+   "fieldtype": "Text Editor",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "open_risks",
+   "fieldtype": "Int",
+   "label": "Open Critical Risks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "open_findings",
+   "fieldtype": "Int",
+   "label": "Open Findings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "compliance_score",
+   "fieldtype": "Percent",
+   "label": "Compliance Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "maturity_score",
+   "fieldtype": "Percent",
+   "label": "Maturity Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overdue_actions",
+   "fieldtype": "Int",
+   "label": "Overdue Actions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "key_decisions",
+   "fieldtype": "Text Editor",
+   "label": "Key Decisions Required"
+  },
+  {
+   "fieldname": "risk_summary",
+   "fieldtype": "Text Editor",
+   "label": "Risk Summary"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1
+  }
+ ]
+}

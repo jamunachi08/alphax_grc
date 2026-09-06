@@ -1,0 +1,24 @@
+{
+  "doctype": "DocType",
+  "name": "GRC Pack Framework Item",
+  "module": "AlphaX GRC",
+  "custom": 0,
+  "istable": 1,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "engine": "InnoDB",
+  "allow_rename": 1,
+  "field_order": [
+    "framework"
+  ],
+  "fields": [
+    {
+      "fieldname": "framework",
+      "fieldtype": "Link",
+      "label": "Framework",
+      "options": "GRC Framework",
+      "in_list_view": 1
+    }
+  ],
+  "permissions": []
+}

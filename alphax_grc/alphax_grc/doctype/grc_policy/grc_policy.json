@@ -1,0 +1,163 @@
+{
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "creation": "2026-04-04 00:00:00.000000",
+ "modified": "2026-04-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": [],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "share": 1,
+   "email": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "allow_rename": 1,
+ "name": "GRC Policy",
+ "autoname": "format:POL-{#####}",
+ "field_order": [
+  "client",
+  "policy_title",
+  "policy_category",
+  "policy_owner",
+  "version_no",
+  "status",
+  "effective_date",
+  "review_due_date",
+  "summary",
+  "publication_status",
+  "acknowledgement_required",
+  "published_on",
+  "acknowledgment_required"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "policy_title",
+   "fieldtype": "Data",
+   "label": "Policy Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "policy_category",
+   "fieldtype": "Select",
+   "label": "Policy Category",
+   "options": "Information Security\nPrivacy\nRisk\nCompliance\nHR\nOperations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "policy_owner",
+   "fieldtype": "Link",
+   "label": "Policy Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "version_no",
+   "fieldtype": "Data",
+   "label": "Version",
+   "default": "1.0"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nUnder Review\nApproved\nRetired",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "review_due_date",
+   "fieldtype": "Date",
+   "label": "Review Due Date"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text Editor",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "publication_status",
+   "fieldtype": "Select",
+   "label": "Publication Status",
+   "options": "Draft\nReview\nApproved\nPublished\nRetired",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "acknowledgement_required",
+   "fieldtype": "Check",
+   "label": "Acknowledgement Required",
+   "default": 1
+  },
+  {
+   "fieldname": "published_on",
+   "fieldtype": "Date",
+   "label": "Published On"
+  },
+  {
+   "fieldname": "acknowledgment_required",
+   "fieldtype": "Check",
+   "label": "Acknowledgment Required",
+   "default": 1
+  }
+ ]
+}

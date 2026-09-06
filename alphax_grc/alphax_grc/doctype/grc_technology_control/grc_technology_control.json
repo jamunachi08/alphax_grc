@@ -1,0 +1,145 @@
+{
+ "name": "GRC Technology Control",
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "naming_rule": "Expression",
+ "autoname": "format:TC-{#####}",
+ "title_field": "control_name",
+ "description": "Technology-to-control mapping — links GRC controls to recommended technology solutions (based on NCA ECC-2:2024 technology mapping)",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "write": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "control_name",
+   "fieldtype": "Data",
+   "label": "Control Name",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "control_number",
+   "fieldtype": "Data",
+   "label": "Control No.",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "main_domain",
+   "fieldtype": "Select",
+   "label": "Main Domain",
+   "options": "\nGovernance\nDefense\nResilience\nExternal Parties\nTechnical Systems",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "linked_framework",
+   "fieldtype": "Link",
+   "label": "Framework",
+   "options": "GRC Framework"
+  },
+  {
+   "fieldname": "required_technology_type",
+   "fieldtype": "Data",
+   "label": "Required Technology Type",
+   "description": "e.g. GRC Solutions, IAM/PAM/IGA, EDR/XDR, SIEM/SOAR"
+  },
+  {
+   "fieldname": "technology_category",
+   "fieldtype": "Select",
+   "label": "Technology Category",
+   "options": "\nGRC / Policy Management\nIdentity & Access Management\nEndpoint Detection & Response\nData Protection / DLP\nEmail Security\nNetwork Security\nWeb & App Security\nVulnerability Management\nPenetration Testing\nBackup & Recovery\nSecurity Monitoring / SIEM\nThird-Party Risk Management\nCloud Security\nAsset Management\nSecurity Awareness"
+  },
+  {
+   "fieldname": "vendor_examples",
+   "fieldtype": "Small Text",
+   "label": "Vendor Examples",
+   "description": "e.g. CrowdStrike, SentinelOne, Trend Micro"
+  },
+  {
+   "fieldname": "implementation_status",
+   "fieldtype": "Select",
+   "label": "Implementation Status",
+   "options": "Not Implemented\nPlanned\nIn Progress\nImplemented\nNot Applicable",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "current_tool",
+   "fieldtype": "Data",
+   "label": "Current Tool / Vendor"
+  },
+  {
+   "fieldname": "current_tool_version",
+   "fieldtype": "Data",
+   "label": "Current Version / License"
+  },
+  {
+   "fieldname": "tool_owner",
+   "fieldtype": "Link",
+   "label": "Tool Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "nca_pillar",
+   "fieldtype": "Select",
+   "label": "NCA ECC-2:2024 Pillar",
+   "options": "\nCyber Resilience\nZero Trust Architecture\nData Sovereignty & Privacy\nAutomation & AI"
+  },
+  {
+   "fieldname": "linked_control",
+   "fieldtype": "Link",
+   "label": "Linked GRC Control",
+   "options": "GRC Control"
+  },
+  {
+   "fieldname": "gap_notes",
+   "fieldtype": "Small Text",
+   "label": "Gap / Notes"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  }
+ ],
+ "field_order": [
+  "client"
+ ]
+}

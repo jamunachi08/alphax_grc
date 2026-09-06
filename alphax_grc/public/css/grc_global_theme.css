@@ -1,0 +1,494 @@
+/* =========================================================================
+   AlphaX GRC v1.7.0 — Global Visual Feast Theme
+   =========================================================================
+   This file applies branded polish to EVERY page in the Frappe app — not
+   just dashboards, but every list view, every form, every report builder,
+   every print format. It targets GRC- and AlphaX GRC AI- doctypes by name
+   so it never affects ERPNext pages.
+
+   The CSS variables below are the single source of truth for colors. They
+   are overridden at runtime by grc_theme_loader.js reading GRC Theme
+   Settings, which means changing the theme via the UI re-themes everything
+   instantly without recompiling.
+   ========================================================================= */
+
+:root {
+    --grc-primary:        #0F1F40;
+    --grc-secondary:      #185FA5;
+    --grc-accent:         #C9A227;
+    --grc-success:        #0F6E56;
+    --grc-warning:        #854F0B;
+    --grc-danger:         #A32D2D;
+    --grc-bg:             #FFFFFF;
+    --grc-card-bg:        #FFFFFF;
+    --grc-page-bg:        #F7F8FA;
+    --grc-muted:          #687178;
+    --grc-text:           #1E293B;
+    --grc-border:         rgba(15, 31, 64, 0.08);
+    --grc-border-strong:  rgba(15, 31, 64, 0.16);
+    --grc-radius-sm:      4px;
+    --grc-radius-md:      8px;
+    --grc-radius-lg:      12px;
+    --grc-radius-xl:      16px;
+    --grc-shadow-sm:      0 1px 2px rgba(15, 31, 64, 0.04);
+    --grc-shadow-md:      0 2px 8px rgba(15, 31, 64, 0.08);
+    --grc-shadow-lg:      0 8px 24px rgba(15, 31, 64, 0.12);
+    --grc-fade:           cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================================================
+   STATUS CHIPS — used throughout list views, forms, dashboards, reports
+   ========================================================================= */
+.grc-chip {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition: all 0.15s var(--grc-fade);
+}
+.grc-chip-implemented { background: #D9F0E2; color: #0A5740; border-color: #A8D9BA; }
+.grc-chip-partial     { background: #FAEEDA; color: #6B3F08; border-color: #E5C58A; }
+.grc-chip-not-impl    { background: #FCEBEB; color: #791F1F; border-color: #E5A8A8; }
+.grc-chip-not-applic  { background: #F1EFE8; color: #4A4945; border-color: #C8C5BA; }
+.grc-chip-untracked   { background: rgba(15, 31, 64, 0.04); color: #687178; border-color: rgba(15, 31, 64, 0.08); }
+.grc-chip-critical    { background: #FCEBEB; color: #5A0F0F; border-color: #C26060; }
+.grc-chip-high        { background: #FFE8D6; color: #8C3F0F; border-color: #E5B584; }
+.grc-chip-medium      { background: #FAEEDA; color: #6B3F08; border-color: #E5C58A; }
+.grc-chip-low         { background: #EAF3DE; color: #1A3D08; border-color: #B5D49A; }
+.grc-chip-info        { background: #E6F1FB; color: #093566; border-color: #A8C8E5; }
+
+/* =========================================================================
+   FRAPPE INDICATOR PILL OVERRIDES
+   ========================================================================= */
+.indicator-pill { font-weight: 600; letter-spacing: 0.02em; padding: 3px 10px; border-radius: 999px; border: 1px solid transparent; }
+.indicator-pill[data-color="green"]  { background: #D9F0E2 !important; color: #0A5740 !important; border-color: #A8D9BA !important; }
+.indicator-pill[data-color="red"]    { background: #FCEBEB !important; color: #791F1F !important; border-color: #E5A8A8 !important; }
+.indicator-pill[data-color="orange"] { background: #FFE8D6 !important; color: #8C3F0F !important; border-color: #E5B584 !important; }
+.indicator-pill[data-color="yellow"] { background: #FAEEDA !important; color: #6B3F08 !important; border-color: #E5C58A !important; }
+.indicator-pill[data-color="blue"]   { background: #E6F1FB !important; color: #093566 !important; border-color: #A8C8E5 !important; }
+.indicator-pill[data-color="grey"], .indicator-pill[data-color="gray"] { background: rgba(15,31,64,0.04) !important; color: #687178 !important; }
+
+/* =========================================================================
+   LIST VIEW — applies to every GRC- prefixed doctype list
+   ========================================================================= */
+[data-page-route^="List/GRC "] .list-row,
+[data-page-route^="List/AlphaX GRC AI"] .list-row,
+.list-row[data-doctype^="GRC "] {
+    border-bottom: 1px solid var(--grc-border) !important;
+    transition: background 0.12s var(--grc-fade), transform 0.12s var(--grc-fade);
+}
+[data-page-route^="List/GRC "] .list-row:hover,
+[data-page-route^="List/AlphaX GRC AI"] .list-row:hover,
+.list-row[data-doctype^="GRC "]:hover {
+    background: rgba(24, 95, 165, 0.04) !important;
+    transform: translateX(2px);
+}
+[data-page-route^="List/GRC "] .list-row.level-left,
+[data-page-route^="List/AlphaX GRC AI"] .list-row.level-left {
+    padding: 12px 16px !important;
+}
+[data-page-route^="List/GRC "] .list-subject .level-item:first-child a,
+[data-page-route^="List/AlphaX GRC AI"] .list-subject .level-item:first-child a {
+    color: var(--grc-primary) !important;
+    font-weight: 500;
+}
+[data-page-route^="List/GRC "] .list-row-checkbox {
+    accent-color: var(--grc-secondary);
+}
+
+/* List header */
+[data-page-route^="List/GRC "] .list-row-head,
+[data-page-route^="List/AlphaX GRC AI"] .list-row-head {
+    background: var(--grc-page-bg) !important;
+    border-top: 3px solid var(--grc-secondary) !important;
+    border-bottom: 1px solid var(--grc-border) !important;
+    color: var(--grc-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+}
+
+/* Page-title for GRC list views */
+[data-page-route^="List/GRC "] .title-text,
+[data-page-route^="List/AlphaX GRC AI"] .title-text {
+    color: var(--grc-primary);
+    font-weight: 600;
+}
+
+/* =========================================================================
+   FORM VIEW — applies to every GRC doctype form
+   ========================================================================= */
+[data-page-route^="Form/GRC "] .layout-main-section,
+[data-page-route^="Form/AlphaX GRC AI"] .layout-main-section {
+    background: var(--grc-card-bg);
+    border-radius: var(--grc-radius-lg);
+    box-shadow: var(--grc-shadow-sm);
+    border: 1px solid var(--grc-border);
+    padding: 24px !important;
+}
+
+[data-page-route^="Form/GRC "] .page-head,
+[data-page-route^="Form/AlphaX GRC AI"] .page-head {
+    border-bottom: 3px solid var(--grc-secondary);
+}
+
+[data-page-route^="Form/GRC "] .title-text,
+[data-page-route^="Form/AlphaX GRC AI"] .title-text {
+    color: var(--grc-primary) !important;
+    font-weight: 600;
+}
+
+/* Section breaks — branded underline */
+[data-page-route^="Form/GRC "] .form-section .section-head,
+[data-page-route^="Form/AlphaX GRC AI"] .form-section .section-head {
+    color: var(--grc-primary) !important;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--grc-secondary);
+    padding: 0 0 6px;
+    margin: 16px 0 12px;
+    display: inline-block;
+    min-width: 100px;
+}
+
+/* Section icons via ::before */
+[data-page-route^="Form/GRC "] .form-section[data-fieldname*="identity"] .section-head::before { content: '◉ '; color: var(--grc-secondary); }
+[data-page-route^="Form/GRC "] .form-section[data-fieldname*="status"] .section-head::before { content: '◐ '; color: var(--grc-warning); }
+[data-page-route^="Form/GRC "] .form-section[data-fieldname*="evidence"] .section-head::before { content: '◈ '; color: var(--grc-accent); }
+[data-page-route^="Form/GRC "] .form-section[data-fieldname*="findings"] .section-head::before { content: '◇ '; color: var(--grc-danger); }
+[data-page-route^="Form/GRC "] .form-section[data-fieldname*="results"] .section-head::before { content: '◐ '; color: var(--grc-success); }
+[data-page-route^="Form/GRC "] .form-section[data-fieldname*="schedule"] .section-head::before { content: '◔ '; color: var(--grc-secondary); }
+[data-page-route^="Form/GRC "] .form-section[data-fieldname*="actions"] .section-head::before { content: '⚡ '; color: var(--grc-warning); }
+[data-page-route^="Form/GRC "] .form-section[data-fieldname*="logic"] .section-head::before { content: '⚙ '; color: var(--grc-secondary); }
+[data-page-route^="Form/GRC "] .form-section[data-fieldname*="source"] .section-head::before { content: '⊞ '; color: var(--grc-secondary); }
+
+/* Field labels */
+[data-page-route^="Form/GRC "] .control-label,
+[data-page-route^="Form/AlphaX GRC AI"] .control-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--grc-muted);
+}
+
+[data-page-route^="Form/GRC "] .control-label .reqd,
+[data-page-route^="Form/AlphaX GRC AI"] .control-label .reqd {
+    color: var(--grc-danger);
+    font-weight: 700;
+}
+
+[data-page-route^="Form/GRC "] .form-control:focus,
+[data-page-route^="Form/AlphaX GRC AI"] .form-control:focus {
+    border-color: var(--grc-secondary);
+    box-shadow: 0 0 0 3px rgba(24, 95, 165, 0.12);
+}
+
+/* Primary buttons */
+[data-page-route^="Form/GRC "] .btn-primary,
+[data-page-route^="Form/AlphaX GRC AI"] .btn-primary,
+.page-form .btn-primary,
+.modal-content .btn-primary {
+    background: var(--grc-secondary);
+    border-color: var(--grc-secondary);
+    border-radius: var(--grc-radius-sm);
+    font-weight: 500;
+    transition: all 0.15s var(--grc-fade);
+}
+[data-page-route^="Form/GRC "] .btn-primary:hover,
+[data-page-route^="Form/AlphaX GRC AI"] .btn-primary:hover {
+    background: var(--grc-primary);
+    border-color: var(--grc-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--grc-shadow-sm);
+}
+
+/* Connections / linked-doctype panels */
+[data-page-route^="Form/GRC "] .form-dashboard,
+[data-page-route^="Form/AlphaX GRC AI"] .form-dashboard {
+    background: linear-gradient(135deg, rgba(24, 95, 165, 0.04) 0%, rgba(15, 31, 64, 0.02) 100%);
+    border: 1px solid var(--grc-border);
+    border-radius: var(--grc-radius-md);
+    padding: 12px 16px !important;
+    margin-bottom: 16px;
+}
+
+/* Sidebar */
+[data-page-route^="Form/GRC "] .form-sidebar,
+[data-page-route^="Form/AlphaX GRC AI"] .form-sidebar {
+    background: var(--grc-page-bg);
+    border-radius: var(--grc-radius-md);
+    padding: 12px;
+}
+[data-page-route^="Form/GRC "] .form-sidebar .sidebar-label,
+[data-page-route^="Form/AlphaX GRC AI"] .form-sidebar .sidebar-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--grc-muted);
+}
+
+/* =========================================================================
+   DASHBOARD COMPONENTS
+   ========================================================================= */
+
+.grc-hero {
+    background: linear-gradient(135deg,
+                                var(--grc-primary, #0F1F40) 0%,
+                                var(--grc-secondary, #185FA5) 50%,
+                                var(--grc-success, #0F6E56) 100%);
+    color: white;
+    padding: 26px 28px;
+    border-radius: var(--grc-radius-lg);
+    margin: 12px 0 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--grc-shadow-md);
+}
+.grc-hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+.grc-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -20px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201, 162, 39, .12) 0%, transparent 70%);
+    pointer-events: none;
+}
+.grc-hero h2 { color: white; margin: 0 0 4px; font-size: 19px; font-weight: 600; }
+.grc-hero .grc-hero-sub { font-size: 12px; opacity: 0.85; margin-bottom: 18px; max-width: 700px; }
+.grc-hero .grc-hero-stats {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    position: relative;
+}
+.grc-hero .grc-hero-stat {
+    background: rgba(255, 255, 255, 0.13);
+    padding: 12px 14px;
+    border-radius: var(--grc-radius-md);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.grc-hero .grc-hero-stat .num {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+}
+.grc-hero .grc-hero-stat .lbl {
+    font-size: 10px;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 6px;
+}
+
+.grc-hero.grc-aramco {
+    background: linear-gradient(135deg, #003F1F 0%, #00833B 50%, #00B050 100%);
+}
+
+.grc-section {
+    background: var(--grc-card-bg);
+    border: 1px solid var(--grc-border);
+    border-radius: var(--grc-radius-lg);
+    padding: 18px;
+    margin: 0 0 18px;
+    transition: box-shadow 0.2s var(--grc-fade);
+}
+.grc-section:hover {
+    box-shadow: var(--grc-shadow-sm);
+}
+.grc-section h4 {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--grc-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.grc-section h4::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 16px;
+    background: var(--grc-secondary);
+    border-radius: 2px;
+}
+
+.grc-card-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.grc-card {
+    background: var(--grc-card-bg);
+    border: 1px solid var(--grc-border);
+    border-radius: var(--grc-radius-md);
+    padding: 14px;
+    cursor: pointer;
+    transition: transform 0.15s var(--grc-fade), box-shadow 0.15s var(--grc-fade), border-color 0.15s var(--grc-fade);
+}
+.grc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--grc-shadow-md);
+    border-color: var(--grc-secondary);
+}
+
+.grc-progress {
+    display: flex;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.06);
+}
+.grc-progress-lg { height: 10px; border-radius: 5px; }
+.grc-progress > div { height: 100%; transition: width 0.3s var(--grc-fade); }
+.grc-progress-implemented { background: linear-gradient(90deg, #5BA52A 0%, #7BC747 100%); }
+.grc-progress-partial     { background: linear-gradient(90deg, #E5A82E 0%, #F0BA4F 100%); }
+.grc-progress-not-impl    { background: linear-gradient(90deg, #D44C4C 0%, #E36868 100%); }
+.grc-progress-not-applic  { background: #9C9C9C; }
+
+/* =========================================================================
+   PRINT FORMAT
+   ========================================================================= */
+@media print {
+    body { background: white; }
+    .print-format {
+        font-family: 'Arial', 'Segoe UI', sans-serif;
+        color: var(--grc-text);
+    }
+    .grc-print-header {
+        background: linear-gradient(135deg, var(--grc-primary) 0%, var(--grc-secondary) 100%);
+        color: white;
+        padding: 16px 24px;
+        margin: -20px -20px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 4px solid var(--grc-accent);
+    }
+    .grc-print-header .brand-name {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+    .grc-print-header .doc-type {
+        font-size: 11px;
+        opacity: 0.85;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+    .grc-print-footer {
+        margin-top: 32px;
+        padding: 12px 8px;
+        text-align: center;
+        font-size: 9px;
+        color: var(--grc-muted);
+        border-top: 1px solid var(--grc-border);
+    }
+    .print-format h1, .print-format h2, .print-format h3 {
+        color: var(--grc-primary);
+    }
+    .print-format table th {
+        background: var(--grc-primary) !important;
+        color: white !important;
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 0.04em;
+        padding: 8px 12px;
+    }
+    .print-format table td {
+        padding: 8px 12px;
+        border-bottom: 1px solid var(--grc-border);
+    }
+}
+
+/* =========================================================================
+   WORKSPACE TILES
+   ========================================================================= */
+.shortcut-widget-box {
+    transition: transform 0.15s var(--grc-fade), box-shadow 0.15s var(--grc-fade);
+    border-radius: var(--grc-radius-md);
+}
+.shortcut-widget-box.grc-tile-polished:hover,
+.shortcut-widget-box[data-name*="grc-"]:hover,
+.shortcut-widget-box[data-name*="ECC"]:hover,
+.shortcut-widget-box[data-name*="Aramco"]:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--grc-shadow-md);
+    border-color: var(--grc-secondary);
+}
+
+.workspace-sidebar [data-page-route*="grc-"] {
+    font-weight: 500;
+}
+.workspace-sidebar [data-page-route*="grc-"]:hover {
+    color: var(--grc-secondary);
+}
+
+/* =========================================================================
+   ARABIC / RTL HANDLING
+   ========================================================================= */
+[dir="rtl"] .grc-hero h2,
+[dir="rtl"] .grc-hero .grc-hero-sub {
+    text-align: right;
+}
+[dir="rtl"] [data-page-route^="List/GRC "] .list-row:hover {
+    transform: translateX(-2px);
+}
+[dir="rtl"] .grc-section h4 {
+    flex-direction: row-reverse;
+}
+
+/* =========================================================================
+   MICRO-ANIMATIONS
+   ========================================================================= */
+@keyframes grc-fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.grc-section, .grc-hero {
+    animation: grc-fade-in 0.4s var(--grc-fade);
+}
+
+@keyframes grc-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(163, 45, 45, 0.4); }
+    50%      { box-shadow: 0 0 0 6px rgba(163, 45, 45, 0); }
+}
+.grc-chip-critical {
+    animation: grc-pulse 2s ease-in-out infinite;
+}
+
+/* =========================================================================
+   UTILITY CLASSES
+   ========================================================================= */
+.grc-text-primary { color: var(--grc-primary) !important; }
+.grc-text-muted   { color: var(--grc-muted) !important; }
+.grc-text-success { color: var(--grc-success) !important; }
+.grc-text-danger  { color: var(--grc-danger) !important; }
+.grc-bg-primary   { background: var(--grc-primary) !important; color: white; }
+.grc-bg-secondary { background: var(--grc-secondary) !important; color: white; }
+
+.grc-mono { font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, monospace; }
+.grc-uppercase { text-transform: uppercase; letter-spacing: 0.04em; font-size: 11px; font-weight: 600; }

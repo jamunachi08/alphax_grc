@@ -1,0 +1,85 @@
+{
+ "name": "GRC DPIA Workflow",
+ "workflow_name": "GRC DPIA Workflow",
+ "document_type": "GRC DPIA Record",
+ "is_active": 1,
+ "override_status": 0,
+ "send_email_alert": 1,
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "allow_edit": "Privacy Officer",
+   "style": "Warning"
+  },
+  {
+   "state": "In Review",
+   "doc_status": "0",
+   "allow_edit": "Privacy Officer",
+   "style": "Primary"
+  },
+  {
+   "state": "Approved",
+   "doc_status": "0",
+   "allow_edit": "Compliance Officer",
+   "style": "Success"
+  },
+  {
+   "state": "Needs Revision",
+   "doc_status": "0",
+   "allow_edit": "Privacy Officer",
+   "style": "Warning"
+  },
+  {
+   "state": "Rejected",
+   "doc_status": "0",
+   "allow_edit": "Compliance Officer",
+   "style": "Danger"
+  },
+  {
+   "state": "Retired",
+   "doc_status": "0",
+   "allow_edit": "Compliance Officer",
+   "style": "Inverse"
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Draft",
+   "action": "Submit for Review",
+   "next_state": "In Review",
+   "allowed": "Privacy Officer"
+  },
+  {
+   "state": "In Review",
+   "action": "Approve",
+   "next_state": "Approved",
+   "allowed": "Compliance Officer",
+   "condition": "doc.dpo_consulted == 1"
+  },
+  {
+   "state": "In Review",
+   "action": "Request Revision",
+   "next_state": "Needs Revision",
+   "allowed": "Compliance Officer"
+  },
+  {
+   "state": "Needs Revision",
+   "action": "Resubmit",
+   "next_state": "In Review",
+   "allowed": "Privacy Officer"
+  },
+  {
+   "state": "In Review",
+   "action": "Reject",
+   "next_state": "Rejected",
+   "allowed": "Compliance Officer"
+  },
+  {
+   "state": "Approved",
+   "action": "Retire",
+   "next_state": "Retired",
+   "allowed": "Compliance Officer"
+  }
+ ]
+}

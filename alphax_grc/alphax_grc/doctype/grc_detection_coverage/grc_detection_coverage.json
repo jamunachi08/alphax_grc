@@ -1,0 +1,232 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DET-{####}",
+ "creation": "2026-05-09 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "detection_name",
+  "client",
+  "framework",
+  "control_reference",
+  "column_break_1",
+  "detection_type",
+  "implementation_status",
+  "is_active",
+  "section_source",
+  "detection_source",
+  "soc_use_case_ref",
+  "section_evidence",
+  "evidence_link",
+  "last_validated_date",
+  "next_validation_due",
+  "column_break_2",
+  "owner_user",
+  "responsible_team",
+  "section_notes",
+  "detection_notes",
+  "false_positive_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "detection_name",
+   "fieldtype": "Data",
+   "label": "Detection Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_global_search": 1,
+   "description": "e.g. 'Brute Force Detection — AD Logs'"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "framework",
+   "fieldtype": "Select",
+   "label": "Framework",
+   "options": "\nNCA ECC-2:2024\nISO 27001\nISO 42001\nAramco SACS-002\nPDPL\nGDPR\nCustom\nNIST CSF 2.0\nISO 22301",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "control_reference",
+   "fieldtype": "Data",
+   "label": "Control",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "e.g. 2-12-3, A.8.16, SACS-001-2"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "detection_type",
+   "fieldtype": "Select",
+   "label": "Detection Type",
+   "options": "\nSIEM Rule\nEDR Rule\nDLP Rule\nCloud Guardrail\nNetwork IDS/IPS\nApplication Logging\nManual Review\nOther",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "implementation_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Not Implemented\nPlanned\nIn Tuning\nLive\nRetired",
+   "default": "Planned",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "section_source",
+   "fieldtype": "Section Break",
+   "label": "Detection Source"
+  },
+  {
+   "fieldname": "detection_source",
+   "fieldtype": "Data",
+   "label": "Source / Tool",
+   "description": "e.g. Microsoft Sentinel, CrowdStrike Falcon, Splunk Enterprise"
+  },
+  {
+   "fieldname": "soc_use_case_ref",
+   "fieldtype": "Data",
+   "label": "SOC Use-Case Reference",
+   "description": "e.g. UC-AUTH-001 (when alphax_soc is installed, this becomes a Link)"
+  },
+  {
+   "fieldname": "section_evidence",
+   "fieldtype": "Section Break",
+   "label": "Evidence & Validation"
+  },
+  {
+   "fieldname": "evidence_link",
+   "fieldtype": "Data",
+   "label": "Evidence Link / URL"
+  },
+  {
+   "fieldname": "last_validated_date",
+   "fieldtype": "Date",
+   "label": "Last Validated",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "next_validation_due",
+   "fieldtype": "Date",
+   "label": "Next Validation Due"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "owner_user",
+   "fieldtype": "Link",
+   "options": "User",
+   "label": "Owner"
+  },
+  {
+   "fieldname": "responsible_team",
+   "fieldtype": "Select",
+   "label": "Team",
+   "options": "\nSOC Team\nGRC Team\nIT Team\nCyber Security Team\nClient Side"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "detection_notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "false_positive_rate",
+   "fieldtype": "Percent",
+   "label": "False Positive Rate",
+   "default": 0,
+   "description": "Percentage of alerts that turn out to be benign"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-09 00:00:00",
+ "modified_by": "Administrator",
+ "module": "AlphaX GRC",
+ "name": "GRC Detection Coverage",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1,
+   "write": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "GRC Assessor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1
+  },
+  {
+   "role": "GRC Auditor",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "detection_name",
+ "track_changes": 1
+}

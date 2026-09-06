@@ -1,0 +1,424 @@
+{
+ "doctype": "DocType",
+ "name": "GRC Risk Register",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "risk_title",
+  "risk_category",
+  "linked_framework",
+  "linked_control",
+  "risk_owner",
+  "sb_nfcrm_impact",
+  "impact_confidentiality",
+  "impact_integrity",
+  "impact_availability",
+  "cb_nfcrm_impact",
+  "likelihood_basis",
+  "likelihood_rationale",
+  "impact",
+  "likelihood",
+  "inherent_score",
+  "risk_rating",
+  "treatment_plan",
+  "treatment_actions",
+  "status",
+  "next_review_date",
+  "residual_score",
+  "residual_rating",
+  "sb_appetite",
+  "appetite_ceiling",
+  "within_appetite",
+  "cb_appetite",
+  "appetite_status",
+  "risk_response",
+  "escalation_status",
+  "residual_impact",
+  "residual_likelihood",
+  "acceptance_reference",
+  "nca_section",
+  "risk_cause",
+  "threat",
+  "risk_analysis_consequences",
+  "date_of_risk_identification",
+  "date_of_risk_analysis",
+  "last_evaluation_date",
+  "sb_nca_reporting",
+  "nca_reportable",
+  "nca_reported_on",
+  "cb_nca_reporting",
+  "haseen_reference",
+  "treatment_plan_submitted_on",
+  "inherent_rating_accepted",
+  "inherent_rating_override_reason",
+  "manual_rating_override",
+  "engagement"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "options": "GRC Client Profile",
+   "label": "Client",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1,
+   "description": "The client engagement this record belongs to."
+  },
+  {
+   "fieldname": "risk_title",
+   "fieldtype": "Data",
+   "label": "Risk Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_category",
+   "fieldtype": "Select",
+   "label": "Risk Category",
+   "options": "Strategic\nOperational\nFinancial\nCompliance\nCybersecurity\nPrivacy\nThird-Party\nReputational\nLegal\nEnvironmental",
+   "reqd": 1,
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "linked_framework",
+   "fieldtype": "Link",
+   "label": "Linked Framework",
+   "options": "GRC Framework"
+  },
+  {
+   "fieldname": "linked_control",
+   "fieldtype": "Link",
+   "label": "Linked Control",
+   "options": "GRC Control"
+  },
+  {
+   "fieldname": "risk_owner",
+   "fieldtype": "Link",
+   "label": "Risk Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "sb_nfcrm_impact",
+   "fieldtype": "Section Break",
+   "label": "Impact Assessment (NFCRM Figure 4)"
+  },
+  {
+   "fieldname": "impact_confidentiality",
+   "fieldtype": "Select",
+   "label": "Confidentiality Impact",
+   "options": "\n1\n2\n3\n4\n5",
+   "description": "Disclosure or leakage of data — 1 Very Low to 5 Critical"
+  },
+  {
+   "fieldname": "impact_integrity",
+   "fieldtype": "Select",
+   "label": "Integrity Impact",
+   "options": "\n1\n2\n3\n4\n5",
+   "description": "Unauthorised change to the entity's assets"
+  },
+  {
+   "fieldname": "impact_availability",
+   "fieldtype": "Select",
+   "label": "Availability Impact",
+   "options": "\n1\n2\n3\n4\n5",
+   "description": "Disruption of the entity's assets"
+  },
+  {
+   "fieldname": "cb_nfcrm_impact",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "likelihood_basis",
+   "fieldtype": "Select",
+   "label": "Likelihood Basis",
+   "options": "\nTime Frame\nExploitability",
+   "description": "NFCRM Figure 5 grades likelihood on either recurrence interval or ease of exploitation"
+  },
+  {
+   "fieldname": "likelihood_rationale",
+   "fieldtype": "Small Text",
+   "label": "Likelihood Rationale"
+  },
+  {
+   "fieldname": "impact",
+   "fieldtype": "Select",
+   "label": "Impact",
+   "options": "1\n2\n3\n4\n5",
+   "default": "3"
+  },
+  {
+   "fieldname": "likelihood",
+   "fieldtype": "Select",
+   "label": "Likelihood",
+   "options": "1\n2\n3\n4\n5",
+   "default": "3"
+  },
+  {
+   "fieldname": "inherent_score",
+   "fieldtype": "Int",
+   "label": "Inherent Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "risk_rating",
+   "fieldtype": "Select",
+   "label": "Risk Rating",
+   "options": "Critical\nHigh\nMedium\nLow\nVery Low\nN/A",
+   "read_only": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "treatment_plan",
+   "fieldtype": "Small Text",
+   "label": "Treatment Plan"
+  },
+  {
+   "fieldname": "treatment_actions",
+   "fieldtype": "Table",
+   "label": "Treatment Actions",
+   "options": "GRC Risk Treatment Action",
+   "description": "Structured action items backing the treatment plan — owner, due date, status per action."
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nMonitoring\nMitigated\nClosed",
+   "default": "Open"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "residual_score",
+   "fieldtype": "Int",
+   "label": "Residual Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "residual_rating",
+   "fieldtype": "Select",
+   "label": "Residual Risk Rating",
+   "read_only": 1,
+   "options": "\nCritical\nHigh\nMedium\nLow\nVery Low\nN/A",
+   "description": "Computed from residual impact x likelihood using NFCRM bands"
+  },
+  {
+   "fieldname": "sb_appetite",
+   "fieldtype": "Section Break",
+   "label": "Risk Appetite Check"
+  },
+  {
+   "fieldname": "appetite_ceiling",
+   "fieldtype": "Data",
+   "label": "Client Appetite Ceiling",
+   "read_only": 1,
+   "description": "Highest residual rating this client accepts in this risk category, from the client profile"
+  },
+  {
+   "fieldname": "within_appetite",
+   "fieldtype": "Check",
+   "label": "Within Appetite",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_appetite",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appetite_status",
+   "fieldtype": "Data",
+   "label": "Appetite Status",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "risk_response",
+   "fieldtype": "Select",
+   "label": "Risk Response",
+   "options": "Mitigate\nAccept\nAvoid\nTransfer",
+   "default": "Mitigate"
+  },
+  {
+   "fieldname": "escalation_status",
+   "fieldtype": "Select",
+   "label": "Escalation Status",
+   "options": "Normal\nEscalated\nCommittee Review",
+   "default": "Normal"
+  },
+  {
+   "fieldname": "residual_impact",
+   "fieldtype": "Int",
+   "label": "Residual Impact",
+   "default": 0
+  },
+  {
+   "fieldname": "residual_likelihood",
+   "fieldtype": "Int",
+   "label": "Residual Likelihood",
+   "default": 0
+  },
+  {
+   "fieldname": "acceptance_reference",
+   "fieldtype": "Link",
+   "label": "Acceptance Reference",
+   "options": "GRC Risk Acceptance"
+  },
+  {
+   "fieldname": "nca_section",
+   "fieldtype": "Section Break",
+   "label": "NCA Risk Register fields",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "risk_cause",
+   "fieldtype": "Text",
+   "label": "Risk Cause",
+   "description": "Description of the cause of the inherent risk"
+  },
+  {
+   "fieldname": "threat",
+   "fieldtype": "Link",
+   "options": "GRC Threat Catalogue",
+   "label": "Threat",
+   "in_standard_filter": 1,
+   "description": "Threat arising from the risk"
+  },
+  {
+   "fieldname": "risk_analysis_consequences",
+   "fieldtype": "Text",
+   "label": "Risk Analysis & Consequences",
+   "description": "Possible consequences of the risk and timescale"
+  },
+  {
+   "fieldname": "date_of_risk_identification",
+   "fieldtype": "Date",
+   "label": "Date of Risk Identification"
+  },
+  {
+   "fieldname": "date_of_risk_analysis",
+   "fieldtype": "Date",
+   "label": "Date of Risk Analysis"
+  },
+  {
+   "fieldname": "last_evaluation_date",
+   "fieldtype": "Date",
+   "label": "Last Evaluation Date"
+  },
+  {
+   "fieldname": "sb_nca_reporting",
+   "fieldtype": "Section Break",
+   "label": "NCA Reporting (NFCRM 5.5)"
+  },
+  {
+   "fieldname": "nca_reportable",
+   "fieldtype": "Check",
+   "label": "Reportable to NCA",
+   "read_only": 1,
+   "default": "0",
+   "description": "Set automatically for Critical and High risks — these must be reported immediately on identification"
+  },
+  {
+   "fieldname": "nca_reported_on",
+   "fieldtype": "Datetime",
+   "label": "Reported to NCA On"
+  },
+  {
+   "fieldname": "cb_nca_reporting",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "haseen_reference",
+   "fieldtype": "Data",
+   "label": "Haseen Reference",
+   "description": "Submission reference from the Haseen platform"
+  },
+  {
+   "fieldname": "treatment_plan_submitted_on",
+   "fieldtype": "Date",
+   "label": "Treatment Plan Submitted On"
+  },
+  {
+   "fieldname": "inherent_rating_accepted",
+   "fieldtype": "Select",
+   "label": "Inherent Rating Accepted?",
+   "options": "Not Reviewed\nYes\nNo",
+   "default": "Not Reviewed",
+   "description": "Does the risk owner accept the auto-calculated inherent rating?"
+  },
+  {
+   "fieldname": "inherent_rating_override_reason",
+   "fieldtype": "Text",
+   "label": "Override Reason",
+   "depends_on": "eval:doc.inherent_rating_accepted=='No'"
+  },
+  {
+   "fieldname": "manual_rating_override",
+   "fieldtype": "Select",
+   "label": "Manual Rating Override",
+   "options": "\nCritical\nHigh\nMedium\nLow\nVery Low\nN/A",
+   "depends_on": "eval:doc.inherent_rating_accepted=='No'",
+   "description": "Override of the auto-calculated inherent rating"
+  },
+  {
+   "fieldname": "engagement",
+   "fieldtype": "Link",
+   "options": "GRC Engagement",
+   "label": "Engagement",
+   "in_standard_filter": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "GRC Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Compliance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Risk Owner",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "GRC Executive",
+   "read": 1
+  }
+ ],
+ "allow_rename": 1,
+ "creation": "2026-04-04 00:00:00.000000",
+ "modified": "2026-04-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": [],
+ "autoname": "autoincrement"
+}

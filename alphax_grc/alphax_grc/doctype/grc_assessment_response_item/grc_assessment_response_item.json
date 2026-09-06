@@ -1,0 +1,108 @@
+{
+ "doctype": "DocType",
+ "module": "AlphaX GRC",
+ "custom": 0,
+ "istable": 1,
+ "is_submittable": 0,
+ "track_changes": 0,
+ "engine": "InnoDB",
+ "creation": "2026-04-22 00:00:00.000000",
+ "modified": "2026-04-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "",
+ "title_field": "",
+ "search_fields": "",
+ "states": [],
+ "links": [],
+ "actions": [],
+ "permissions": [],
+ "fields": [
+  {
+   "fieldname": "section",
+   "fieldtype": "Data",
+   "label": "Section",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "question_code",
+   "fieldtype": "Data",
+   "label": "Question Code",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "question_text",
+   "fieldtype": "Small Text",
+   "label": "Question Text",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "question_text_ar",
+   "fieldtype": "Small Text",
+   "label": "Question Text (Arabic)"
+  },
+  {
+   "fieldname": "framework_reference",
+   "fieldtype": "Data",
+   "label": "Framework Reference"
+  },
+  {
+   "fieldname": "response_type",
+   "fieldtype": "Data",
+   "label": "Response Type"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight",
+   "default": "1"
+  },
+  {
+   "fieldname": "answer_option",
+   "fieldtype": "Select",
+   "label": "Answer Option",
+   "options": "\nYes\nPartial\nNo\nNot Applicable\nFully Implemented\nPartially Implemented\nNot Implemented\n1\n2\n3\n4\n5",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "maturity_score",
+   "fieldtype": "Float",
+   "label": "Maturity Score",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "max_score",
+   "fieldtype": "Float",
+   "label": "Max Score",
+   "default": "5"
+  },
+  {
+   "fieldname": "gap_score",
+   "fieldtype": "Float",
+   "label": "Gap Score"
+  },
+  {
+   "fieldname": "owner_role",
+   "fieldtype": "Data",
+   "label": "Owner Role"
+  },
+  {
+   "fieldname": "evidence_reference",
+   "fieldtype": "Small Text",
+   "label": "Evidence Reference"
+  },
+  {
+   "fieldname": "observations",
+   "fieldtype": "Small Text",
+   "label": "Observations"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Small Text",
+   "label": "Recommendation"
+  }
+ ],
+ "name": "GRC Assessment Response Item"
+}

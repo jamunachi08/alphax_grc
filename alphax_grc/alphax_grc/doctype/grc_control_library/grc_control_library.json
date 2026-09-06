@@ -1,0 +1,171 @@
+{
+  "doctype": "DocType",
+  "name": "GRC Control Library",
+  "module": "AlphaX GRC",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "track_changes": 1,
+  "engine": "InnoDB",
+  "allow_rename": 1,
+  "autoname": "field:control_id",
+  "field_order": [
+    "control_id",
+    "control_name",
+    "primary_framework",
+    "framework_mappings",
+    "domain",
+    "subdomain",
+    "description",
+    "maturity_level",
+    "weight",
+    "status",
+    "notes",
+    "reporting_domain",
+    "compliance_target"
+  ],
+  "fields": [
+    {
+      "fieldname": "control_id",
+      "fieldtype": "Data",
+      "label": "Control ID",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "control_name",
+      "fieldtype": "Data",
+      "label": "Control Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "primary_framework",
+      "fieldtype": "Link",
+      "label": "Primary Framework",
+      "options": "GRC Framework",
+      "reqd": 1
+    },
+    {
+      "fieldname": "framework_mappings",
+      "fieldtype": "Table",
+      "label": "Framework Mappings",
+      "options": "GRC Control Mapping Item"
+    },
+    {
+      "fieldname": "domain",
+      "fieldtype": "Data",
+      "label": "Domain",
+      "reqd": 1
+    },
+    {
+      "fieldname": "subdomain",
+      "fieldtype": "Data",
+      "label": "Subdomain"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "maturity_level",
+      "fieldtype": "Int",
+      "label": "Maturity Level",
+      "default": 1
+    },
+    {
+      "fieldname": "weight",
+      "fieldtype": "Float",
+      "label": "Weight",
+      "default": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nInactive\nDraft",
+      "default": "Active"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "reporting_domain",
+      "fieldtype": "Data",
+      "label": "Reporting Domain"
+    },
+    {
+      "fieldname": "compliance_target",
+      "fieldtype": "Percent",
+      "label": "Compliance Target",
+      "default": 100
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    },
+    {
+      "role": "Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    },
+    {
+      "role": "GRC Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    },
+    {
+      "role": "Compliance Officer",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1,
+      "email": 1
+    },
+    {
+      "role": "GRC Executive",
+      "read": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1
+    }
+  ],
+  "creation": "2026-04-14 00:00:00",
+  "modified": "2026-04-14 00:00:00",
+  "modified_by": "Administrator",
+  "owner": "Administrator",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "links": [],
+  "actions": []
+}

@@ -1,0 +1,8 @@
+[pre_model_sync]
+alphax_grc.patches.v2_3_1_retire_addon_module
+
+
+
+[post_model_sync]
+alphax_grc.patches.v2_3_0_pathway_module
+alphax_grc.patches.v2_14_0_governance
